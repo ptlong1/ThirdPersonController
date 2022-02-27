@@ -78,6 +78,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2923740389595895339, guid: 09d5aba47a9affa4b83878576feba7ff, type: 3}
+      propertyPath: m_AssetId
+      value: 920c0616f3d6d5949a5de92a46925f1e
+      objectReference: {fileID: 0}
     - target: {fileID: 3686484901336393789, guid: 09d5aba47a9affa4b83878576feba7ff, type: 3}
       propertyPath: moveSpeed
       value: 6
@@ -90,9 +94,17 @@ PrefabInstance:
       propertyPath: playerCameraRoot
       value: 
       objectReference: {fileID: 6565977695784639320}
+    - target: {fileID: 3686484901336393790, guid: 09d5aba47a9affa4b83878576feba7ff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3686484901336393791, guid: 09d5aba47a9affa4b83878576feba7ff, type: 3}
       propertyPath: m_Name
       value: Player With Avatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686484901336393791, guid: 09d5aba47a9affa4b83878576feba7ff, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4063046006966547077, guid: 09d5aba47a9affa4b83878576feba7ff, type: 3}
       propertyPath: m_RootOrder

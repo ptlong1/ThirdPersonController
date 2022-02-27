@@ -59,6 +59,9 @@ public class PlayerController : NetworkBehaviour
     float fallTimeoutDelta;
     float jumpTimeoutDelta;
 
+    //results collider
+    Collider[] results = new Collider[10];
+
     private void Awake() {
         if (mainCamera == null)
         {
@@ -169,9 +172,19 @@ public class PlayerController : NetworkBehaviour
     void GroundedCheck()
     {
         Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - groundOffset, transform.position.z);
-        grounded = Physics.CheckSphere(spherePosition, groundRadius, groundLayerMask, QueryTriggerInteraction.Ignore);
-
+        PhysicsScene physicsScene = gameObject.scene.GetPhysicsScene();
+        int numColliders = physicsScene.OverlapSphere(
+            spherePosition, 
+            groundRadius, 
+            results,
+            groundLayerMask, 
+            QueryTriggerInteraction.UseGlobal);
+        grounded = numColliders > 0;
+        bool collided = physicsScene.Raycast(spherePosition, Vector3.down, groundRadius, groundLayerMask);
+        // Debug.Log("Number Colliders" +numColliders);
         // Debug.Log("Check Grounded " +grounded);
+        // Debug.Log("Raycast " +collided);
+        // Debug.Log("Charactor controller "+ characterController.isGrounded);
         if (hasAnimator)
         {
             animator.SetBool(animIDGrounded, grounded);
