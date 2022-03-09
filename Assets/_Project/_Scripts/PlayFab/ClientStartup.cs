@@ -10,6 +10,7 @@ using PlayFab.Networking;
 using Mirror.SimpleWeb;
 public class ClientStartup : MonoBehaviour
 {
+	#if !UNITY_SERVER
     [Header("Address info")]
     public string IpV4Address;
     public ushort port;
@@ -101,4 +102,5 @@ public class ClientStartup : MonoBehaviour
         Debug.Log("List Server Error");
         Debug.Log(playFabError);
 	}
+	#endif
 }

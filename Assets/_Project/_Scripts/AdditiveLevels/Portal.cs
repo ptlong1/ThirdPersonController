@@ -48,11 +48,15 @@ namespace Assets._Project._Scripts.AdditiveLevels
             //Debug.Log($"{System.DateTime.Now:HH:mm:ss:fff} Portal::OnTriggerEnter {gameObject.name} in {gameObject.scene.name}");
 
             // applies to host client on server and remote clients
+			Debug.Log("Player trigger portal");
             if (other.TryGetComponent<PlayerController>(out PlayerController playerController))
                 playerController.enabled = false;
 
             if (isServer)
+			{
+				Debug.Log("Start Send Player to new scene");
                 StartCoroutine(SendPlayerToNewScene(other.gameObject));
+			}
         }
 
         [ServerCallback]
@@ -64,11 +68,14 @@ namespace Assets._Project._Scripts.AdditiveLevels
                 if (conn == null) yield break;
 
                 // Tell client to unload previous subscene. No custom handling for this.
+				Debug.Log("Tell client to unload previous subscene");
                 conn.Send(new SceneMessage { sceneName = gameObject.scene.path, sceneOperation = SceneOperation.UnloadAdditive, customHandling = true });
 
+				Debug.Log("Wait for fade");
                 yield return waitForFade;
+				Debug.Log("Done wait for fade");
 
-                //Debug.Log($"SendPlayerToNewScene RemovePlayerForConnection {conn} netId:{conn.identity.netId}");
+                Debug.Log($"SendPlayerToNewScene RemovePlayerForConnection {conn} netId:{conn.identity.netId}");
                 NetworkServer.RemovePlayerForConnection(conn, false);
 
                 // reposition player on server and client
@@ -79,9 +86,10 @@ namespace Assets._Project._Scripts.AdditiveLevels
                 SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByPath(destinationScene));
 
                 // Tell client to load the new subscene with custom handling (see NetworkManager::OnClientChangeScene).
+				Debug.Log("Tell client to load new subscene");
                 conn.Send(new SceneMessage { sceneName = destinationScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true });
 
-                //Debug.Log($"SendPlayerToNewScene AddPlayerForConnection {conn} netId:{conn.identity.netId}");
+                // Debug.Log($"SendPlayerToNewScene AddPlayerForConnection {conn} netId:{conn.identity.netId}");
                 NetworkServer.AddPlayerForConnection(conn, player);
 
                 //Try to reposition for player

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: GameEvents
+  m_EditorClassIdentifier: 
+  m_GroupName: GameEvents
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8832052d811f91740b832f6e9245d16c
+  m_SerializeEntries:
+  - m_GUID: 0342a88d747f64d46884a313f804e334
+    m_Address: Assets/_Project/Events/GameEvents/OnLoadedAvatar.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 83ed27b997bb96842af4f8e1d2d446a6
+    m_Address: Assets/_Project/Events/GameEvents/OnLoadingAvatar.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d0145b17c869c884685e30b2bd98430c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7395eaa2bca938946805a92e38463c68, type: 2}
+    - {fileID: 11400000, guid: cdeee15136bcf414ca054ca79b1df707, type: 2}
