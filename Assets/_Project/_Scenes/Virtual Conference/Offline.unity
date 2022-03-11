@@ -906,7 +906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1075172970
 Transform:
   m_ObjectHideFlags: 0
@@ -935,8 +935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IpV4Address: 20.93.8.119
   port: 30000
-  buildID: '481c7582-a1c2-4475-b221-11ea97eefce8 '
-  sessionID: fc05e09c-821f-404a-af18-26b255c05cc2
+  buildID: af6bf535-b1ff-4473-a666-f7758fa44473
+  sessionID: e660327e-e36f-408b-93b6-3ab2c17cd608
   regions:
   - 'NorthEurope '
 --- !u!1 &1212846457
