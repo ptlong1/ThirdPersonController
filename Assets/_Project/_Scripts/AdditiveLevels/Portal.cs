@@ -67,14 +67,17 @@ namespace Assets._Project._Scripts.AdditiveLevels
                 NetworkConnectionToClient conn = identity.connectionToClient;
                 if (conn == null) yield break;
 
+				// Debug.Log($"1. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
                 // Tell client to unload previous subscene. No custom handling for this.
 				Debug.Log("Tell client to unload previous subscene");
                 conn.Send(new SceneMessage { sceneName = gameObject.scene.path, sceneOperation = SceneOperation.UnloadAdditive, customHandling = true });
 
+				// Debug.Log($"2. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
 				Debug.Log("Wait for fade");
                 yield return waitForFade;
 				Debug.Log("Done wait for fade");
 
+				// Debug.Log($"3. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
                 Debug.Log($"SendPlayerToNewScene RemovePlayerForConnection {conn} netId:{conn.identity.netId}");
                 NetworkServer.RemovePlayerForConnection(conn, false);
 
@@ -85,24 +88,22 @@ namespace Assets._Project._Scripts.AdditiveLevels
                 // Move player to new subscene.
                 SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByPath(destinationScene));
 
+				// Debug.Log($"4. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
                 // Tell client to load the new subscene with custom handling (see NetworkManager::OnClientChangeScene).
 				Debug.Log("Tell client to load new subscene");
                 conn.Send(new SceneMessage { sceneName = destinationScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true });
 
+				// Debug.Log($"5. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
                 // Debug.Log($"SendPlayerToNewScene AddPlayerForConnection {conn} netId:{conn.identity.netId}");
                 NetworkServer.AddPlayerForConnection(conn, player);
 
-                //Try to reposition for player
-                // Transform startTransform = FindObjectOfType<NetworkManager>().GetStartPosition();
-                // player.transform.position = startTransform.position;
-                // player.transform.rotation = startTransform.rotation;
-                // Debug.Log("Start Position: " + startTransform.position.ToString());
+				// Debug.Log($"6. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
 
                 // host client would have been disabled by OnTriggerEnter above
                 if (NetworkClient.localPlayer != null && NetworkClient.localPlayer.TryGetComponent<PlayerController>(out PlayerController playerController))
                 {
                     playerController.enabled = true;
-                    // Debug.Log("Client can go in this position");
+                    Debug.Log("Client can go in this position");
                 }
             }
         }

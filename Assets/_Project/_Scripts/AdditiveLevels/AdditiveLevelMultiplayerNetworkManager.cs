@@ -329,6 +329,8 @@ namespace Assets._Project._Scripts.AdditiveLevels
 			// This fires from a Ready message client sends to server after loading the online scene
 			base.OnServerReady(conn);
 
+			// conn.authenticationData = NetworkServer.connections.Count;
+			Debug.Log("conn.identity null: " + conn.identity == null);
 			if (conn.identity == null)
 			{
 				// StartCoroutine(AddPlayerDelayed(conn));
@@ -389,6 +391,7 @@ namespace Assets._Project._Scripts.AdditiveLevels
 				GameObject player = go.Result;
 
 				player.transform.SetParent(null);
+				player.GetComponent<RuntimeAvatarLoader>().avatarIndex = NetworkServer.connections.Count;
 				NetworkServer.AddPlayerForConnection(conn, player);
 				Debug.Log($"Done AddPlayerDelayed {conn} {conn.identity}");
 			};

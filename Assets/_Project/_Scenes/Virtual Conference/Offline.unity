@@ -204,8 +204,8 @@ Transform:
   m_LocalPosition: {x: 1.13, y: -1.545868, z: -0.6837194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 899729374}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &186238425
 MonoBehaviour:
@@ -325,7 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396714861}
   m_Layer: 0
-  m_Name: ----SYSTEM----
+  m_Name: ----SYSTEM---------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,9 +341,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1991878652}
-  - {fileID: 491867615}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,12 +372,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491867614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1052946616}
-  m_Father: {fileID: 396714861}
+  m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &491867616
@@ -394,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0110f245bfcfc7d459681f7bd9ebc590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 7778
+  port: 46457
   maxMessageSize: 16384
   handshakeMaxSize: 3000
   noDelay: 1
@@ -404,7 +402,7 @@ MonoBehaviour:
   clientMaxMessagesPerTick: 1000
   batchSend: 1
   waitBeforeSend: 0
-  clientUseWss: 0
+  clientUseWss: 1
   sslEnabled: 0
   sslCertJson: ./cert.json
   sslProtocols: 3072
@@ -423,12 +421,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   runInBackground: 1
-  autoStartServerBuild: 0
+  autoStartServerBuild: 1
   serverTickRate: 30
   offlineScene: 
   onlineScene: 
   transport: {fileID: 491867616}
-  networkAddress: localhost
+  networkAddress: sea.ssl.cloud.playflow.app
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 0}
@@ -690,8 +688,8 @@ RectTransform:
   m_Children:
   - {fileID: 916642653}
   - {fileID: 1324546748}
-  m_Father: {fileID: 1050424912}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -720,7 +718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899729374}
   m_Layer: 0
-  m_Name: ----PLAYER----
+  m_Name: ----PLAYER--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,12 +734,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 186238424}
-  - {fileID: 1075172970}
-  - {fileID: 2138415814}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916642652
 GameObject:
@@ -825,7 +820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050424912}
   m_Layer: 0
-  m_Name: ----UI----
+  m_Name: ----UI--------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,10 +836,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 721481862}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052946615
 GameObject:
@@ -862,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1052946616
 Transform:
   m_ObjectHideFlags: 0
@@ -906,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1075172970
 Transform:
   m_ObjectHideFlags: 0
@@ -914,12 +908,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075172969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 899729374}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1075172971
 MonoBehaviour:
@@ -936,7 +930,7 @@ MonoBehaviour:
   IpV4Address: 20.93.8.119
   port: 30000
   buildID: af6bf535-b1ff-4473-a666-f7758fa44473
-  sessionID: e660327e-e36f-408b-93b6-3ab2c17cd608
+  sessionID: e660327e-e36f-408b-93b6-3ab2c17cd609
   regions:
   - 'NorthEurope '
 --- !u!1 &1212846457
@@ -1521,8 +1515,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -2.172, z: -3.989656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 396714861}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138415813
 GameObject:
@@ -1557,8 +1551,8 @@ Transform:
   - {fileID: 1212846458}
   - {fileID: 1830610655}
   - {fileID: 229015432}
-  m_Father: {fileID: 899729374}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2138415815
 MonoBehaviour:

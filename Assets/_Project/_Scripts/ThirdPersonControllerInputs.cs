@@ -62,7 +62,7 @@ public class ThirdPersonControllerInputs : MonoBehaviour
         // Debug.Log("Angle: " + Mathf.Atan2(vector2.x, vector2.y)*Mathf.Rad2Deg);
 	}
     private void OnApplicationFocus(bool focusStatus) {
-        SetCursorState(focusStatus);
+        // SetCursorState(focusStatus);
         // Debug.Log($"Application Focus {focusStatus}");
     }
 
@@ -72,7 +72,8 @@ public class ThirdPersonControllerInputs : MonoBehaviour
 
 	private void SetCursorState(bool focusStatus)
 	{
-        Cursor.lockState = focusStatus?CursorLockMode.Locked:CursorLockMode.None;
+		if (EventSystem.current.IsPointerOverGameObject())
+			Cursor.lockState = focusStatus?CursorLockMode.Locked:CursorLockMode.None;
 	}
 
 	// public void OnPointerDown(PointerEventData eventData)

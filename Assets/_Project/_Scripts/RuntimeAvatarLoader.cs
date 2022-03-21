@@ -4,25 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using Wolf3D.ReadyPlayerMe.AvatarSDK;
 using ScriptableObjectArchitecture;
-
-public class RuntimeAvatarLoader : MonoBehaviour
+using Mirror;
+public class RuntimeAvatarLoader : NetworkBehaviour
 {
     public Transform mainPlayer;
     public GameObject defaultAvatar;
-    public string avatarURL;
+    public string[] avatarURLs;
+	[SyncVar]
+	public int avatarIndex;
+	string avatarURL;
     public GameEvent OnLoadingAvatar;
     public GameEvent OnLoadedAvatar;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log($"Started loading avatar. [{Time.timeSinceLevelLoad:F2}]");
+		avatarURL = avatarURLs[ avatarIndex % avatarURLs.Length];
         LoadNewAvatar();
     }
     public void LoadNewAvatar()
     {
         AvatarLoader avatarLoader = new AvatarLoader();
         avatarLoader.LoadAvatar(avatarURL, OnAvatarImported, OnAvatarLoaded);
-        OnLoadingAvatar.Raise();
+		if (isLocalPlayer)
+		{
+			OnLoadingAvatar.Raise();
+		}
     }
     private void OnAvatarImported(GameObject avatar)
     {
@@ -34,7 +41,10 @@ public class RuntimeAvatarLoader : MonoBehaviour
         Debug.Log($"Avatar loaded. [{Time.timeSinceLevelLoad:F2}]\n\n{metaData}");
         // defaultAvatar.SetActive(false);
         AddArmature(avatar);
-        OnLoadedAvatar.Raise();
+		if (isLocalPlayer)
+		{
+			OnLoadedAvatar.Raise();
+		}
     }
 
     void AddArmature(GameObject avatar)

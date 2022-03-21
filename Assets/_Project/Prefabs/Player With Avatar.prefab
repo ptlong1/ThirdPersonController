@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1066796254885952939}
   - component: {fileID: 2942621722932796972}
   - component: {fileID: 7949316106186788735}
+  - component: {fileID: 6428156886158489601}
   m_Layer: 6
   m_Name: Player With Avatar
   m_TagString: Player
@@ -137,7 +138,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: 900f35f3-592b-4821-9b4c-f2cb4131d8e2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &6565977696807352115
@@ -268,11 +269,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8b3e6635771dd48b1d3a14cd3f93c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   mainPlayer: {fileID: 3191571131165806595}
   defaultAvatar: {fileID: 100078, guid: 60fc92d6f342ba147a9feaf3ae587168, type: 3}
-  avatarURL: https://d1a370nemizbjq.cloudfront.net/111bccd9-aca6-48ff-b676-6d4e7c221672.glb
+  avatarURLs:
+  - https://d1a370nemizbjq.cloudfront.net/111bccd9-aca6-48ff-b676-6d4e7c221672.glb
+  - https://d1a370nemizbjq.cloudfront.net/eb9c1820-416c-40f4-86f6-90858160039d.glb
   OnLoadingAvatar: {fileID: 11400000, guid: 83ed27b997bb96842af4f8e1d2d446a6, type: 2}
   OnLoadedAvatar: {fileID: 11400000, guid: 0342a88d747f64d46884a313f804e334, type: 2}
+--- !u!114 &6428156886158489601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810648194239154873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 920c0616f3d6d5949a5de92a46925f1e
+  hasSpawned: 0
 --- !u!1 &6565977695784639321
 GameObject:
   m_ObjectHideFlags: 0

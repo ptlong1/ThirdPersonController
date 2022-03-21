@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     public void HideLoadingAvatarModelWindow()
     {
-        loadingModelWindow.Hide();
+		if (loadingModelWindow != null)
+			loadingModelWindow.Hide();
     }
 }
