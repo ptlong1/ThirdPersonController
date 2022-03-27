@@ -238,9 +238,9 @@ public class PlayerController : NetworkBehaviour
 
     }
 
-	[Server]
-	public string GetPlayerName()
-	{
-		return connectionToClient.connectionId.ToString();
-	}
+    [Server]
+    public string GetPlayerName()
+    {
+        return connectionToClient.connectionId.ToString();
+    }
 }
