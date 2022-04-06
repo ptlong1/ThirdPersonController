@@ -93,6 +93,7 @@ namespace Assets._Project._Scripts.AdditiveLevels
                 Debug.Log("Tell client to load new subscene");
                 conn.Send(new SceneMessage { sceneName = destinationScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true });
 
+				player.GetComponent<PlayerController>().roomName = destinationScene;
                 // Debug.Log($"5. NetworkClient.localPlayer:" +(NetworkClient.localPlayer != null));
                 // Debug.Log($"SendPlayerToNewScene AddPlayerForConnection {conn} netId:{conn.identity.netId}");
                 NetworkServer.AddPlayerForConnection(conn, player);

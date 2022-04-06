@@ -4,9 +4,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 using Cinemachine;
+using System.Runtime.InteropServices;
+using System.Linq;
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : NetworkBehaviour 
 {
+#if UNITY_WEBGL && !UNITY_EDITOR
+	[DllImport("__Internal")]
+	private static extern void ConnectRoom(string str);
+#endif
     [Header("Player")]
     public float moveSpeed = 3f;
     public float sprintSpeed = 6f;
@@ -32,6 +39,9 @@ public class PlayerController : NetworkBehaviour
     [Header("Camera Settings")]
     public Transform playerCameraRoot;
     CinemachineFreeLook freeLookCamera;
+
+	[Header("Voice Room")]
+	[SyncVar] public string roomName;
 
     //Player 
     float speed;
@@ -81,6 +91,10 @@ public class PlayerController : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
+		#if UNITY_WEBGL && !UNITY_EDITOR
+			string shortName = roomName.Split('/').Last();
+			ConnectRoom(shortName);
+		#endif
             freeLookCamera.Follow = playerCameraRoot;
             freeLookCamera.LookAt = playerCameraRoot;
         }
