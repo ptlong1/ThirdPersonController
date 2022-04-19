@@ -138,7 +138,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 900f35f3-592b-4821-9b4c-f2cb4131d8e2
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &6565977696807352115
@@ -207,6 +207,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   playerCameraRoot: {fileID: 6565977695784639320}
+  roomName: 
 --- !u!114 &1066796254885952939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +277,8 @@ MonoBehaviour:
   avatarURLs:
   - https://d1a370nemizbjq.cloudfront.net/111bccd9-aca6-48ff-b676-6d4e7c221672.glb
   - https://d1a370nemizbjq.cloudfront.net/eb9c1820-416c-40f4-86f6-90858160039d.glb
+  avatarIndex: 0
+  quality: 0.1
   OnLoadingAvatar: {fileID: 11400000, guid: 83ed27b997bb96842af4f8e1d2d446a6, type: 2}
   OnLoadedAvatar: {fileID: 11400000, guid: 0342a88d747f64d46884a313f804e334, type: 2}
 --- !u!114 &6428156886158489601

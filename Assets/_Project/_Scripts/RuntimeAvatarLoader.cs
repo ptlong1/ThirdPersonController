@@ -12,6 +12,7 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     public string[] avatarURLs;
 	[SyncVar]
 	public int avatarIndex;
+	public float quality = 0.2f;
 	string avatarURL;
     public GameEvent OnLoadingAvatar;
     public GameEvent OnLoadedAvatar;
@@ -40,6 +41,7 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     {
         Debug.Log($"Avatar loaded. [{Time.timeSinceLevelLoad:F2}]\n\n{metaData}");
         // defaultAvatar.SetActive(false);
+		Simplify(avatar);
         AddArmature(avatar);
 		if (isLocalPlayer)
 		{
@@ -57,4 +59,31 @@ public class RuntimeAvatarLoader : NetworkBehaviour
         Animator mainAnimator = mainPlayer.GetComponent<Animator>();
         mainAnimator.Rebind();
     }
+
+	void Simplify(GameObject avatar)
+	{
+		SkinnedMeshRenderer[] skinnedMeshes = avatar.GetComponentsInChildren<SkinnedMeshRenderer>();
+		foreach (SkinnedMeshRenderer skinnedMesh in skinnedMeshes)
+		{
+			SimplifySkinnedMesh(skinnedMesh);
+		}
+	}
+
+	private void SimplifySkinnedMesh(SkinnedMeshRenderer skinnedMesh)
+	{
+		Mesh sourceMesh = skinnedMesh.sharedMesh;
+		if (sourceMesh == null)
+		{
+			return;
+		}
+		var meshSimplifier = new UnityMeshSimplifier.MeshSimplifier();
+        meshSimplifier.Initialize(sourceMesh);
+
+        // This is where the magic happens, lets simplify!
+        meshSimplifier.SimplifyMesh(quality);
+
+        // Create our final mesh and apply it back to our mesh filter
+        skinnedMesh.sharedMesh = meshSimplifier.ToMesh();
+
+	}
 }
