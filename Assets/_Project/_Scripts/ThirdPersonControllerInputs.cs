@@ -41,6 +41,14 @@ public class ThirdPersonControllerInputs : MonoBehaviour
         SprintInput(value.isPressed);
     }
 
+	public void OnLockCursor(InputValue value)
+	{
+		if (value.isPressed)
+		{
+			cursorLocked = !cursorLocked;
+			SetCursorState(cursorLocked);
+		}
+	}
 	private void JumpInput(bool isPressed)
 	{
         jump = isPressed;
@@ -72,7 +80,7 @@ public class ThirdPersonControllerInputs : MonoBehaviour
 
 	private void SetCursorState(bool focusStatus)
 	{
-		if (EventSystem.current.IsPointerOverGameObject())
+		// if (EventSystem.current.IsPointerOverGameObject())
 			Cursor.lockState = focusStatus?CursorLockMode.Locked:CursorLockMode.None;
 	}
 
