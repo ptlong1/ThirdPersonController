@@ -10,25 +10,25 @@ namespace PlayFab.Networking
     {
         public static MultiplayerNetworkServer Instance { get; private set; }
 
-        public PlayerEvent OnPlayerAdded = new PlayerEvent();
-        public PlayerEvent OnPlayerRemoved = new PlayerEvent();
+        // public PlayerEvent OnPlayerAdded = new PlayerEvent();
+        // public PlayerEvent OnPlayerRemoved = new PlayerEvent();
 
 
-        public List<UnityNetworkConnection> Connections
-        {
-            get { return _connections; }
-            private set { _connections = value; }
-        }
-        private List<UnityNetworkConnection> _connections = new List<UnityNetworkConnection>();
+        // public List<UnityNetworkConnection> Connections
+        // {
+        //     get { return _connections; }
+        //     private set { _connections = value; }
+        // }
+        // private List<UnityNetworkConnection> _connections = new List<UnityNetworkConnection>();
 
-        public class PlayerEvent : UnityEvent<string> { }
+        // public class PlayerEvent : UnityEvent<string> { }
 
         // Use this for initialization
         public override void Awake()
         {
             base.Awake();
             Instance = this;
-            NetworkServer.RegisterHandler<ReceiveAuthenticateMessage>(OnReceiveAuthenticate);
+            // NetworkServer.RegisterHandler<ReceiveAuthenticateMessage>(OnReceiveAuthenticate);
             //_netManager.transport.port = Port;
         }
 
@@ -45,97 +45,97 @@ namespace PlayFab.Networking
             NetworkServer.Shutdown();
         }
 
-        private void OnReceiveAuthenticate(NetworkConnection nconn, ReceiveAuthenticateMessage message)
-        {
-            var conn = _connections.Find(c => c.ConnectionId == nconn.connectionId);
-            if(conn != null)
-            {
-                conn.PlayFabId = message.PlayFabId;
-                conn.IsAuthenticated = true;
-                OnPlayerAdded.Invoke(message.PlayFabId);
-            }
-        }
+        // private void OnReceiveAuthenticate(NetworkConnection nconn, ReceiveAuthenticateMessage message)
+        // {
+        //     var conn = _connections.Find(c => c.ConnectionId == nconn.connectionId);
+        //     if(conn != null)
+        //     {
+        //         conn.PlayFabId = message.PlayFabId;
+        //         conn.IsAuthenticated = true;
+        //         OnPlayerAdded.Invoke(message.PlayFabId);
+        //     }
+        // }
 
-        public override void OnServerConnect(NetworkConnection conn)
-        {
-            base.OnServerConnect(conn);
+        // public override void OnServerConnect(NetworkConnection conn)
+        // {
+        //     base.OnServerConnect(conn);
 
-            Debug.LogWarning("Client Connected");
-            var uconn = _connections.Find(c => c.ConnectionId == conn.connectionId);
-            if (uconn == null)
-            {
-                _connections.Add(new UnityNetworkConnection()
-                {
-                    Connection = conn,
-                    ConnectionId = conn.connectionId,
-                    LobbyId = PlayFabMultiplayerAgentAPI.SessionConfig.SessionId
-                });
-            }
-        }
+        //     Debug.LogWarning("Client Connected");
+        //     var uconn = _connections.Find(c => c.ConnectionId == conn.connectionId);
+        //     if (uconn == null)
+        //     {
+        //         _connections.Add(new UnityNetworkConnection()
+        //         {
+        //             Connection = conn,
+        //             ConnectionId = conn.connectionId,
+        //             LobbyId = PlayFabMultiplayerAgentAPI.SessionConfig.SessionId
+        //         });
+        //     }
+        // }
 
-        public override void OnServerDisconnect(NetworkConnection conn)
-        {
-            base.OnServerDisconnect(conn);
+    //     public override void OnServerDisconnect(NetworkConnection conn)
+    //     {
+    //         base.OnServerDisconnect(conn);
 
-            var uconn = _connections.Find(c => c.ConnectionId == conn.connectionId);
-            if (uconn != null)
-            {
-                if (!string.IsNullOrEmpty(uconn.PlayFabId))
-                {
-                    OnPlayerRemoved.Invoke(uconn.PlayFabId);
-                }
-                _connections.Remove(uconn);
-            }
-        }
-    }
+    //         var uconn = _connections.Find(c => c.ConnectionId == conn.connectionId);
+    //         if (uconn != null)
+    //         {
+    //             if (!string.IsNullOrEmpty(uconn.PlayFabId))
+    //             {
+    //                 OnPlayerRemoved.Invoke(uconn.PlayFabId);
+    //             }
+    //             _connections.Remove(uconn);
+    //         }
+    //     }
+    // }
 
-    [Serializable]
-    public class UnityNetworkConnection
-    {
-        public bool IsAuthenticated;
-        public string PlayFabId;
-        public string LobbyId;
-        public int ConnectionId;
-        public NetworkConnection Connection;
-    }
+//     [Serializable]
+//     public class UnityNetworkConnection
+//     {
+//         public bool IsAuthenticated;
+//         public string PlayFabId;
+//         public string LobbyId;
+//         public int ConnectionId;
+//         public NetworkConnection Connection;
+//     }
 
-    public class CustomGameServerMessageTypes
-    {
-        public const short ReceiveAuthenticate = 900;
-        public const short ShutdownMessage = 901;
-        public const short MaintenanceMessage = 902;
-    }
+//     public class CustomGameServerMessageTypes
+//     {
+//         public const short ReceiveAuthenticate = 900;
+//         public const short ShutdownMessage = 901;
+//         public const short MaintenanceMessage = 902;
+//     }
 
-    public struct ReceiveAuthenticateMessage : NetworkMessage
-    {
-        public string PlayFabId;
-    }
+//     public struct ReceiveAuthenticateMessage : NetworkMessage
+//     {
+//         public string PlayFabId;
+//     }
 
-    public struct ShutdownMessage : NetworkMessage {}
+//     public struct ShutdownMessage : NetworkMessage {}
 
-    [Serializable]
-    public struct MaintenanceMessage : NetworkMessage
-    {
-        public DateTime ScheduledMaintenanceUTC;
-    }
+//     [Serializable]
+//     public struct MaintenanceMessage : NetworkMessage
+//     {
+//         public DateTime ScheduledMaintenanceUTC;
+//     }
 
-    public static class MaintenanceMessageFunctions
-    {
-        public static MaintenanceMessage Deserialize(this NetworkReader reader)
-        {
-            MaintenanceMessage msg = new MaintenanceMessage();
+//     public static class MaintenanceMessageFunctions
+//     {
+//         public static MaintenanceMessage Deserialize(this NetworkReader reader)
+//         {
+//             MaintenanceMessage msg = new MaintenanceMessage();
             
-            var json = PlayFab.PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
-            msg.ScheduledMaintenanceUTC = json.DeserializeObject<DateTime>(reader.ReadString());
+//             var json = PlayFab.PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
+//             msg.ScheduledMaintenanceUTC = json.DeserializeObject<DateTime>(reader.ReadString());
 
-            return msg;
-        }
+//             return msg;
+//         }
 
-        public static void Serialize(this NetworkWriter writer, MaintenanceMessage value)
-        {
-            var json = PlayFab.PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
-            var str = json.SerializeObject(value.ScheduledMaintenanceUTC);
-            writer.Write(str);
-        }
+//         public static void Serialize(this NetworkWriter writer, MaintenanceMessage value)
+//         {
+//             var json = PlayFab.PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
+//             var str = json.SerializeObject(value.ScheduledMaintenanceUTC);
+//             writer.Write(str);
+//         }
     }
 }
