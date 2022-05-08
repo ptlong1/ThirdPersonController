@@ -12,20 +12,30 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     public string[] avatarURLs;
 	[SyncVar]
 	public int avatarIndex;
+	public bool useMeshSimplify = false;
 	public float quality = 0.2f;
 	string avatarURL;
     public GameEvent OnLoadingAvatar;
     public GameEvent OnLoadedAvatar;
+	AvatarLoader avatarLoader;
     // Start is called before the first frame update
     void Start()
     {
+		avatarLoader = new AvatarLoader();
         Debug.Log($"Started loading avatar. [{Time.timeSinceLevelLoad:F2}]");
 		avatarURL = avatarURLs[ avatarIndex % avatarURLs.Length];
         LoadNewAvatar();
     }
+	
+	public void TestAvatar()
+	{
+        // AvatarLoader avatarLoader = new AvatarLoader();
+        avatarLoader.LoadAvatar(avatarURL, OnAvatarImported, OnAvatarLoaded);
+		
+	}
     public void LoadNewAvatar()
     {
-        AvatarLoader avatarLoader = new AvatarLoader();
+        // AvatarLoader avatarLoader = new AvatarLoader();
         avatarLoader.LoadAvatar(avatarURL, OnAvatarImported, OnAvatarLoaded);
 		if (isLocalPlayer)
 		{
@@ -41,7 +51,8 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     {
         Debug.Log($"Avatar loaded. [{Time.timeSinceLevelLoad:F2}]\n\n{metaData}");
         // defaultAvatar.SetActive(false);
-		Simplify(avatar);
+		if (useMeshSimplify)
+			Simplify(avatar);
         AddArmature(avatar);
 		if (isLocalPlayer)
 		{
@@ -84,6 +95,7 @@ public class RuntimeAvatarLoader : NetworkBehaviour
 
         // Create our final mesh and apply it back to our mesh filter
         skinnedMesh.sharedMesh = meshSimplifier.ToMesh();
+		Destroy(sourceMesh);
 
 	}
 }

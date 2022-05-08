@@ -4,15 +4,19 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-
+using Mirror;
 public class LoginWindow : MonoBehaviour
 {
 	public TMP_InputField username;
 	public TMP_InputField password;
 	public LoginAPI loginAPI;
 	public Button loginButton;
+	NetworkManager manager;
     // Start is called before the first frame update
 
+	void Start(){
+		manager = FindObjectOfType<NetworkManager>();
+	}
 	public void UpdateInfo()
 	{
 		loginAPI.username = username.text;
@@ -40,5 +44,6 @@ public class LoginWindow : MonoBehaviour
 	{
 		Debug.Log("Login Sucess");
 		gameObject.SetActive(false);
+		manager.StartClient();
 	}
 }

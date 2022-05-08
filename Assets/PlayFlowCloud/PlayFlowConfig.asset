@@ -16,4 +16,4 @@ MonoBehaviour:
   playflowUrl: 
   serverArguments: 
   enableSSL: 1
-  serverLocation: 2
+  serverLocation: 3

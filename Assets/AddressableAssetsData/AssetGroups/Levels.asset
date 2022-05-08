@@ -21,10 +21,6 @@ MonoBehaviour:
     m_Address: Assets/_Project/_Scenes/Virtual Conference/SubLevel1.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 747a5126d0472a546b9e1e75de601287
-    m_Address: Assets/_Project/_Scenes/Virtual Conference/SubLevel2.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d0145b17c869c884685e30b2bd98430c, type: 2}
   m_SchemaSet:

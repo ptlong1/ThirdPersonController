@@ -834,7 +834,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 186238424}
-  - {fileID: 1075172970}
   - {fileID: 2138415814}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1663,7 +1662,7 @@ MonoBehaviour:
   offlineScene: 
   onlineScene: 
   transport: {fileID: 491867616}
-  networkAddress: sea.ssl.cloud.playflow.app
+  networkAddress: ea.ssl.cloud.playflow.app
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 0}
@@ -1672,7 +1671,6 @@ MonoBehaviour:
   spawnPrefabs: []
   additiveScenes:
   - Assets/_Project/_Scenes/Virtual Conference/SubLevel1.unity
-  - Assets/_Project/_Scenes/Virtual Conference/SubLevel2.unity
   useAddressablesForScenes: 1
   playerAssetReference:
     m_AssetGUID: 920c0616f3d6d5949a5de92a46925f1e
@@ -1881,7 +1879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 50
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1366, y: 768}
   m_ScreenMatchMode: 0
@@ -2403,55 +2401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Debugging: 1
---- !u!1 &1075172969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1075172970}
-  - component: {fileID: 1075172971}
-  m_Layer: 0
-  m_Name: ClientStartup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1075172970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075172969}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.815, y: 1.022934, z: 0.5918597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 155972644}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1075172971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075172969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2565219c715dd4c87ecba75b903bca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IpV4Address: 20.93.8.119
-  port: 30000
-  buildID: af6bf535-b1ff-4473-a666-f7758fa44473
-  sessionID: e660327e-e36f-408b-93b6-3ab2c17cd609
-  regions:
-  - 'NorthEurope '
 --- !u!1 &1120302273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,7 +3374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61247505de16d224187a96ba6ad83202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urlLogin: localhost:8080/auth/login
+  urlLogin: http://localhost:8080/auth/login
   username: 
   password: 
 --- !u!114 &1719121111
@@ -3856,7 +3805,7 @@ Transform:
   - {fileID: 1830610655}
   - {fileID: 229015432}
   m_Father: {fileID: 155972644}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2138415815
 MonoBehaviour:

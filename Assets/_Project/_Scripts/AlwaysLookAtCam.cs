@@ -13,9 +13,10 @@ public class AlwaysLookAtCam : MonoBehaviour {
     void LateUpdate () {
         if (mainCam) {
             // Vector3 euler = Quaternion.LookRotation (-mainCam.transform.position + transform.position, Vector3.up).eulerAngles;
-            Vector3 euler = Quaternion.LookRotation (mainCam.transform.forward, Vector3.up).eulerAngles;
-            euler = new Vector3 (0, euler.y, 0);
-            transform.rotation = Quaternion.Euler (euler);
+            // Vector3 euler = Quaternion.LookRotation (mainCam.transform.forward, Vector3.up).eulerAngles;
+            // euler = new Vector3 (0, euler.y, 0);
+            // transform.rotation = Quaternion.Euler (euler);
+			transform.forward = mainCam.transform.forward;
         }
     }
 }
