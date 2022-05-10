@@ -391,7 +391,7 @@ namespace Assets._Project._Scripts.AdditiveLevels
                 GameObject player = go.Result;
 
                 player.transform.SetParent(null);
-                player.GetComponent<RuntimeAvatarLoader>().avatarIndex = NetworkServer.connections.Count;
+                // player.GetComponent<RuntimeAvatarLoader>().avatarIndex = NetworkServer.connections.Count;
 				player.GetComponent<PlayerController>().roomName = additiveScenes[0];
                 NetworkServer.AddPlayerForConnection(conn, player);
                 Debug.Log($"Done AddPlayerDelayed {conn} {conn.identity}");

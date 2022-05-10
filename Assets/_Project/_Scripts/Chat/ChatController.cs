@@ -35,7 +35,7 @@ namespace Assets._Project._Scripts.Chat
 		{
 			if (!string.IsNullOrWhiteSpace(msg))
 			{
-				string playerName = sender.identity.GetComponent<PlayerController>().GetPlayerName();
+				string playerName = sender.identity.GetComponent<PlayerName>().playerName;
 				RpcReceiveText(playerName, msg);
 			}
 		}

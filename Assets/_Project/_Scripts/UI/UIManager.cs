@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     [Header("Loading Avatar Model Window")]
     public Sprite loadingSprite;
     ModelWindow loadingModelWindow;
+	
+	[ContextMenu("Show Loading Avatar Model Window")]
     public void ShowLoadingAvatarModelWindow()
     {
         loadingModelWindow = Instantiate(modelWindowPrefab, transform);

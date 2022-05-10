@@ -8,10 +8,13 @@ using Mirror;
 public class RuntimeAvatarLoader : NetworkBehaviour
 {
     public Transform mainPlayer;
-    public GameObject defaultAvatar;
-    public string[] avatarURLs;
+    // public GameObject defaultAvatar;
+    // public string[] avatarURLs;
+	// [SyncVar]
+	// public int avatarIndex;
+	public string defaultAvatar;
 	[SyncVar]
-	public int avatarIndex;
+	public string userAvatar;
 	public bool useMeshSimplify = false;
 	public float quality = 0.2f;
 	string avatarURL;
@@ -23,9 +26,31 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     {
 		avatarLoader = new AvatarLoader();
         Debug.Log($"Started loading avatar. [{Time.timeSinceLevelLoad:F2}]");
-		avatarURL = avatarURLs[ avatarIndex % avatarURLs.Length];
-        LoadNewAvatar();
+		// Debug.Log("Assign Avatar");
     }
+	
+	[Command]
+	public void CmdSetUserAvatar(string url)
+	{
+		if (String.IsNullOrEmpty(url) || String.IsNullOrWhiteSpace(url))
+		{
+			userAvatar = defaultAvatar;
+		}
+		else
+		{
+			userAvatar = url;
+		}
+		Debug.Log("CmdSetUserAvatar");
+		avatarURL = userAvatar;
+		RpcLoadNewAvatar(avatarURL);
+	}
+
+	[ClientRpc]
+	void RpcLoadNewAvatar(string url)
+	{
+		avatarURL = url;
+        LoadNewAvatar();
+	}
 	
 	public void TestAvatar()
 	{

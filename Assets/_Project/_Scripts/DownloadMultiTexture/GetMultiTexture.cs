@@ -27,7 +27,7 @@ public class GetMultiTexture : MonoBehaviour
 	Texture2D currentTexture;
 	FilesInfo result;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
 	{
 		// Debug.Log("ABC");
 		ChooseRatio(fileType);

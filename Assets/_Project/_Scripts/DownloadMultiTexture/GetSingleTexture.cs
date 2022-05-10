@@ -10,7 +10,7 @@ public class GetSingleTexture : MonoBehaviour
 	public RawImage image;
 	Texture2D currentTexture;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(CR_AppendTexture());
     }

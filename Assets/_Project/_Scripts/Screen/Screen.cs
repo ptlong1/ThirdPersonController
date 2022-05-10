@@ -5,13 +5,15 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.Video;
 
+
+public enum screenTypeEnum {
+	Picture,
+	Document,
+	Video
+}
+[RequireComponent(typeof(ConferenceData))]
 public class Screen : MonoBehaviour
 {
-	public enum screenTypeEnum {
-		Picture,
-		Document,
-		Video
-	}
 	public screenTypeEnum screenType;
 	public GameObject picturePrefab;
 	public GameObject documentPrefab;
@@ -27,11 +29,11 @@ public class Screen : MonoBehaviour
 		picturePrefab.SetActive(false);
 		documentPrefab.SetActive(false);
 		videoPrefab.SetActive(false);
-		ReadyContent();
     }
 
 	void TurnOnContent(bool value)
 	{
+		ReadyContent();
 		if 	(screenType == screenTypeEnum.Picture)
 		{
 			picturePrefab.SetActive(value);
@@ -56,9 +58,9 @@ public class Screen : MonoBehaviour
 	// [ClientCallback]
 	void OnTriggerEnter(Collider other) {
 		// Debug.Log("Trigger Enter");
-		// if (!other.GetComponent<NetworkBehaviour>()) return;
-		// bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
-		bool isLocalPlayer = true;
+		if (!other.GetComponent<NetworkBehaviour>()) return;
+		bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
+		// bool isLocalPlayer = true;
 		bool isPlayerLayer =other.gameObject.layer == LayerMask.NameToLayer("Player"); 
 		if (isPlayerLayer && isLocalPlayer)
 		{
@@ -70,9 +72,9 @@ public class Screen : MonoBehaviour
 
 	// [ClientCallback]
 	private void OnTriggerExit(Collider other) {
-		// if (!other.GetComponent<NetworkBehaviour>()) return;
-		// bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
-		bool isLocalPlayer = true;
+		if (!other.GetComponent<NetworkBehaviour>()) return;
+		bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
+		// bool isLocalPlayer = true;
 		bool isPlayerLayer =other.gameObject.layer == LayerMask.NameToLayer("Player"); 
 		if (isPlayerLayer && isLocalPlayer)
 		{

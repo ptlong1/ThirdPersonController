@@ -8,6 +8,7 @@ public class LoginAPI : MonoBehaviour
 	public string urlLogin;
 	public string username;
 	public string password;
+	public UserResponse userResponse;
 
 	public void StartLogin()
 	{
@@ -63,6 +64,7 @@ public class LoginAPI : MonoBehaviour
 			else
 			{
 				Debug.Log("Received: " + req.downloadHandler.text);
+				userResponse.ParseJson(req.downloadHandler.text);
 				successCB();
 			}
 		}

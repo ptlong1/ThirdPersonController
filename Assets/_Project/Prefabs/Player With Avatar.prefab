@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 1066796254885952939}
   - component: {fileID: 2942621722932796972}
   - component: {fileID: 7949316106186788735}
+  - component: {fileID: 9047727025405965617}
+  - component: {fileID: 2897542220672871264}
   - component: {fileID: 6428156886158489601}
   m_Layer: 6
   m_Name: Player With Avatar
@@ -388,15 +390,43 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   mainPlayer: {fileID: 3191571131165806595}
-  defaultAvatar: {fileID: 100078, guid: 60fc92d6f342ba147a9feaf3ae587168, type: 3}
-  avatarURLs:
-  - https://d1a370nemizbjq.cloudfront.net/2923050f-d67d-45bc-b47e-2235fc6a3fa2.glb
-  - https://d1a370nemizbjq.cloudfront.net/2923050f-d67d-45bc-b47e-2235fc6a3fa2.glb
-  avatarIndex: 0
+  defaultAvatar: https://d1a370nemizbjq.cloudfront.net/2923050f-d67d-45bc-b47e-2235fc6a3fa2.glb
+  userAvatar: 
   useMeshSimplify: 0
   quality: 0.2
   OnLoadingAvatar: {fileID: 11400000, guid: 83ed27b997bb96842af4f8e1d2d446a6, type: 2}
   OnLoadedAvatar: {fileID: 11400000, guid: 0342a88d747f64d46884a313f804e334, type: 2}
+--- !u!114 &9047727025405965617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810648194239154873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980c16fb91056364083d26672fb4c59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  userResponse: {fileID: 11400000, guid: 9c4350803acca014faebe2fe23bd7cdb, type: 2}
+--- !u!114 &2897542220672871264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810648194239154873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9c7d676a8b9744684f12c46897fa6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerName: 
+  nameDisplay: {fileID: 6046476975338704732}
 --- !u!114 &6428156886158489601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +823,7 @@ GameObject:
   - component: {fileID: 6889635342614762901}
   - component: {fileID: 6046476975338704732}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NameDisplay_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
