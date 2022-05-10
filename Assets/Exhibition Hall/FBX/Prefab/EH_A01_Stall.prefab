@@ -814,6 +814,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 246884614921196058, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: webServerUrl
+      value: http://localhost:8080/root/
+      objectReference: {fileID: 0}
     - target: {fileID: 246884614921196059, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -857,6 +861,18 @@ PrefabInstance:
     - target: {fileID: 5272321279831897242, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272321279991627918, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTIxNzM5MjMsImV4cCI6MTY1MjE5NTUyM30.NYJWY3FQmTHvOFirEpH_ulazZN9SX_DQiSsT-OOm3j0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272321279991627918, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: screenType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272321279991627918, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: urlContent
+      value: http://localhost:8080/cloudconvert/Report.pdf
       objectReference: {fileID: 0}
     - target: {fileID: 5272321280274952956, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -930,6 +946,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6648496408850600038, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: id
+      value: A-01-01
+      objectReference: {fileID: 0}
     - target: {fileID: 7667317578298899812, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -1000,6 +1020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6648496408850600038, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: id
+      value: A-01-03
+      objectReference: {fileID: 0}
     - target: {fileID: 9007064474340333121, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_Name
       value: ScreenMini_03
@@ -1061,6 +1085,10 @@ PrefabInstance:
     - target: {fileID: 6474966727815004280, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648496408850600038, guid: e198cb766f834b44cb567df7476849a6, type: 3}
+      propertyPath: id
+      value: A-01-02
       objectReference: {fileID: 0}
     - target: {fileID: 9007064474340333121, guid: e198cb766f834b44cb567df7476849a6, type: 3}
       propertyPath: m_Name

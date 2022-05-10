@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 public class GetSingleTexture : MonoBehaviour
 {
 	public string fileRequest;
+	public string token;
 	public RawImage image;
 	Texture2D currentTexture;
     // Start is called before the first frame update
@@ -22,10 +24,23 @@ public class GetSingleTexture : MonoBehaviour
 		image.GetComponent<AspectRatioFitter>().aspectRatio = (1f*currentTexture.width)/currentTexture.height;
 	}
 
+	private void AddTokenHeader(UnityWebRequest webRequest)
+	{
+		if (!String.IsNullOrWhiteSpace(token))
+		{
+			webRequest.SetRequestHeader("Authorization", "Bearer " + token);
+		}
+		else
+		{
+			Debug.Log("Token empty");
+		}
+	}
+
 	IEnumerator CR_GetTexture(string url)
 	{
 		using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url))
         {
+			AddTokenHeader(uwr);
             yield return uwr.SendWebRequest();
 
             if (uwr.result != UnityWebRequest.Result.Success)

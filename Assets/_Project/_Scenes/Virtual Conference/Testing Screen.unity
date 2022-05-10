@@ -721,14 +721,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603615423}
     m_Modifications:
-    - target: {fileID: 660197836, guid: fca9e3077ab20c84cb9dc4de046d7b88, type: 3}
-      propertyPath: screenType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 660197836, guid: fca9e3077ab20c84cb9dc4de046d7b88, type: 3}
-      propertyPath: urlContent
-      value: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
-      objectReference: {fileID: 0}
     - target: {fileID: 2543624441110278170, guid: fca9e3077ab20c84cb9dc4de046d7b88, type: 3}
       propertyPath: m_RootOrder
       value: 14

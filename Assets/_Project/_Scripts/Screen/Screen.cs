@@ -19,6 +19,7 @@ public class Screen : MonoBehaviour
 	public GameObject documentPrefab;
 	public GameObject videoPrefab;
 	public string urlContent;
+	public string token;
 	public GameObject content;
 	public GameObject confirmUI;
     // Start is called before the first frame update
@@ -51,16 +52,21 @@ public class Screen : MonoBehaviour
 	void ReadyContent()
 	{
 		picturePrefab.GetComponent<GetSingleTexture>().fileRequest = urlContent;
+		picturePrefab.GetComponent<GetSingleTexture>().token = token;
+		
 		documentPrefab.GetComponent<GetMultiTexture>().fileRequest = urlContent;
-		videoPrefab.GetComponent<VideoPlayer>().url = urlContent;
+		documentPrefab.GetComponent<GetMultiTexture>().token = token;
+		
+		videoPrefab.GetComponent<VideoPlayer>().url = urlContent + "?token=" + token;
+		// videoPrefab.GetComponent<VideoPlayer>().url = urlContent;
 	}
 
 	// [ClientCallback]
 	void OnTriggerEnter(Collider other) {
 		// Debug.Log("Trigger Enter");
-		if (!other.GetComponent<NetworkBehaviour>()) return;
-		bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
-		// bool isLocalPlayer = true;
+		// if (!other.GetComponent<NetworkBehaviour>()) return;
+		// bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
+		bool isLocalPlayer = true;
 		bool isPlayerLayer =other.gameObject.layer == LayerMask.NameToLayer("Player"); 
 		if (isPlayerLayer && isLocalPlayer)
 		{
@@ -72,14 +78,15 @@ public class Screen : MonoBehaviour
 
 	// [ClientCallback]
 	private void OnTriggerExit(Collider other) {
-		if (!other.GetComponent<NetworkBehaviour>()) return;
-		bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
-		// bool isLocalPlayer = true;
+		// if (!other.GetComponent<NetworkBehaviour>()) return;
+		// bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
+		bool isLocalPlayer = true;
 		bool isPlayerLayer =other.gameObject.layer == LayerMask.NameToLayer("Player"); 
 		if (isPlayerLayer && isLocalPlayer)
 		{
 			TurnOnConfirmUI(false);
 			TurnOnContent(false);
+			content.SetActive(false);
 		}
 		
 	}

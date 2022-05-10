@@ -19,6 +19,7 @@ public class GetMultiTexture : MonoBehaviour
 
 	public string webServerUrl;
 	public string fileRequest;
+	public string token;
 	public RectTransform content;
 	public RawImage imagePrefab;
 	public string fileType;
@@ -58,33 +59,46 @@ public class GetMultiTexture : MonoBehaviour
     {
 		Debug.Log("Enter Function GetRequest");
         using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
-        {
+		{
+			AddTokenHeader(webRequest);
 			Debug.Log("Send Web Request");
-            // Request and wait for the desired page.
-            yield return webRequest.SendWebRequest();
+			// Request and wait for the desired page.
+			yield return webRequest.SendWebRequest();
 
-            string[] pages = uri.Split('/');
-            int page = pages.Length - 1;
+			string[] pages = uri.Split('/');
+			int page = pages.Length - 1;
 
-            switch (webRequest.result)
-            {
-                case UnityWebRequest.Result.ConnectionError:
-                case UnityWebRequest.Result.DataProcessingError:
-                    Debug.LogError(pages[page] + ": Error: " + webRequest.error);
-                    break;
-                case UnityWebRequest.Result.ProtocolError:
-                    Debug.LogError(pages[page] + ": HTTP Error: " + webRequest.error);
-                    break;
-                case UnityWebRequest.Result.Success:
-                    Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
+			switch (webRequest.result)
+			{
+				case UnityWebRequest.Result.ConnectionError:
+				case UnityWebRequest.Result.DataProcessingError:
+					Debug.LogError(pages[page] + ": Error: " + webRequest.error);
+					break;
+				case UnityWebRequest.Result.ProtocolError:
+					Debug.LogError(pages[page] + ": HTTP Error: " + webRequest.error);
+					break;
+				case UnityWebRequest.Result.Success:
+					Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
 					result = JsonUtility.FromJson<FilesInfo>(webRequest.downloadHandler.text);
 					// LogFilesInfo(result);
 					StartCoroutine(FillContent(result));
 					// Debug.Log(result);
-                    break;
-            }
-        }
-    }
+					break;
+			}
+		}
+	}
+
+	private void AddTokenHeader(UnityWebRequest webRequest)
+	{
+		if (!String.IsNullOrWhiteSpace(token))
+		{
+			webRequest.SetRequestHeader("Authorization", "Bearer " + token);
+		}
+		else
+		{
+			Debug.Log("Token empty");
+		}
+	}
 
 	void LogFilesInfo(FilesInfo file)
 	{
@@ -98,8 +112,23 @@ public class GetMultiTexture : MonoBehaviour
 		}
 	}
 
+	void FixFilePath(FilesInfo file)
+	{
+		string[] splitPath;
+		foreach (FilesInfo child in file.children)
+		{
+			splitPath = child.path.Split('/');
+			child.path = String.Empty;
+			for (int i = 0; i < 3; ++i)
+			{
+				child.path = splitPath[splitPath.Length - i - 1] + '/' + child.path;
+			}
+		}
+	}
+
 	IEnumerator FillContent(FilesInfo file)
 	{
+		FixFilePath(file);
 		foreach (FilesInfo child in file.children)
 		{
 			// Debug.Log(child.name);
@@ -124,6 +153,7 @@ public class GetMultiTexture : MonoBehaviour
 	{
 		using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url))
         {
+			AddTokenHeader(uwr);
             yield return uwr.SendWebRequest();
 
             if (uwr.result != UnityWebRequest.Result.Success)
@@ -145,6 +175,7 @@ public class GetMultiTexture : MonoBehaviour
 	{
 		uri1 = uri1.TrimEnd('/');
 		uri2 = uri2.TrimStart('/');
+		uri2 = uri2.TrimEnd('/');
 		return string.Format("{0}/{1}", uri1, uri2);
 	}
 

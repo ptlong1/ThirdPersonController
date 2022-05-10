@@ -9,6 +9,7 @@ public class DynamicData
 	public string id;
 	public string url;
 	public string type;
+	public string token;
 }
 
 [CreateAssetMenu(fileName = "DynamicDataContainer", menuName = "ScriptableObjects/DynamicDataContainer")]
@@ -48,6 +49,7 @@ public class DynamicDataContainer : ScriptableObject
 				if (data.id.Equals(id))
 				{
 					screen.urlContent = data.url;
+					screen.token = data.token;
 					if (!Enum.TryParse<screenTypeEnum>(data.type, out screen.screenType))
 					{
 						Debug.Log($"{id} wrong enum type {data.type}");

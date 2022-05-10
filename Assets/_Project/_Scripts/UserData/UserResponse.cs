@@ -38,6 +38,7 @@ public class UserResponse: ScriptableObject
 	public void ParseJson(string jsonFromServer)
 	{
 		JsonUtility.FromJsonOverwrite(jsonFromServer, this);
+		Debug.Log(jsonFromServer);
 		// user = userTemp.user;
 		// token = userTemp.token;
 	}
