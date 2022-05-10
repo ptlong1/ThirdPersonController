@@ -1665,18 +1665,13 @@ MonoBehaviour:
   networkAddress: ea.ssl.cloud.playflow.app
   maxConnections: 100
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 2810648194239154873, guid: 920c0616f3d6d5949a5de92a46925f1e, type: 3}
   autoCreatePlayer: 0
   playerSpawnMethod: 0
   spawnPrefabs: []
   additiveScenes:
   - Assets/_Project/_Scenes/Virtual Conference/SubLevel1.unity
-  useAddressablesForScenes: 1
-  playerAssetReference:
-    m_AssetGUID: 920c0616f3d6d5949a5de92a46925f1e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  useAddressablesForScenes: 0
 --- !u!114 &491867618
 MonoBehaviour:
   m_ObjectHideFlags: 0

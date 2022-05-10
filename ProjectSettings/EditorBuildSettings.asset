@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/_Scenes/Virtual Conference/Bootstrap.unity
     guid: 1cfcba030b802984e8eaaae771871a1e
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Virtual Conference/Offline.unity
+    guid: ab12d37d278dc2c4894e3d14919a4251
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Virtual Conference/SubLevel1.unity
+    guid: c4e0c576c5acac34b9aa9721a77d6f42
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 5db6419928f1d7b48a7649efc5ea91ee, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

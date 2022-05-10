@@ -5,10 +5,10 @@ using PlayFab.Networking;
 using Mirror;
 using UnityEngine.SceneManagement;
 using Mirror.Examples.AdditiveLevels;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.ResourceProviders;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceLocations;
+// using UnityEngine.AddressableAssets;
+// using UnityEngine.ResourceManagement.ResourceProviders;
+// using UnityEngine.ResourceManagement.AsyncOperations;
+// using UnityEngine.ResourceManagement.ResourceLocations;
 using System;
 
 #if UNITY_EDITOR
@@ -25,7 +25,7 @@ namespace Assets._Project._Scripts.AdditiveLevels
         // public AssetReference[] additiveScenes;
         public string[] additiveScenes;
         public bool useAddressablesForScenes;
-        SceneInstance currentSceneInstance;
+        // SceneInstance currentSceneInstance;
         [Header("Fade Control - See child FadeCanvas")]
 
         // [Tooltip("Reference to FadeInOut script on child FadeCanvas")]
@@ -36,23 +36,23 @@ namespace Assets._Project._Scripts.AdditiveLevels
 
         // This is managed in LoadAdditive, UnloadAdditive, and checked in OnClientSceneChanged
         bool isInTransition;
-        [Header("Player AssetReference")]
-        public AssetReference playerAssetReference;
-        bool playerRegistered;
+        // [Header("Player AssetReference")]
+        // public AssetReference playerAssetReference;
+        // bool playerRegistered;
 
         #region Scene Management
 
         public override void OnStartClient()
         {
             base.OnStartClient();
-            playerRegistered = false;
+            // playerRegistered = false;
             Debug.Log($"OnStartClient: Loading player asset");
-            playerAssetReference.LoadAssetAsync<GameObject>().Completed += (go) =>
-            {
-                NetworkClient.RegisterPrefab(go.Result);
-                playerRegistered = true;
-                Debug.Log($"OnStartClient: Done loading and RegisterPrefab player asset");
-            };
+            // playerAssetReference.LoadAssetAsync<GameObject>().Completed += (go) =>
+            // {
+            //     NetworkClient.RegisterPrefab(go.Result);
+            //     playerRegistered = true;
+            //     Debug.Log($"OnStartClient: Done loading and RegisterPrefab player asset");
+            // };
         }
 
         public override void OnStartServer()
@@ -84,64 +84,64 @@ namespace Assets._Project._Scripts.AdditiveLevels
             {
                 if (useAddressablesForScenes)
                 {
-                    AsyncOperationHandle<IList<IResourceLocation>> loadHandle = Addressables.LoadResourceLocationsAsync(additiveScene, typeof(SceneInstance));
-                    loadHandle.Completed += loadHandle_Completed;
-                    yield return loadHandle;
-                    IList<IResourceLocation> locations = loadHandle.Result;
-                    string scenePath;
+                //     AsyncOperationHandle<IList<IResourceLocation>> loadHandle = Addressables.LoadResourceLocationsAsync(additiveScene, typeof(SceneInstance));
+                //     loadHandle.Completed += loadHandle_Completed;
+                //     yield return loadHandle;
+                //     IList<IResourceLocation> locations = loadHandle.Result;
+                //     string scenePath;
 
-                    #if UNITY_EDITOR
-                    bool bundle = false;
-                    #endif
+                //     #if UNITY_EDITOR
+                //     bool bundle = false;
+                //     #endif
 
-                    Debug.Log($"OnFindLocationsForScene : {locations[0].InternalId}");
-                    if (Addressables.InternalIdTransformFunc != null)
-                    {
-                        scenePath = Addressables.InternalIdTransformFunc(locations[0]);
-                    }
-                    else
-                    {
-                        scenePath = locations[0].InternalId;
-                    }
-                    Debug.Log(scenePath);
-                    Debug.Log(locations[0].HasDependencies);
-                    if (locations[0].HasDependencies)
-                    {
-                        Debug.Log("Has Dependencies");
+                //     Debug.Log($"OnFindLocationsForScene : {locations[0].InternalId}");
+                //     if (Addressables.InternalIdTransformFunc != null)
+                //     {
+                //         scenePath = Addressables.InternalIdTransformFunc(locations[0]);
+                //     }
+                //     else
+                //     {
+                //         scenePath = locations[0].InternalId;
+                //     }
+                //     Debug.Log(scenePath);
+                //     Debug.Log(locations[0].HasDependencies);
+                //     if (locations[0].HasDependencies)
+                //     {
+                //         Debug.Log("Has Dependencies");
 
-                        AsyncOperationHandle<IList<IAssetBundleResource>> depHandle =
-                            Addressables.LoadAssetsAsync<IAssetBundleResource>(locations[0].Dependencies,null);
-                        depHandle.Completed += depHandle_Completed;
-                        yield return depHandle;
+                //         AsyncOperationHandle<IList<IAssetBundleResource>> depHandle =
+                //             Addressables.LoadAssetsAsync<IAssetBundleResource>(locations[0].Dependencies,null);
+                //         depHandle.Completed += depHandle_Completed;
+                //         yield return depHandle;
 
-                        foreach( IAssetBundleResource resource in depHandle.Result)
-                        {
-                            if (resource != null && resource.GetAssetBundle() != null)
-                            {
-                                #if UNITY_EDITOR
-                                bundle = true;
-                                // break;
-                                #endif
-                            }
-                        }
-                    }
-                    LoadSceneParameters parameters = new LoadSceneParameters{
-                        loadSceneMode = LoadSceneMode.Additive,
-                        localPhysicsMode = LocalPhysicsMode.Physics3D
-                    };
+                //         foreach( IAssetBundleResource resource in depHandle.Result)
+                //         {
+                //             if (resource != null && resource.GetAssetBundle() != null)
+                //             {
+                //                 #if UNITY_EDITOR
+                //                 bundle = true;
+                //                 // break;
+                //                 #endif
+                //             }
+                //         }
+                //     }
+                //     LoadSceneParameters parameters = new LoadSceneParameters{
+                //         loadSceneMode = LoadSceneMode.Additive,
+                //         localPhysicsMode = LocalPhysicsMode.Physics3D
+                //     };
 
-                    #if UNITY_EDITOR
-                    if (bundle)
-                    {
-                        yield return SceneManager.LoadSceneAsync(scenePath, parameters);
-                    }
-                    else
-                    {
-                        yield return EditorSceneManager.LoadSceneAsyncInPlayMode(scenePath, parameters);
-                    }
-                    #else
-                    yield return SceneManager.LoadSceneAsync(scenePath, parameters);
-                    #endif
+                //     #if UNITY_EDITOR
+                //     if (bundle)
+                //     {
+                //         yield return SceneManager.LoadSceneAsync(scenePath, parameters);
+                //     }
+                //     else
+                //     {
+                //         yield return EditorSceneManager.LoadSceneAsyncInPlayMode(scenePath, parameters);
+                //     }
+                //     #else
+                //     yield return SceneManager.LoadSceneAsync(scenePath, parameters);
+                //     #endif
 
                 }
                 else
@@ -159,48 +159,48 @@ namespace Assets._Project._Scripts.AdditiveLevels
             Debug.Log("3. Loaded levels into game successfully");
         }
 
-        private void loadHandle_Completed(AsyncOperationHandle<IList<IResourceLocation>> obj)
-        {
-            if (obj.Status == AsyncOperationStatus.Failed)
-            {
-                Debug.Log("Load Location failed");
-            }
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                Debug.Log("Load Location Succeeded");
-            }
-        }
+        // private void loadHandle_Completed(AsyncOperationHandle<IList<IResourceLocation>> obj)
+        // {
+        //     if (obj.Status == AsyncOperationStatus.Failed)
+        //     {
+        //         Debug.Log("Load Location failed");
+        //     }
+        //     if (obj.Status == AsyncOperationStatus.Succeeded)
+        //     {
+        //         Debug.Log("Load Location Succeeded");
+        //     }
+        // }
 
-        private void depHandle_Completed(AsyncOperationHandle<IList<IAssetBundleResource>> obj)
-        {
-            if (obj.Status == AsyncOperationStatus.Failed)
-            {
-                Debug.Log("Load Dependencies failed");
-            }
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                Debug.Log("Load Dependencies Succeeded");
-            }
-        }
+        // private void depHandle_Completed(AsyncOperationHandle<IList<IAssetBundleResource>> obj)
+        // {
+        //     if (obj.Status == AsyncOperationStatus.Failed)
+        //     {
+        //         Debug.Log("Load Dependencies failed");
+        //     }
+        //     if (obj.Status == AsyncOperationStatus.Succeeded)
+        //     {
+        //         Debug.Log("Load Dependencies Succeeded");
+        //     }
+        // }
 
-        private void OnFindLocationsForScene(AsyncOperationHandle<IList<IResourceLocation>> obj)
-        {
-            IList<IResourceLocation> locations = obj.Result;
-            string scenePath;
-            Debug.Log($"OnFindLocationsForScene : {locations[0].InternalId}");
-            if (Addressables.InternalIdTransformFunc != null)
-            {
-                scenePath = Addressables.InternalIdTransformFunc(locations[0]);
-            }
-            else 
-            {
-                scenePath = locations[0].InternalId;
-            }
-            SceneManager.LoadSceneAsync(scenePath, new LoadSceneParameters{
-                loadSceneMode = LoadSceneMode.Additive,
-                localPhysicsMode = LocalPhysicsMode.Physics3D
-            });
-        }
+        // private void OnFindLocationsForScene(AsyncOperationHandle<IList<IResourceLocation>> obj)
+        // {
+        //     IList<IResourceLocation> locations = obj.Result;
+        //     string scenePath;
+        //     Debug.Log($"OnFindLocationsForScene : {locations[0].InternalId}");
+        //     if (Addressables.InternalIdTransformFunc != null)
+        //     {
+        //         scenePath = Addressables.InternalIdTransformFunc(locations[0]);
+        //     }
+        //     else 
+        //     {
+        //         scenePath = locations[0].InternalId;
+        //     }
+        //     SceneManager.LoadSceneAsync(scenePath, new LoadSceneParameters{
+        //         loadSceneMode = LoadSceneMode.Additive,
+        //         localPhysicsMode = LocalPhysicsMode.Physics3D
+        //     });
+        // }
 
         /// <summary>
         /// Called from ClientChangeScene immediately before SceneManager.LoadSceneAsync is executed
@@ -232,7 +232,7 @@ namespace Assets._Project._Scripts.AdditiveLevels
             {
                 if (useAddressablesForScenes)
                 {
-                    yield return Addressables.UnloadSceneAsync(currentSceneInstance);
+                    // yield return Addressables.UnloadSceneAsync(currentSceneInstance);
                 }
                 else
                 {
@@ -265,14 +265,14 @@ namespace Assets._Project._Scripts.AdditiveLevels
             {
                 if (useAddressablesForScenes)
                 {
-                    AsyncOperationHandle<SceneInstance> loadHandle;
-                    loadHandle = Addressables.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-                    loadHandle.Completed += (go) =>
-                    {
-                        currentSceneInstance = go.Result;
+                    // AsyncOperationHandle<SceneInstance> loadHandle;
+                    // loadHandle = Addressables.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+                    // loadHandle.Completed += (go) =>
+                    // {
+                    //     currentSceneInstance = go.Result;
                         
-                    };
-                    yield return loadHandle;
+                    // };
+                    // yield return loadHandle;
                 }
                 else
                 {
@@ -333,8 +333,8 @@ namespace Assets._Project._Scripts.AdditiveLevels
             Debug.Log("conn.identity null: " + conn.identity == null);
             if (conn.identity == null)
             {
-                // StartCoroutine(AddPlayerDelayed(conn));
-                StartCoroutine(AddPlayerAssetDelayed(conn));
+                StartCoroutine(AddPlayerDelayed(conn));
+                // StartCoroutine(AddPlayerAssetDelayed(conn));
             }
             Debug.Log($"5. OnServerReady {conn} {conn.identity}, loaded player");
         }
@@ -363,40 +363,43 @@ namespace Assets._Project._Scripts.AdditiveLevels
 
             // Wait for end of frame before adding the player to ensure Scene Message goes first
             yield return new WaitForEndOfFrame();
+			player.GetComponent<PlayerController>().roomName = additiveScenes[0];
+			// NetworkServer.AddPlayerForConnection(conn, player);
+			// Debug.Log($"Done AddPlayerDelayed {conn} {conn.identity}");
 
             // Finally spawn the player object for this connection
             NetworkServer.AddPlayerForConnection(conn, player);
             Debug.Log($"Done AddPlayerDelayed {conn} {conn.identity}");
         }
-        IEnumerator AddPlayerAssetDelayed(NetworkConnection conn)
-        {
-            Debug.Log($"AddPlayerDelayed {conn} {conn.identity}");
-            // Debug.Log("Host go in here");
-            // Wait for server to async load all subscenes for game instances
-            while (!subscenesLoaded)
-                yield return null;
+        // IEnumerator AddPlayerAssetDelayed(NetworkConnection conn)
+        // {
+        //     Debug.Log($"AddPlayerDelayed {conn} {conn.identity}");
+        //     // Debug.Log("Host go in here");
+        //     // Wait for server to async load all subscenes for game instances
+        //     while (!subscenesLoaded)
+        //         yield return null;
 
-            // Send Scene msg to client telling it to load the first additive scene
-            conn.Send(new SceneMessage { sceneName = additiveScenes[0], sceneOperation = SceneOperation.LoadAdditive, customHandling = true });
+        //     // Send Scene msg to client telling it to load the first additive scene
+        //     conn.Send(new SceneMessage { sceneName = additiveScenes[0], sceneOperation = SceneOperation.LoadAdditive, customHandling = true });
 
-            // We have Network Start Positions in first additive scene...pick one
-            Transform start = GetStartPosition();
-            yield return new WaitForEndOfFrame();
+        //     // We have Network Start Positions in first additive scene...pick one
+        //     Transform start = GetStartPosition();
+        //     yield return new WaitForEndOfFrame();
 
-            // Instantiate player as child of start position - this will place it in the additive scene
-            // This also lets player object "inherit" pos and rot from start position transform
-            Debug.Log($"AddPlayerAssetDelayed : Start add player asset");
-            playerAssetReference.InstantiateAsync(start).Completed += (go) =>
-            {
-                GameObject player = go.Result;
+        //     // Instantiate player as child of start position - this will place it in the additive scene
+        //     // This also lets player object "inherit" pos and rot from start position transform
+        //     Debug.Log($"AddPlayerAssetDelayed : Start add player asset");
+        //     playerAssetReference.InstantiateAsync(start).Completed += (go) =>
+        //     {
+        //         GameObject player = go.Result;
 
-                player.transform.SetParent(null);
-                // player.GetComponent<RuntimeAvatarLoader>().avatarIndex = NetworkServer.connections.Count;
-				player.GetComponent<PlayerController>().roomName = additiveScenes[0];
-                NetworkServer.AddPlayerForConnection(conn, player);
-                Debug.Log($"Done AddPlayerDelayed {conn} {conn.identity}");
-            };
-        }
+        //         player.transform.SetParent(null);
+        //         // player.GetComponent<RuntimeAvatarLoader>().avatarIndex = NetworkServer.connections.Count;
+		// 		player.GetComponent<PlayerController>().roomName = additiveScenes[0];
+        //         NetworkServer.AddPlayerForConnection(conn, player);
+        //         Debug.Log($"Done AddPlayerDelayed {conn} {conn.identity}");
+        //     };
+        // }
         
 
         #endregion
