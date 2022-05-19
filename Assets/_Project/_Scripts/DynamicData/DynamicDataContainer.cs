@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets._Project._Scripts.Screen;
 using UnityEngine;
 
 [Serializable]
@@ -10,6 +11,9 @@ public class DynamicData
 	public string url;
 	public string type;
 	public string token;
+	// public string _id;
+	// public string __v;
+
 }
 
 [CreateAssetMenu(fileName = "DynamicDataContainer", menuName = "ScriptableObjects/DynamicDataContainer")]
@@ -34,14 +38,14 @@ public class DynamicDataContainer : ScriptableObject
 	public void ParseJsonToList(string jsonFromServer)
 	{
 		string json = fixJson(jsonFromServer);
-		dynamicDatas = JsonUtility.FromJson<DynamicDataContainer>(json).dynamicDatas;
+		JsonUtility.FromJsonOverwrite(json, this);
 	}
 
 	[ContextMenu("Find And Replace Url")]
 	public void FindAndReplaceUrl()
 	{
-		Screen[] screens = FindObjectsOfType<Screen>(true);
-		foreach(Screen screen in screens)
+		ConferenceScreen[] screens = FindObjectsOfType<ConferenceScreen>(true);
+		foreach(ConferenceScreen screen in screens)
 		{
 			string id = screen.GetComponent<ConferenceData>().id;
 			foreach (DynamicData data in dynamicDatas)

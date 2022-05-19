@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2651508817973624479}
   - component: {fileID: 2651508818529519569}
   - component: {fileID: 3576761076471066231}
+  - component: {fileID: 5589380579490909989}
   m_Layer: 0
   m_Name: EH_A01_Screen_01
   m_TagString: Untagged
@@ -35,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 2651508817001010960}
   - {fileID: 2651508817075814750}
+  - {fileID: 8640115990691106126}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,6 +119,7 @@ MonoBehaviour:
   documentPrefab: {fileID: 7965211061762878474}
   videoPrefab: {fileID: 2651508816983552188}
   urlContent: 'https://picsum.photos/200/300 '
+  token: 
   content: {fileID: 2651508817075814751}
   confirmUI: {fileID: 2651508817001010961}
 --- !u!54 &2651508818529519569
@@ -148,6 +151,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+--- !u!114 &5589380579490909989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540653830327321455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c680182f7e9714084320ced615254c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 8640115990691106126}
 --- !u!1 &2651508816983552188
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileRequest: 
+  token: 
   image: {fileID: 2651508818529519574}
 --- !u!114 &2651508818529519574
 MonoBehaviour:
@@ -1525,6 +1542,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &6296315425688479310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8640115990691106126}
+  m_Layer: 0
+  m_Name: CameraView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8640115990691106126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6296315425688479310}
+  m_LocalRotation: {x: -0.14519578, y: 0.6888537, z: -0.14380898, w: -0.6954982}
+  m_LocalPosition: {x: 2.3308182, y: 1.6159474, z: 0.07268306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 540653830327164751}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7965211061762878474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   webServerUrl: http://localhost:3000
   fileRequest: http://localhost:3000/files/abc.pptx
+  token: 
   content: {fileID: 7965211061970437026}
   imagePrefab: {fileID: 3980791950310568252, guid: 66558f7ebdaa6e1448a3b2ab9fa1a338, type: 3}
   fileType: pptx

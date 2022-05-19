@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using Mirror;
+using ScriptableObjectArchitecture;
 public class LoginWindow : MonoBehaviour
 {
 	public TMP_InputField username;
@@ -12,6 +13,7 @@ public class LoginWindow : MonoBehaviour
 	public LoginAPI loginAPI;
 	public Button loginButton;
 	NetworkManager manager;
+	public GameEvent OnLoginSuccess;
     // Start is called before the first frame update
 
 	void Start(){
@@ -44,6 +46,7 @@ public class LoginWindow : MonoBehaviour
 	{
 		Debug.Log("Login Sucess");
 		gameObject.SetActive(false);
-		manager.StartClient();
+		OnLoginSuccess.Raise();
+		// manager.StartClient();
 	}
 }
