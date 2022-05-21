@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConferenceData : MonoBehaviour
+[CreateAssetMenu(fileName = "ConferenceData", menuName = "ScriptableObjects/ConferenceData")]
+public class ConferenceData : ScriptableObject
 {
-	public string id;
+	[SerializeField] private string conferenceId;
+
+	public string ConferenceId { get => conferenceId; set => conferenceId = value; }
 }

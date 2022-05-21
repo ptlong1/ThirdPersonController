@@ -6,6 +6,7 @@ public class DynamicDataManager : MonoBehaviour
 {
 	public DynamicDataContainer dataContainer;
 	public UserResponse userResponse;
+	public ConferenceData conferenceData;
 	public string jsonUrl;
 	public string jsonData;
 	public bool parseOnStart;
@@ -31,7 +32,7 @@ public class DynamicDataManager : MonoBehaviour
 
 	IEnumerator CR_TryGetJsonData(string url)
 	{
-		yield return StartCoroutine(WebServerAPI.CR_GetResouceJson(userResponse.token));
+		yield return StartCoroutine(WebServerAPI.CR_GetResouceJson(userResponse.token, conferenceData.ConferenceId));
 		jsonData = WebServerAPI.Result;
 	}
 }

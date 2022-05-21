@@ -6,7 +6,8 @@ using UnityEngine.Networking;
 
 public static class WebServerAPI  
 {
-	public static string resourceUrl = "http://localhost:8080/resources/all-resource-url";
+	public static string resourceUrl = "http://localhost:8080/resources/";
+	public static string conferenceUrl = "http://localhost:8080/conference/";
 
 	static string result;
 
@@ -23,10 +24,18 @@ public static class WebServerAPI
 			Debug.Log("Token empty");
 		}
 	}
-
-	public static IEnumerator CR_GetResouceJson(string token)
+	public static string Combine(string uri1, string uri2)
 	{
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(resourceUrl))
+		uri1 = uri1.TrimEnd('/');
+		uri2 = uri2.TrimStart('/');
+		uri2 = uri2.TrimEnd('/');
+		return string.Format("{0}/{1}", uri1, uri2);
+	}
+
+	public static IEnumerator CR_GetResouceJson(string token, string conferenceId)
+	{
+		string newUrl = Combine(conferenceUrl, conferenceId);
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(newUrl))
 		{
 			AddTokenHeader(webRequest, token);
 			Debug.Log("Send Web Request");

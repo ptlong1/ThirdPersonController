@@ -322,7 +322,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headerId: {fileID: 360162711439308645}
   updateTable: {fileID: 360162711458833228}
-  updateUrlApi: http://localhost:8080/resources/update-url
+  updateUrlApi: http://localhost:8080/resources/
+  userResponse: {fileID: 0}
+  conferenceData: {fileID: 11400000, guid: 23d6e764e5d8ea94d894a8f58ef82e10, type: 2}
 --- !u!1 &360162710925601233
 GameObject:
   m_ObjectHideFlags: 0

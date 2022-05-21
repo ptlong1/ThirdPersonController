@@ -9,7 +9,7 @@ namespace Assets._Project._Scripts.ChangeData
 	public class ChangeDataController : MonoBehaviour
 	{
 		public CinemachineVirtualCamera virtualCam;
-		ConferenceData[] conferenceObjects;
+		ConferenceObjectData[] conferenceObjects;
 		private int currentObjectIdx;
 		public UpdateDataWindow updateDataWindow;
 
@@ -25,7 +25,7 @@ namespace Assets._Project._Scripts.ChangeData
 		}
 
 		private void Awake() {
-			conferenceObjects = FindObjectsOfType<ConferenceData>();
+			conferenceObjects = FindObjectsOfType<ConferenceObjectData>();
 			CurrentObjectIdx = 0;
 		}
 		// Start is called before the first frame update
@@ -38,7 +38,7 @@ namespace Assets._Project._Scripts.ChangeData
 			CurrentObjectIdx += value;
 		}
 
-		void UpdateInfo(ConferenceData data)
+		void UpdateInfo(ConferenceObjectData data)
 		{
 			updateDataWindow.Id = data.id;
 			CameraView cameraView = data.GetComponent<CameraView>();

@@ -39,6 +39,7 @@ public class UpdateDataWindow : MonoBehaviour
 	public string updateUrlApi;
 
 	public UserResponse userResponse;
+	public ConferenceData conferenceData;
 
 	// Start is called before the first frame update
 	void Start()
@@ -97,9 +98,12 @@ public class UpdateDataWindow : MonoBehaviour
 	}
 	IEnumerator CR_UpdateData()
 	{
-		string postBody = $"{{\"id\": \"{Id}\",\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\"}}";
+		// string postBody = $"{{\"id\": \"{Id}\",\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\"}}";
+		string postBody = $"{{\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\",\"conferenceId\": \"{conferenceData.ConferenceId}\"}}";
 		Debug.Log(postBody);
-		using (var req = new UnityWebRequest(updateUrlApi, "POST"))
+		string newUpdateUrl = WebServerAPI.Combine(updateUrlApi, Id + "/update");
+		Debug.Log(newUpdateUrl);
+		using (var req = new UnityWebRequest(newUpdateUrl, "POST"))
 		{
 			AddTokenHeader(req);
 			byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(postBody);

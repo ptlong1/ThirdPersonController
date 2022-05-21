@@ -47,7 +47,7 @@ public class DynamicDataContainer : ScriptableObject
 		ConferenceScreen[] screens = FindObjectsOfType<ConferenceScreen>(true);
 		foreach(ConferenceScreen screen in screens)
 		{
-			string id = screen.GetComponent<ConferenceData>().id;
+			string id = screen.GetComponent<ConferenceObjectData>().id;
 			foreach (DynamicData data in dynamicDatas)
 			{
 				if (data.id.Equals(id))

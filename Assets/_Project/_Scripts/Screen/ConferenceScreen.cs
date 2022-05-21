@@ -13,7 +13,7 @@ namespace Assets._Project._Scripts.Screen
 		Document,
 		Video
 	}
-	[RequireComponent(typeof(ConferenceData))]
+	[RequireComponent(typeof(ConferenceObjectData))]
 	public class ConferenceScreen : MonoBehaviour
 	{
 		public screenTypeEnum screenType;

@@ -46,8 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataContainer: {fileID: 11400000, guid: 9a09afac497db4043a1359c80cf3f955, type: 2}
   userResponse: {fileID: 11400000, guid: 9c4350803acca014faebe2fe23bd7cdb, type: 2}
+  conferenceData: {fileID: 11400000, guid: 23d6e764e5d8ea94d894a8f58ef82e10, type: 2}
   jsonUrl: 
   jsonData: 
+  parseOnStart: 0
 --- !u!114 &927802233984074082
 MonoBehaviour:
   m_ObjectHideFlags: 0
