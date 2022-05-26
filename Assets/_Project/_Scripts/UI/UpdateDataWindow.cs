@@ -7,6 +7,7 @@ using System.Web;
 using DG.Tweening;
 using UnityEngine.Networking;
 
+
 public class UpdateDataWindow : MonoBehaviour
 {
 	public TMP_Text headerId;
@@ -16,7 +17,7 @@ public class UpdateDataWindow : MonoBehaviour
 		get {return id;}
 		set { 
 			id = value;
-			headerId.text = id;
+			headerId.text = "ID: " + id;
 		}	
 	}
 	private string url;
@@ -40,6 +41,8 @@ public class UpdateDataWindow : MonoBehaviour
 
 	public UserResponse userResponse;
 	public ConferenceData conferenceData;
+	public TMP_Text contentUrl;
+	// public Button
 
 	// Start is called before the first frame update
 	void Start()
@@ -95,6 +98,13 @@ public class UpdateDataWindow : MonoBehaviour
 				return;
 			}
 		StartCoroutine(CR_UpdateData());
+	}
+
+	void UpdateSuccessCB()
+	{
+		CloseUI();
+		contentUrl.text = String.Empty;
+
 	}
 	IEnumerator CR_UpdateData()
 	{
