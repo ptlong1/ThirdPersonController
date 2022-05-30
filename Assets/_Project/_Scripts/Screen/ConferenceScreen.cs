@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.Video;
+using ScriptableObjectArchitecture;
 
 namespace Assets._Project._Scripts.Screen
 {
@@ -24,21 +25,26 @@ namespace Assets._Project._Scripts.Screen
 		public string token;
 		public GameObject content;
 		public GameObject confirmUI;
+		public GameEvent OnTurnOnContent;
+		public GameEvent OnTurnOffContent;
+		public bool defaultOn;
 		// Start is called before the first frame update
 		void Start()
 		{
-			content.SetActive(false);
+			// content.SetActive(false);
 			confirmUI.SetActive(false);
-			picturePrefab.SetActive(false);
-			documentPrefab.SetActive(false);
-			videoPrefab.SetActive(false);
+			// picturePrefab.SetActive(false);
+			// documentPrefab.SetActive(false);
+			// videoPrefab.SetActive(false);
 		}
 
-		void TurnOnContent(bool value)
+		public void TurnOnContent(bool value)
 		{
 			ReadyContent();
+			Debug.Log("In TurnOnContent " + value);
 			if (screenType == screenTypeEnum.Picture)
 			{
+			Debug.Log("In TurnOnContent Pictrue " + value);
 				picturePrefab.SetActive(value);
 			}
 			if (screenType == screenTypeEnum.Document)
@@ -49,6 +55,22 @@ namespace Assets._Project._Scripts.Screen
 			{
 				videoPrefab.SetActive(value);
 			}
+			if (value)
+			{
+				if (OnTurnOnContent != null)
+				OnTurnOnContent.Raise();
+			}
+			else{
+				if (OnTurnOffContent != null)
+				OnTurnOffContent.Raise();
+			}
+		}
+
+		public void ShowContent()
+		{
+			Debug.Log("Show Content Banner");
+			gameObject.SetActive(true);
+			TurnOnContent(true);
 		}
 
 		void ReadyContent()
@@ -59,17 +81,29 @@ namespace Assets._Project._Scripts.Screen
 			documentPrefab.GetComponent<GetMultiTexture>().fileRequest = urlContent;
 			documentPrefab.GetComponent<GetMultiTexture>().token = token;
 
-			videoPrefab.GetComponent<VideoPlayer>().url = urlContent + "?token=" + token;
+			videoPrefab.GetComponent<VideoPlayer>().url = urlContent + "&token=" + token;
 			// videoPrefab.GetComponent<VideoPlayer>().url = urlContent;
+		}
+
+		[ContextMenu("Restart Content")]
+		public void RestartContent()
+		{
+			ReadyContent();
+			if (content.activeInHierarchy)
+			{
+				content.SetActive(false);
+				content.SetActive(true);
+
+			}
 		}
 
 		// [ClientCallback]
 		void OnTriggerEnter(Collider other)
 		{
 			// Debug.Log("Trigger Enter");
-			// if (!other.GetComponent<NetworkBehaviour>()) return;
-			// bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
-			bool isLocalPlayer = true;
+			if (!other.GetComponent<NetworkBehaviour>()) return;
+			bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
+			// bool isLocalPlayer = true;
 			bool isPlayerLayer = other.gameObject.layer == LayerMask.NameToLayer("Player");
 			if (isPlayerLayer && isLocalPlayer)
 			{
@@ -82,9 +116,9 @@ namespace Assets._Project._Scripts.Screen
 		// [ClientCallback]
 		private void OnTriggerExit(Collider other)
 		{
-			// if (!other.GetComponent<NetworkBehaviour>()) return;
-			// bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
-			bool isLocalPlayer = true;
+			if (!other.GetComponent<NetworkBehaviour>()) return;
+			bool isLocalPlayer = other.GetComponent<NetworkBehaviour>().isLocalPlayer;
+			// bool isLocalPlayer = true;
 			bool isPlayerLayer = other.gameObject.layer == LayerMask.NameToLayer("Player");
 			if (isPlayerLayer && isLocalPlayer)
 			{

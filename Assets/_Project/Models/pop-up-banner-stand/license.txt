@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pop-up-banner-stand
+* source:	https://sketchfab.com/3d-models/pop-up-banner-stand-b6407a9bd61a4ba79199ca516bad621f
+* author:	Kevin (https://sketchfab.com/koskow)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pop-up-banner-stand" (https://sketchfab.com/3d-models/pop-up-banner-stand-b6407a9bd61a4ba79199ca516bad621f) by Kevin (https://sketchfab.com/koskow) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

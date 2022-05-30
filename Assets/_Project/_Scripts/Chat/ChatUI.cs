@@ -4,6 +4,7 @@ using Mirror;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
 
 namespace Assets._Project._Scripts.Chat
 {
@@ -33,6 +34,25 @@ namespace Assets._Project._Scripts.Chat
 			yield return null;
 
 			scrollbar.value = 0;
+		}
+		public void OpenUI()
+		{
+			if (!gameObject.activeInHierarchy)
+			{
+				gameObject.SetActive(true);
+				transform.DOScale(1f, 0.3f).From(0f);
+			}
+		}
+
+		public void CloseUI()
+		{
+			if (gameObject.activeInHierarchy)
+			{
+				transform
+					.DOScale(0f, 0.3f)
+					.From(1f)
+					.OnComplete( () => gameObject.SetActive(false));
+			}
 		}
 
 	}

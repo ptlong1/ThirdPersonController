@@ -11,6 +11,7 @@ public class GetSingleTexture : MonoBehaviour
 	public string token;
 	public RawImage image;
 	Texture2D currentTexture;
+	public bool fixRatio;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -21,7 +22,11 @@ public class GetSingleTexture : MonoBehaviour
 	{
 		yield return CR_GetTexture(fileRequest);
 		image.texture = currentTexture;
-		image.GetComponent<AspectRatioFitter>().aspectRatio = (1f*currentTexture.width)/currentTexture.height;
+		if (!fixRatio)
+		{
+			if (image.GetComponent<AspectRatioFitter>().enabled)
+				image.GetComponent<AspectRatioFitter>().aspectRatio = (1f*currentTexture.width)/currentTexture.height;
+		}
 	}
 
 	private void AddTokenHeader(UnityWebRequest webRequest)

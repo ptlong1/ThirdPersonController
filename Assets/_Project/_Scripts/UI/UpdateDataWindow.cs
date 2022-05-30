@@ -6,7 +6,15 @@ using System;
 using System.Web;
 using DG.Tweening;
 using UnityEngine.Networking;
+using Assets._Project._Scripts.Screen;
 
+[Serializable]
+public class UpdateResponse
+{
+	public string url;
+	public string token;
+
+}
 
 public class UpdateDataWindow : MonoBehaviour
 {
@@ -41,7 +49,11 @@ public class UpdateDataWindow : MonoBehaviour
 
 	public UserResponse userResponse;
 	public ConferenceData conferenceData;
-	public TMP_Text contentUrl;
+	public TMP_InputField contentUrl;
+	public ConferenceObjectData currentConferenceObject;
+	public TMP_InputField currentUrl;
+	public TMP_InputField currentType;
+	
 	// public Button
 
 	// Start is called before the first frame update
@@ -57,7 +69,8 @@ public class UpdateDataWindow : MonoBehaviour
 		var query = HttpUtility.ParseQueryString(uri.Query);
 		// Debug.Log(query.Get("token"));
 		// Debug.Log(query.Get("type"));
-		Token = query.Get("token");
+		// Token = query.Get("token");
+		Token = userResponse.token;
 		Type = query.Get("type");
 		SimpleUrl = uri.GetLeftPart(UriPartial.Path);
 	}
@@ -90,8 +103,7 @@ public class UpdateDataWindow : MonoBehaviour
 	public void UpdateData()
 	{
 		ParseUrl();
-		if (String.IsNullOrWhiteSpace(Token) 
-			|| String.IsNullOrWhiteSpace(Type) 
+		if (String.IsNullOrWhiteSpace(Type) 
 			|| String.IsNullOrWhiteSpace(SimpleUrl))
 			{
 				Debug.Log("Data not valid");
@@ -100,16 +112,20 @@ public class UpdateDataWindow : MonoBehaviour
 		StartCoroutine(CR_UpdateData());
 	}
 
-	void UpdateSuccessCB()
+	void UpdateSuccessCB(UpdateResponse response)
 	{
 		CloseUI();
 		contentUrl.text = String.Empty;
+		ConferenceScreen screen = currentConferenceObject.GetComponent<ConferenceScreen>();
+		screen.urlContent = response.url;
+		screen.token = response.token;
+		screen.RestartContent();
 
 	}
 	IEnumerator CR_UpdateData()
 	{
 		// string postBody = $"{{\"id\": \"{Id}\",\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\"}}";
-		string postBody = $"{{\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\",\"conferenceId\": \"{conferenceData.ConferenceId}\"}}";
+		string postBody = $"{{\"url\": \"{Url}\", \"type\" : \"{Type}\",\"conferenceId\": \"{conferenceData.ConferenceId}\"}}";
 		Debug.Log(postBody);
 		string newUpdateUrl = WebServerAPI.Combine(updateUrlApi, Id + "/update");
 		Debug.Log(newUpdateUrl);
@@ -131,6 +147,8 @@ public class UpdateDataWindow : MonoBehaviour
 			else
 			{
 				Debug.Log("Received: " + req.downloadHandler.text);
+				UpdateResponse response = JsonUtility.FromJson<UpdateResponse>(req.downloadHandler.text);
+				UpdateSuccessCB(response);
 			}
 		}
 	}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets._Project._Scripts.Screen;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 [Serializable]
 public class DynamicData
@@ -21,6 +22,7 @@ public class DynamicData
 public class DynamicDataContainer : ScriptableObject
 {
 	public List<DynamicData> dynamicDatas;
+	public GameEvent OnFinishReplaceUrl;
 	
 	[ContextMenu("Print Json")]
 	public void PrintJson()
@@ -60,6 +62,18 @@ public class DynamicDataContainer : ScriptableObject
 					}
 				}
 			}
+			if (screen.defaultOn)
+			{
+				screen.ShowContent();
+			}
+			// conference banner
+
 		}
+		
+		// if (OnFinishReplaceUrl != null)
+		// {
+		// 	OnFinishReplaceUrl.Raise();
+		// 	Debug.Log("Raise OnFinishReplaceUrl");
+		// }
 	}
 }

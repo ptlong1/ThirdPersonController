@@ -49,3 +49,4 @@ MonoBehaviour:
     url: http://localhost:8080/root/ppttll101/sample.mp4
     type: Video
     token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzk5MDQsImV4cCI6MzE3MTk3NDgyMzA0fQ.htwJ8xJKyqm0ZJPUIC7yGw22XunZAcuDlood7p3zn0Y
+  OnFinishReplaceUrl: {fileID: 11400000, guid: d832664afc932e445af94ff88020bd51, type: 2}
