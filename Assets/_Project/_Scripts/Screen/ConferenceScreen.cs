@@ -28,6 +28,7 @@ namespace Assets._Project._Scripts.Screen
 		public GameEvent OnTurnOnContent;
 		public GameEvent OnTurnOffContent;
 		public bool defaultOn;
+		public bool useWorldSpace;
 		// Start is called before the first frame update
 		void Start()
 		{
@@ -107,10 +108,16 @@ namespace Assets._Project._Scripts.Screen
 			bool isPlayerLayer = other.gameObject.layer == LayerMask.NameToLayer("Player");
 			if (isPlayerLayer && isLocalPlayer)
 			{
-				TurnOnConfirmUI(true);
-				// ReadyContent();
-				TurnOnContent(true);
+				TriggerWatching();
 			}
+		}
+
+		public void TriggerWatching()
+		{
+			if (useWorldSpace) return;
+			TurnOnConfirmUI(true);
+			// ReadyContent();
+			TurnOnContent(true);
 		}
 
 		// [ClientCallback]
@@ -122,11 +129,17 @@ namespace Assets._Project._Scripts.Screen
 			bool isPlayerLayer = other.gameObject.layer == LayerMask.NameToLayer("Player");
 			if (isPlayerLayer && isLocalPlayer)
 			{
-				TurnOnConfirmUI(false);
-				TurnOnContent(false);
-				content.SetActive(false);
+				TurnOffWatching();
 			}
 
+		}
+
+		public void TurnOffWatching()
+		{
+			if (useWorldSpace) return;
+			TurnOnConfirmUI(false);
+			TurnOnContent(false);
+			content.SetActive(false);
 		}
 
 		private void TurnOnConfirmUI(bool value)

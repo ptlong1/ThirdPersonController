@@ -749,66 +749,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 371395905920622819, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 869875003552002462, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085469136602096650, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709281074270128564, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824996395440251729, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1830118285573449597, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 2038674391173763139, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428747589692014863, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428747589692014863, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363916364008141324, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5366151117350658803, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5501050072947473477, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5719858504677511649, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200506795299643713, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200506795299643713, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6352767607875030331, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_Name
       value: Network Environments
@@ -855,34 +795,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6352767607875030332, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646058379716634024, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646058379716634024, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6918140871344679992, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6918140871344679993, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 2.828427
-      objectReference: {fileID: 0}
-    - target: {fileID: 7356298117475353800, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7356298117475353801, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259447370085302445, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
-      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

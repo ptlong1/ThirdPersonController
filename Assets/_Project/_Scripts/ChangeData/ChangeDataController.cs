@@ -18,6 +18,7 @@ namespace Assets._Project._Scripts.ChangeData
 		public int CurrentObjectIdx { 
 			get => currentObjectIdx; 
 			set {
+				TurnOffWatching(CurrentObjectIdx);
 				int temp = value;
 				if (temp < 0)
 					temp += conferenceObjects.Length;
@@ -25,6 +26,7 @@ namespace Assets._Project._Scripts.ChangeData
 				UpdateInfo(conferenceObjects[currentObjectIdx]);
 			}
 		}
+
 
 		private void Awake() {
 			conferenceObjects = FindObjectsOfType<ConferenceObjectData>();
@@ -51,8 +53,10 @@ namespace Assets._Project._Scripts.ChangeData
 		{
 			updateDataWindow.Id = data.id;
 			updateDataWindow.currentConferenceObject = data;
-			updateDataWindow.currentType.text = data.GetComponent<ConferenceScreen>().screenType.ToString();
-			updateDataWindow.currentUrl.text = data.GetComponent<ConferenceScreen>().urlContent;
+			ConferenceScreen screen = data.GetComponent<ConferenceScreen>();
+			updateDataWindow.currentType.text = screen.screenType.ToString();
+			updateDataWindow.currentUrl.text = screen.urlContent;
+			screen.TriggerWatching();
 			CameraView cameraView = data.GetComponent<CameraView>();
 			UpdateCamera(cameraView.cameraTransform);
 		}
@@ -62,6 +66,12 @@ namespace Assets._Project._Scripts.ChangeData
 			// virtualCam.ForceCameraPosition(trans.position, trans.rotation);
 			virtualCam.transform.DOMove(trans.position, 1f);
 			virtualCam.transform.DORotateQuaternion(trans.rotation, 1f);
+		}
+
+		public void TurnOffWatching(int idx)
+		{
+			ConferenceScreen screen = conferenceObjects[idx].GetComponent<ConferenceScreen>();
+			screen.TurnOffWatching();
 		}
 	}
 }
