@@ -64,6 +64,7 @@ public class PlayerController : NetworkBehaviour
     int animIDGrounded;
     int animIDFreeFall;
     int animIDMotionSpeed;
+    int animIDSitting;
 
     //timeout deltatime
     float fallTimeoutDelta;
@@ -71,6 +72,7 @@ public class PlayerController : NetworkBehaviour
 
     //results collider
     Collider[] results = new Collider[10];
+	public bool isDisableMovementAndCamera;
 
     private void Awake() {
         if (mainCamera == null)
@@ -111,11 +113,16 @@ public class PlayerController : NetworkBehaviour
         animIDGrounded = Animator.StringToHash("Grounded");
         animIDJump = Animator.StringToHash("Jump");
         animIDMotionSpeed= Animator.StringToHash("MotionSpeed");
+        animIDSitting= Animator.StringToHash("Sitting");
     }
 
     [ClientCallback]
     void Update()
     {
+		if (DisableMovementAndCameraCheck())
+		{
+			return;
+		}
         if (isLocalPlayer)
         {
             JumpAndGravity();
@@ -123,6 +130,21 @@ public class PlayerController : NetworkBehaviour
             Move(); 
         }
     }
+
+	bool DisableMovementAndCameraCheck()
+	{
+		if (inputs.cursorLocked == false)
+		{
+			isDisableMovementAndCamera = true;
+		}
+		else
+		{
+			isDisableMovementAndCamera = false;
+		}
+		freeLookCamera.gameObject.SetActive(!isDisableMovementAndCamera);
+		animator.SetBool(animIDSitting, isDisableMovementAndCamera);
+		return isDisableMovementAndCamera;
+	}
 
     void JumpAndGravity()
     {

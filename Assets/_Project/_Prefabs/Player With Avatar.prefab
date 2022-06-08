@@ -275,7 +275,7 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 0
-  cursorLocked: 0
+  cursorLocked: 1
   cursorInputForLook: 1
 --- !u!143 &2810648194239154872
 CharacterController:
@@ -325,6 +325,7 @@ MonoBehaviour:
     m_Bits: 1
   playerCameraRoot: {fileID: 6565977695784639320}
   roomName: 
+  isDisableMovementAndCamera: 0
 --- !u!114 &1066796254885952939
 MonoBehaviour:
   m_ObjectHideFlags: 0
