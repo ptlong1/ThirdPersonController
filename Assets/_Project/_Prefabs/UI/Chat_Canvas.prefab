@@ -667,7 +667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc33a39070010f94fb1c2dd721c1286d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableTabText: 1
   showHtmlElement: 0
 --- !u!1 &4318469700944838677
 GameObject:
@@ -1114,7 +1113,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4318469702401082518}
   m_HandleRect: {fileID: 4318469702401082521}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1137,7 +1136,7 @@ GameObject:
   - component: {fileID: 1218081381}
   m_Layer: 0
   m_Name: Chat_Canvas
-  m_TagString: Untagged
+  m_TagString: Chat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -83,7 +83,7 @@ namespace Assets._Project._Scripts.AdditiveLevels
 
                 // reposition player on server and client
                 player.transform.position = startPosition;
-                player.transform.LookAt(Vector3.up);
+                // player.transform.LookAt(Vector3.up);
 
                 // Move player to new subscene.
                 SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByPath(destinationScene));

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Chat
   layers:
   - Default
   - TransparentFX

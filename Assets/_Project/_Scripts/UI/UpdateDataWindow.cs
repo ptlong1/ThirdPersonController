@@ -7,12 +7,14 @@ using System.Web;
 using DG.Tweening;
 using UnityEngine.Networking;
 using Assets._Project._Scripts.Screen;
+using Assets._Project._Scripts.DynamicData;
 
 [Serializable]
 public class UpdateResponse
 {
 	public string url;
 	public string token;
+	public string type;
 
 }
 
@@ -119,6 +121,10 @@ public class UpdateDataWindow : MonoBehaviour
 		ConferenceScreen screen = currentConferenceObject.GetComponent<ConferenceScreen>();
 		screen.urlContent = response.url;
 		screen.token = response.token;
+		if (!Enum.TryParse(response.type, out screen.screenType))
+		{
+			Debug.Log($"{id} wrong enum type {response.type}");
+		}
 		screen.RestartContent();
 
 	}

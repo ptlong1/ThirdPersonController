@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConferenceObjectData : MonoBehaviour
+namespace Assets._Project._Scripts.DynamicData
 {
-	public string id;
+	public class ConferenceObjectData : MonoBehaviour
+	{
+		public string id;
+	}
 }

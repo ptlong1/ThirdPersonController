@@ -118,6 +118,7 @@ MonoBehaviour:
   picturePrefab: {fileID: 2651508817619389677}
   documentPrefab: {fileID: 7965211061762878474}
   videoPrefab: {fileID: 2651508816983552188}
+  slidePrefab: {fileID: 8498607609400433679}
   urlContent: 'https://picsum.photos/200/300 '
   token: 
   content: {fileID: 2651508817075814751}
@@ -125,6 +126,7 @@ MonoBehaviour:
   OnTurnOnContent: {fileID: 11400000, guid: 55cbbf24e947e1a4d8d004ea2cbbcebd, type: 2}
   OnTurnOffContent: {fileID: 11400000, guid: 318f27925ddb14945b206ce7647b539d, type: 2}
   defaultOn: 0
+  useWorldSpace: 0
 --- !u!54 &2651508818529519569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -450,6 +452,7 @@ RectTransform:
   - {fileID: 2651508817619389676}
   - {fileID: 2651508816983552163}
   - {fileID: 7965211061762878479}
+  - {fileID: 2893439009678437644}
   - {fileID: 2651508818907752909}
   m_Father: {fileID: 540653830327164751}
   m_RootOrder: 1
@@ -1485,7 +1488,7 @@ RectTransform:
   m_Children:
   - {fileID: 2651508817864198794}
   m_Father: {fileID: 2651508817075814750}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1598,6 +1601,69 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &5165078389766011329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 262480477368786232}
+  - component: {fileID: 5280502365981275829}
+  - component: {fileID: 633801959299746042}
+  m_Layer: 0
+  m_Name: SlideView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &262480477368786232
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165078389766011329}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2893439009678437644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 281.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5280502365981275829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165078389766011329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.7777778
+--- !u!114 &633801959299746042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165078389766011329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5cf07b41de1b145b5e2b8a09d39182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6296315425688479310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1749,61 @@ MonoBehaviour:
   content: {fileID: 7965211061970437026}
   imagePrefab: {fileID: 3980791950310568252, guid: 66558f7ebdaa6e1448a3b2ab9fa1a338, type: 3}
   fileType: pptx
-  scaleRatio: 10
+--- !u!1 &8498607609400433679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2893439009678437644}
+  - component: {fileID: 2356982657219027580}
+  m_Layer: 0
+  m_Name: Canvas_Slide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2893439009678437644
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498607609400433679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 262480477368786232}
+  m_Father: {fileID: 2651508817075814750}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2356982657219027580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498607609400433679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f64a1bfa3c096e44960a855f159c6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webServerUrl: http://localhost:8080/root
+  fileRequest: http://localhost:3000/files/abc.pptx
+  token: 
+  content: {fileID: 262480477368786232}
+  imagePrefab: {fileID: 2765246815952534156, guid: e9e527293b77e054091914e00ae12552, type: 3}
+  fileType: pptx
 --- !u!1001 &7343180187360682390
 PrefabInstance:
   m_ObjectHideFlags: 0

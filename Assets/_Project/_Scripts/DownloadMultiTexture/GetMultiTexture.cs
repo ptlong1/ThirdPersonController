@@ -23,10 +23,12 @@ public class GetMultiTexture : MonoBehaviour
 	public RectTransform content;
 	public RawImage imagePrefab;
 	public string fileType;
-	public int scaleRatio;
+	// public int scaleRatio;
 	float ratio;
 	Texture2D currentTexture;
 	FilesInfo result;
+
+	public event System.Action<RawImage> OnAddImageEvent;
     // Start is called before the first frame update
     void OnEnable()
 	{
@@ -52,7 +54,7 @@ public class GetMultiTexture : MonoBehaviour
 		}
 		if (type.Equals("pptx"))
 		{
-			ratio = 4f/3f;
+			ratio = 16f/9f;
 		}
 	}
 	IEnumerator CR_GetRequest(string uri)
@@ -134,10 +136,10 @@ public class GetMultiTexture : MonoBehaviour
 			// Debug.Log(child.name);
 			// string path = Path.Combine(webServerUrl, child.path);
 			string path = Combine(webServerUrl, child.path);
-			Debug.Log("Download from " + path);
+			// Debug.Log("Download from " + path);
 			yield return GetTexture(path);
 			AddContent(currentTexture);
-			Debug.Log("Done with " + child.path);
+			// Debug.Log("Done with " + child.path);
 		}
 
 	}
@@ -145,8 +147,13 @@ public class GetMultiTexture : MonoBehaviour
 	private void AddContent(Texture2D currentTexture)
 	{
 		RawImage rimage = Instantiate(imagePrefab, content);
+		rimage.rectTransform.sizeDelta = new Vector2(content.rect.width, 0f);
 		rimage.texture = currentTexture;
 		rimage.GetComponent<AspectRatioFitter>().aspectRatio = ratio;
+		if (OnAddImageEvent != null)
+		{
+			OnAddImageEvent(rimage);
+		}
 	}
 
 	IEnumerator GetTexture(string url)

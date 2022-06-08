@@ -5,6 +5,7 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.Video;
 using ScriptableObjectArchitecture;
+using Assets._Project._Scripts.DynamicData;
 
 namespace Assets._Project._Scripts.Screen
 {
@@ -12,7 +13,8 @@ namespace Assets._Project._Scripts.Screen
 	{
 		Picture,
 		Document,
-		Video
+		Video,
+		Slide
 	}
 	[RequireComponent(typeof(ConferenceObjectData))]
 	public class ConferenceScreen : MonoBehaviour
@@ -21,6 +23,7 @@ namespace Assets._Project._Scripts.Screen
 		public GameObject picturePrefab;
 		public GameObject documentPrefab;
 		public GameObject videoPrefab;
+		public GameObject slidePrefab;
 		public string urlContent;
 		public string token;
 		public GameObject content;
@@ -34,13 +37,19 @@ namespace Assets._Project._Scripts.Screen
 		{
 			// content.SetActive(false);
 			confirmUI.SetActive(false);
-			// picturePrefab.SetActive(false);
-			// documentPrefab.SetActive(false);
-			// videoPrefab.SetActive(false);
+		}
+
+		void TurnOffAll()
+		{
+			picturePrefab.SetActive(false);
+			documentPrefab.SetActive(false);
+			videoPrefab.SetActive(false);
+			slidePrefab.SetActive(false);
 		}
 
 		public void TurnOnContent(bool value)
 		{
+			TurnOffAll();
 			ReadyContent();
 			Debug.Log("In TurnOnContent " + value);
 			if (screenType == screenTypeEnum.Picture)
@@ -55,6 +64,10 @@ namespace Assets._Project._Scripts.Screen
 			if (screenType == screenTypeEnum.Video)
 			{
 				videoPrefab.SetActive(value);
+			}
+			if (screenType == screenTypeEnum.Slide)
+			{
+				slidePrefab.SetActive(value);
 			}
 			if (value)
 			{
@@ -81,6 +94,9 @@ namespace Assets._Project._Scripts.Screen
 
 			documentPrefab.GetComponent<GetMultiTexture>().fileRequest = urlContent;
 			documentPrefab.GetComponent<GetMultiTexture>().token = token;
+
+			slidePrefab.GetComponent<GetMultiTexture>().fileRequest = urlContent;
+			slidePrefab.GetComponent<GetMultiTexture>().token = token;
 
 			videoPrefab.GetComponent<VideoPlayer>().url = urlContent + "&token=" + token;
 			// videoPrefab.GetComponent<VideoPlayer>().url = urlContent;
@@ -115,9 +131,10 @@ namespace Assets._Project._Scripts.Screen
 		public void TriggerWatching()
 		{
 			if (useWorldSpace) return;
-			TurnOnConfirmUI(true);
+			// TurnOnConfirmUI(true);
 			// ReadyContent();
 			TurnOnContent(true);
+			content.SetActive(true);
 		}
 
 		// [ClientCallback]

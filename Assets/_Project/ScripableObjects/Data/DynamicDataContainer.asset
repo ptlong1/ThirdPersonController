@@ -13,40 +13,20 @@ MonoBehaviour:
   m_Name: DynamicDataContainer
   m_EditorClassIdentifier: 
   dynamicDatas:
-  - id: A-01-02
-    url: http://localhost:8080/cloudconvert/Report.pdf
+  - id: BigScreen-01
+    url: http://localhost:8080/cloudconvert/slide.pptx?type=Slide
+    type: Slide
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTQ2MTE3MzksImV4cCI6MzE3MTk5MDU0MTM5fQ.anu1N1KY2vizxRbJiFtWldruKPAjCR_mPvUkkzqZkCM
+  - id: Exhibition1-A-01-01
+    url: http://localhost:8080/cloudconvert/Report.pdf?type=Document
     type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzA0NTUsImV4cCI6MzE3MTk3NDcyODU1fQ.AWedczxjPFSbL-yoRzf7ABPqdR-1X8oYGamquTO8zsY
-  - id: A-01-01
-    url: http://localhost:8080/cloudconvert/Report.pdf
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTQ2MTMyOTMsImV4cCI6MzE3MTk5MDU1NjkzfQ.ICLf0ExLKDWjpHuXffHW0pjU759krUBOeT1-i0Joavg
+  - id: Exhibition1-A-01-02
+    url: http://localhost:8080/cloudconvert/Report.pdf?type=Document
     type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzI0ODUsImV4cCI6MzE3MTk3NDc0ODg1fQ.H0ag6AUtj592tntB4BpT0pCx9kRDUsaF1HD_Pah8-Uc
-  - id: A-01-04
-    url: http://localhost:8080/cloudconvert/Report.pdf
-    type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzI1OTksImV4cCI6MzE3MTk3NDc0OTk5fQ.7yFvgtdg6bSDYBJ3gEDWKUL2pC_yFxMULLrSOxhnnJY
-  - id: A-01-05
-    url: http://localhost:8080/cloudconvert/Report.pdf
-    type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzI2MTYsImV4cCI6MzE3MTk3NDc1MDE2fQ.mUBLU76a2Cm1ou--bTNIvLmZ3fALhCKfa1nwJZ7A3IA
-  - id: A-01-3
-    url: http://localhost:8080/cloudconvert/Report.pdf
-    type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzI3ODcsImV4cCI6MzE3MTk3NDc1MTg3fQ.8L7OTHaQof6eOocbAf7UL5k9tR79pQs5Ou8EdbWhknY
-  - id: A-01-033
-    url: http://localhost:8080/cloudconvert/Report.pdf
-    type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzI5OTEsImV4cCI6MzE3MTk3NDc1MzkxfQ.ZhsL-JC04Af8wqdqp2HjlbsCAx6Lk6bcL979IKcVfxE
-  - id: A-01-44
-    url: http://localhost:8080/cloudconvert/Report.pdf
-    type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzk1MTMsImV4cCI6MzE3MTk3NDgxOTEzfQ.ZbQ5QwzFDJyKHNprlxX394M_8Ify9RQn2kUQWA1eWXo
-  - id: A-02-03
-    url: http://localhost:8080/cloudconvert/Report.pdf
-    type: Document
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzk1MzQsImV4cCI6MzE3MTk3NDgxOTM0fQ.5HTV8ARKldmyjfgQbEtaCD6lyBxXO1NpGXFp8H0P8NY
-  - id: A-01-03
-    url: http://localhost:8080/root/ppttll101/sample.mp4
-    type: Video
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTMwMzk5MDQsImV4cCI6MzE3MTk3NDgyMzA0fQ.htwJ8xJKyqm0ZJPUIC7yGw22XunZAcuDlood7p3zn0Y
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTQ2MTMzMzUsImV4cCI6MzE3MTk5MDU1NzM1fQ.3FYNfYBHhl8FYa_q6tYXmn95cbc_iFSRQIv1JqPV0Vo
+  - id: Poster-02
+    url: http://localhost:8080/root/ppttll101/bannersample.png?type=Picture
+    type: Picture
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjI0OTg3MDc1NmIyMjA1NWJkZTQ5ZmE4IiwidXNlcm5hbWUiOiJwcHR0bGwxMDEiLCJlbWFpbCI6ImxvbmdsY3F0QGdtYWlsLmNvbSJ9LCJpYXQiOjE2NTQ2MTM5NDQsImV4cCI6MzE3MTk5MDU2MzQ0fQ.vp_z3Oc0gLgDLP42OhGKINInfZS32APtrU7Bh6qC0pQ
   OnFinishReplaceUrl: {fileID: 11400000, guid: d832664afc932e445af94ff88020bd51, type: 2}

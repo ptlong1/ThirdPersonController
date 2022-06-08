@@ -470,7 +470,14 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs: []
   additiveScenes:
-  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/SubLevel1.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Welcome Hall.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Gallery Hallway.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition1.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition2.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium Hallway.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 1.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 2.unity
+  - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 3.unity
   useAddressablesForScenes: 0
 --- !u!114 &491867618
 MonoBehaviour:
@@ -1441,6 +1448,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2062466054}
     m_Modifications:
+    - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2131639241219165209, guid: 05a96c01091ac004abac758994809fcc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1744,6 +1775,54 @@ PrefabInstance:
     - target: {fileID: 2131639242817902982, guid: 05a96c01091ac004abac758994809fcc, type: 3}
       propertyPath: m_Name
       value: UIMainCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a96c01091ac004abac758994809fcc, type: 3}

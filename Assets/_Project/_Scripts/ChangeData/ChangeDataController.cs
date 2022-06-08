@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
 using Assets._Project._Scripts.Screen;
+using Assets._Project._Scripts.DynamicData;
 
 namespace Assets._Project._Scripts.ChangeData
 {
@@ -28,17 +29,25 @@ namespace Assets._Project._Scripts.ChangeData
 		}
 
 
-		private void Awake() {
+		private void Awake()
+		{
+			// UpdateObjectDataList();
+		}
+
+		public void UpdateObjectDataList()
+		{
 			conferenceObjects = FindObjectsOfType<ConferenceObjectData>();
 			CurrentObjectIdx = 0;
 			for (int i = 0; i < conferenceObjects.Length; ++i)
 			{
 				ConferenceIdButton btn = conferenceIdList.AddButton(conferenceObjects[i].id, i);
-				btn.TransferToId += () => {
+				btn.TransferToId += () =>
+				{
 					CurrentObjectIdx = btn.Idx;
 				};
 			}
 		}
+
 		// Start is called before the first frame update
 		void Start()
 		{
@@ -56,9 +65,15 @@ namespace Assets._Project._Scripts.ChangeData
 			ConferenceScreen screen = data.GetComponent<ConferenceScreen>();
 			updateDataWindow.currentType.text = screen.screenType.ToString();
 			updateDataWindow.currentUrl.text = screen.urlContent;
-			screen.TriggerWatching();
+			// screen.TriggerWatching();
 			CameraView cameraView = data.GetComponent<CameraView>();
 			UpdateCamera(cameraView.cameraTransform);
+		}
+
+		public void CurrentScreenTriggerWatching()
+		{
+			ConferenceScreen screen = conferenceObjects[CurrentObjectIdx].GetComponent<ConferenceScreen>();
+			screen.TriggerWatching();
 		}
 		void UpdateCamera(Transform trans)
 		{
@@ -70,6 +85,11 @@ namespace Assets._Project._Scripts.ChangeData
 
 		public void TurnOffWatching(int idx)
 		{
+			if (idx >= conferenceObjects.Length) 
+			{
+				Debug.Log("Index out of array bound");
+				return;
+			}
 			ConferenceScreen screen = conferenceObjects[idx].GetComponent<ConferenceScreen>();
 			screen.TurnOffWatching();
 		}
