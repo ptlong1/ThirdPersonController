@@ -19,6 +19,10 @@ namespace Assets._Project._Scripts.ChangeData
 		public int CurrentObjectIdx { 
 			get => currentObjectIdx; 
 			set {
+				if (conferenceObjects == null || conferenceObjects.Length == 0)
+				{
+					return;
+				}
 				TurnOffWatching(CurrentObjectIdx);
 				int temp = value;
 				if (temp < 0)
