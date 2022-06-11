@@ -1082,6 +1082,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1968748471}
     m_Modifications:
+    - target: {fileID: 1092791430, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 211938357502394268, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: id
       value: Exhibition2-C-01-04

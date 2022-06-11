@@ -3351,6 +3351,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7522253684148517241, guid: 7a9c0fa688e6af14e843834bd53d2927, type: 3}
+      propertyPath: m_AssetId
+      value: 478827124c4e95549b4820b1062f5dac
+      objectReference: {fileID: 0}
     - target: {fileID: 7522253684148517243, guid: 7a9c0fa688e6af14e843834bd53d2927, type: 3}
       propertyPath: m_Name
       value: Portal_1
@@ -3433,6 +3437,10 @@ PrefabInstance:
       value: Gallery-04b
       objectReference: {fileID: 0}
     - target: {fileID: 1329505149592607701, guid: 83b410a316439424d9ec068fa490fb72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806817442809879776, guid: 83b410a316439424d9ec068fa490fb72, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

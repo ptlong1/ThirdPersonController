@@ -1072,22 +1072,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 782279779}
     m_Modifications:
-    - target: {fileID: 22360987186901475, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731221606826879234, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3355317909911764776, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101189129534492448, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6633802475870235080, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1135,10 +1119,6 @@ PrefabInstance:
     - target: {fileID: 6633802475870235081, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
       propertyPath: m_Name
       value: Welcome Hall
-      objectReference: {fileID: 0}
-    - target: {fileID: 8429400355291007987, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8763503c6f416ed418b33d711e29d465, type: 3}
