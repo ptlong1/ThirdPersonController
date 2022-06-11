@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511ddbd3f030c8f449ff7ed709ef626e, type: 3}
   m_Name: ConferenceData
   m_EditorClassIdentifier: 
-  conferenceId: 62873ce9d8d92940c1fda9c4
+  conferenceId: 62a462f4ef7d73a4f0c9375f

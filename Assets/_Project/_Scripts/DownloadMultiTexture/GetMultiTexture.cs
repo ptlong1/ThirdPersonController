@@ -20,6 +20,7 @@ public class GetMultiTexture : MonoBehaviour
 	public string webServerUrl;
 	public string fileRequest;
 	public string token;
+	public string hostName;
 	public RectTransform content;
 	public RawImage imagePrefab;
 	public string fileType;

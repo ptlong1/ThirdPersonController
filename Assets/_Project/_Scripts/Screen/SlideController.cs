@@ -30,7 +30,7 @@ public class SlideController :NetworkBehaviour
 
 	bool CheckIfOwner()
 	{
-		return true;
+		return slideView.hostName == userResponse.user.username;
 	}
 	public void AddToIdx(int value)
 	{

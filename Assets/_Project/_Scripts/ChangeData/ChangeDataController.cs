@@ -70,6 +70,7 @@ namespace Assets._Project._Scripts.ChangeData
 			ConferenceScreen screen = data.GetComponent<ConferenceScreen>();
 			updateDataWindow.currentType.text = screen.screenType.ToString();
 			updateDataWindow.currentUrl.text = screen.urlContent;
+			updateDataWindow.currentHost.text = screen.hostName;
 			// screen.TriggerWatching();
 			CameraView cameraView = data.GetComponent<CameraView>();
 			UpdateCamera(cameraView.cameraTransform);

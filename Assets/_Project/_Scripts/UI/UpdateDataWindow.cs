@@ -12,9 +12,10 @@ using EasyUI.Toast;
 [Serializable]
 public class UpdateResponse
 {
-	public string url;
+	public string url; 
 	public string token;
 	public string type;
+	public string hostName;
 
 }
 
@@ -45,6 +46,9 @@ public class UpdateDataWindow : MonoBehaviour
 	private string token;
 	public string Token { get => token; set => token = value; }
 	public string SimpleUrl { get => simpleUrl; set => simpleUrl = value; }
+	public string HostName { get => hostName; set => hostName = value; }
+
+	private string hostName;
 
 	public GameObject updateTable;
 	public string updateUrlApi;
@@ -52,9 +56,11 @@ public class UpdateDataWindow : MonoBehaviour
 	public UserResponse userResponse;
 	public ConferenceData conferenceData;
 	public TMP_InputField contentUrl;
+	public TMP_InputField hostNameInputField;
 	public ConferenceObjectData currentConferenceObject;
 	public TMP_InputField currentUrl;
 	public TMP_InputField currentType;
+	public TMP_InputField currentHost;
 	
 	// public Button
 
@@ -63,9 +69,16 @@ public class UpdateDataWindow : MonoBehaviour
     {
         
     }
+	private void OnEnable() {
+		bool vl = currentType.text == screenTypeEnum.Slide.ToString();
+		
+		currentHost.transform.parent.gameObject.SetActive(vl);
+		hostNameInputField.transform.parent.gameObject.SetActive(vl);
+		
+	}
 
 	[ContextMenu("Parse Url")]
-	public void ParseUrl()
+	public void ParseUrlAndInputField()
 	{
 		var uri = new Uri(Url);
 		var query = HttpUtility.ParseQueryString(uri.Query);
@@ -75,6 +88,11 @@ public class UpdateDataWindow : MonoBehaviour
 		Token = userResponse.token;
 		Type = query.Get("type");
 		SimpleUrl = uri.GetLeftPart(UriPartial.Path);
+		HostName = hostNameInputField.text;
+		if (String.IsNullOrWhiteSpace(HostName))
+		{
+			HostName = userResponse.user.username;
+		}
 	}
 
 	public void OpenUI()
@@ -104,7 +122,7 @@ public class UpdateDataWindow : MonoBehaviour
 
 	public void UpdateData()
 	{
-		ParseUrl();
+		ParseUrlAndInputField();
 		if (String.IsNullOrWhiteSpace(Type) 
 			|| String.IsNullOrWhiteSpace(SimpleUrl))
 			{
@@ -121,6 +139,7 @@ public class UpdateDataWindow : MonoBehaviour
 		ConferenceScreen screen = currentConferenceObject.GetComponent<ConferenceScreen>();
 		screen.urlContent = response.url;
 		screen.token = response.token;
+		screen.hostName = response.hostName;
 		if (!Enum.TryParse(response.type, out screen.screenType))
 		{
 			Debug.Log($"{id} wrong enum type {response.type}");
@@ -131,7 +150,7 @@ public class UpdateDataWindow : MonoBehaviour
 	IEnumerator CR_UpdateData()
 	{
 		// string postBody = $"{{\"id\": \"{Id}\",\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\"}}";
-		string postBody = $"{{\"url\": \"{Url}\", \"type\" : \"{Type}\",\"conferenceId\": \"{conferenceData.ConferenceId}\"}}";
+		string postBody = $"{{\"url\": \"{Url}\", \"type\" : \"{Type}\",\"conferenceId\": \"{conferenceData.ConferenceId}\",\"hostName\": \"{HostName}\"}}";
 		Debug.Log(postBody);
 		string newUpdateUrl = WebServerAPI.Combine(updateUrlApi, Id + "/update");
 		Debug.Log(newUpdateUrl);

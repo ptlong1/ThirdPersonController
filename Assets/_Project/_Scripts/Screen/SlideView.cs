@@ -10,7 +10,7 @@ public class SlideView : MonoBehaviour
 	List<RawImage> listSlide;
 	int currentIndex;
 	public SlideController slideController;
-
+	public string hostName;
 	public int CurrentIndex { 
 		get => currentIndex; 
 		set {
@@ -51,6 +51,7 @@ public class SlideView : MonoBehaviour
 	}
 
 	private void OnEnable() {
+		hostName = getMultiTexture.hostName;
 		StartCoroutine(CR_FindSlideController());
 	}
 	IEnumerator CR_FindSlideController()

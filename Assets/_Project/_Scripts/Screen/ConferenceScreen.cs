@@ -26,6 +26,7 @@ namespace Assets._Project._Scripts.Screen
 		public GameObject slidePrefab;
 		public string urlContent;
 		public string token;
+		public string hostName;
 		public GameObject content;
 		public GameObject confirmUI;
 		public GameEvent OnTurnOnContent;
@@ -97,6 +98,7 @@ namespace Assets._Project._Scripts.Screen
 
 			slidePrefab.GetComponent<GetMultiTexture>().fileRequest = urlContent;
 			slidePrefab.GetComponent<GetMultiTexture>().token = token;
+			slidePrefab.GetComponent<GetMultiTexture>().hostName = hostName;
 
 			videoPrefab.GetComponent<VideoPlayer>().url = urlContent + "&token=" + token;
 			// videoPrefab.GetComponent<VideoPlayer>().url = urlContent;

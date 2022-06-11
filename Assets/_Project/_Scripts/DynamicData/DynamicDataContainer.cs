@@ -14,6 +14,7 @@ namespace Assets._Project._Scripts.DynamicData
 		public string url;
 		public string type;
 		public string token;
+		public string hostName;
 		// public string _id;
 		// public string __v;
 
@@ -59,6 +60,7 @@ namespace Assets._Project._Scripts.DynamicData
 					{
 						screen.urlContent = data.url;
 						screen.token = data.token;
+						screen.hostName = data.hostName;
 						if (!Enum.TryParse(data.type, out screen.screenType))
 						{
 							Debug.Log($"{id} wrong enum type {data.type}");
