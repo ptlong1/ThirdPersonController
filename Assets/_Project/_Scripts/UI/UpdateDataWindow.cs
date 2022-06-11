@@ -8,7 +8,7 @@ using DG.Tweening;
 using UnityEngine.Networking;
 using Assets._Project._Scripts.Screen;
 using Assets._Project._Scripts.DynamicData;
-
+using EasyUI.Toast;
 [Serializable]
 public class UpdateResponse
 {
@@ -149,11 +149,13 @@ public class UpdateDataWindow : MonoBehaviour
 			{
 				Debug.Log("Error While Sending: " + req.error);
 				Debug.Log("Received: " + req.downloadHandler.text);
+				Toast.Show("Update error", 2f, ToastColor.Red, ToastPosition.BottomCenter);
 			}
 			else
 			{
 				Debug.Log("Received: " + req.downloadHandler.text);
 				UpdateResponse response = JsonUtility.FromJson<UpdateResponse>(req.downloadHandler.text);
+				Toast.Show("Update success", 2f, ToastColor.Blue, ToastPosition.BottomCenter);
 				UpdateSuccessCB(response);
 			}
 		}

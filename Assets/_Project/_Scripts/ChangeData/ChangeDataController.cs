@@ -42,6 +42,7 @@ namespace Assets._Project._Scripts.ChangeData
 		{
 			conferenceObjects = FindObjectsOfType<ConferenceObjectData>();
 			CurrentObjectIdx = 0;
+			conferenceIdList.Clear();
 			for (int i = 0; i < conferenceObjects.Length; ++i)
 			{
 				ConferenceIdButton btn = conferenceIdList.AddButton(conferenceObjects[i].id, i);

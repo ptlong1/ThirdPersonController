@@ -36,13 +36,15 @@ namespace Assets._Project._Scripts.Chat
 			if (!string.IsNullOrWhiteSpace(msg))
 			{
 				string playerName = sender.identity.GetComponent<PlayerName>().playerName;
-				RpcReceiveText(playerName, msg);
+				string roomName = sender.identity.GetComponent<PlayerController>().roomName;
+				RpcReceiveText(playerName, roomName, msg);
 			}
 		}
 
 		[ClientRpc]
-		public void RpcReceiveText(string playerName, string msg)
+		public void RpcReceiveText(string playerName, string roomName, string msg)
 		{
+			if (NetworkClient.localPlayer.GetComponent<PlayerController>().roomName != roomName) return;
 			string text = $"[{playerName}]: {msg}";
 			chatUI.AppendMessage(text);
 		}
