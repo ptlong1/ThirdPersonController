@@ -10,7 +10,7 @@ public class TestDeltaTouchScreen : MonoBehaviour
 	public TMP_Text text;
 	
 	void Start(){
-		// TouchSimulation.Enable();
+		TouchSimulation.Enable();
 	}
 
 	public void PrintDelta(InputAction.CallbackContext context)

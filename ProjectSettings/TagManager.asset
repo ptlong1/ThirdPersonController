@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Chat
+  - CameraSlide
   layers:
   - Default
   - TransparentFX

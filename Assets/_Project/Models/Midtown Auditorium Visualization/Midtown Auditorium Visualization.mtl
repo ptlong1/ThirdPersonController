@@ -1,0 +1,155 @@
+# Blender MTL File: 'Midtown Auditorium Visualization.blend'
+# Material Count: 14
+
+newmtl Material
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.003096 0.003096 0.003096
+Ks 0.067213 0.067213 0.067213
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.001032 0.001032 0.001032
+Ks 0.073770 0.073770 0.073770
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.003
+Ns 264.801642
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\07_images\\freechapel BG.jpg
+map_Ke C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\07_images\\freechapel BG.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\04_exports\\03_Final Model Export\\edited\\de-purpled\\SCAD Auditorium Scan - Final Export - Depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export1.001
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.033000 0.033000 0.033000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd texures\\SCAD Auditorium Scan - Final Export1 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export1.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\04_exports\\03_Final Model Export\\edited\\de-purpled\\SCAD Auditorium Scan - Final Export1 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export2.001
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.033000 0.033000 0.033000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd texures\\SCAD Auditorium Scan - Final Export2 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export2.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\04_exports\\03_Final Model Export\\edited\\de-purpled\\SCAD Auditorium Scan - Final Export2 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export3.001
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.033333 0.033333 0.033333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd texures\\SCAD Auditorium Scan - Final Export3 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export3.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\04_exports\\03_Final Model Export\\edited\\de-purpled\\SCAD Auditorium Scan - Final Export3 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export4.001
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.033000 0.033000 0.033000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd texures\\SCAD Auditorium Scan - Final Export4 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export4.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\04_exports\\03_Final Model Export\\edited\\de-purpled\\SCAD Auditorium Scan - Final Export4 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export5.001
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.033000 0.033000 0.033000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd texures\\SCAD Auditorium Scan - Final Export5 - depurpled.jpg
+
+newmtl SCAD_Auditorium_Scan_-_Final_Export5.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\spast\\Documents\\Photogrammetry\\002_Freechapel\\08-17-21 _ SCAD Theater - Midtown Auditorium Scan\\04_exports\\03_Final Model Export\\edited\\de-purpled\\SCAD Auditorium Scan - Final Export5 - depurpled.jpg

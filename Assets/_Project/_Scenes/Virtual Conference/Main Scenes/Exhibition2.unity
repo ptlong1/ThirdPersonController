@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: f4570db0998e6e247b6cb6982ea6ae45, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: ec9d72dc6ca54d8479d600fb1ededa65, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: ae485fa5ee9322d4f88dcec4fc1f184f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -205,7 +205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &495000451
 Light:
   m_ObjectHideFlags: 0
@@ -1102,6 +1102,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1994760009, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 116537917866d344dad47e55d1b4ad8d, type: 2}
     - target: {fileID: 17581706809254537, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -3140,7 +3144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4471793926874947701, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4485374865290446793, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3200,7 +3204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4771397586457237479, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4808410454314776043, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4180,7 +4184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6390301091446551211, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6391653630894111672, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4792,7 +4796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7874348239878464865, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878670042835713030, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_StaticEditorFlags
