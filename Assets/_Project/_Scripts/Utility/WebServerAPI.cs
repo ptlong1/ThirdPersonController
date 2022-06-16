@@ -19,8 +19,8 @@ public class ConferenceMetaDataResponse
 }
 public static class WebServerAPI  
 {
-	public static string resourceUrl = "http://localhost:8080/resources/";
-	public static string conferenceUrl = "http://localhost:8080/conference";
+	// public static string resourceUrl = "http://localhost:8080/resources/";
+	// public static string conferenceUrl = "http://localhost:8080/conference";
 
 	static string result;
 
@@ -45,7 +45,7 @@ public static class WebServerAPI
 		return string.Format("{0}/{1}", uri1, uri2);
 	}
 
-	public static IEnumerator CR_GetResouceJson(string token, string conferenceId)
+	public static IEnumerator CR_GetResouceJson(string token, string conferenceUrl, string conferenceId)
 	{
 		string newUrl = Combine(conferenceUrl, conferenceId);
         using (UnityWebRequest webRequest = UnityWebRequest.Get(newUrl))
@@ -55,7 +55,7 @@ public static class WebServerAPI
 			// Request and wait for the desired page.
 			yield return webRequest.SendWebRequest();
 
-			string[] pages = resourceUrl.Split('/');
+			string[] pages = newUrl.Split('/');
 			int page = pages.Length - 1;
 
 			switch (webRequest.result)
@@ -74,7 +74,7 @@ public static class WebServerAPI
 			}
 		}
 	}
-	public static IEnumerator CR_GetConferenceInfo()
+	public static IEnumerator CR_GetConferenceInfo(string conferenceUrl)
 	{
 		string newUrl = conferenceUrl;
         using (UnityWebRequest webRequest = UnityWebRequest.Get(newUrl))
@@ -84,7 +84,7 @@ public static class WebServerAPI
 			// Request and wait for the desired page.
 			yield return webRequest.SendWebRequest();
 
-			string[] pages = resourceUrl.Split('/');
+			string[] pages = newUrl.Split('/');
 			int page = pages.Length - 1;
 
 			switch (webRequest.result)

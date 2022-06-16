@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1989dd2bd9cf243a29dcfbc6d8eb30, type: 3}
+  m_Name: EnvironmentVariablesContainer
+  m_EditorClassIdentifier: 
+  environmentVariables:
+    urlLogin: http://localhost:8080/auth/login
+    resourceUrl: http://localhost:8080/resources/
+    conferenceUrl: http://localhost:8080/conference
+    webServerUrl: http://localhost:8080/root
+  environmentUrl: https://gist.githubusercontent.com/ptlong1/f334d507837824b228359f6e822e16c8/raw/

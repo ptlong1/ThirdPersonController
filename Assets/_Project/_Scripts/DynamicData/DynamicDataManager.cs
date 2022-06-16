@@ -9,6 +9,7 @@ namespace Assets._Project._Scripts.DynamicData
 		public DynamicDataContainer dataContainer;
 		public UserResponse userResponse;
 		public ConferenceData conferenceData;
+		public EnvironmentVariablesContainer environmentVariablesContainer;
 		public string jsonUrl;
 		public string jsonData;
 		public bool parseOnStart;
@@ -35,7 +36,10 @@ namespace Assets._Project._Scripts.DynamicData
 
 		IEnumerator CR_TryGetJsonData(string url)
 		{
-			yield return StartCoroutine(WebServerAPI.CR_GetResouceJson(userResponse.token, conferenceData.ConferenceId));
+			yield return StartCoroutine(WebServerAPI.CR_GetResouceJson(
+				userResponse.token,
+				environmentVariablesContainer.environmentVariables.conferenceUrl,
+				conferenceData.ConferenceId));
 			jsonData = WebServerAPI.Result;
 		}
 	}

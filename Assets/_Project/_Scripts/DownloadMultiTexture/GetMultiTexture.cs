@@ -17,7 +17,7 @@ public class FilesInfo
 public class GetMultiTexture : MonoBehaviour
 {
 
-	public string webServerUrl;
+	public EnvironmentVariablesContainer environmentVariablesContainer;
 	public string fileRequest;
 	public string token;
 	public string hostName;
@@ -136,7 +136,7 @@ public class GetMultiTexture : MonoBehaviour
 		{
 			// Debug.Log(child.name);
 			// string path = Path.Combine(webServerUrl, child.path);
-			string path = Combine(webServerUrl, child.path);
+			string path = Combine(environmentVariablesContainer.environmentVariables.webServerUrl, child.path);
 			// Debug.Log("Download from " + path);
 			yield return GetTexture(path);
 			AddContent(currentTexture);

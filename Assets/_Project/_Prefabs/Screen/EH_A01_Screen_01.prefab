@@ -121,6 +121,7 @@ MonoBehaviour:
   slidePrefab: {fileID: 8498607609400433679}
   urlContent: 'https://picsum.photos/200/300 '
   token: 
+  hostName: 
   content: {fileID: 2651508817075814751}
   confirmUI: {fileID: 2651508817001010961}
   OnTurnOnContent: {fileID: 11400000, guid: 55cbbf24e947e1a4d8d004ea2cbbcebd, type: 2}
@@ -1664,6 +1665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5cf07b41de1b145b5e2b8a09d39182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideController: {fileID: 0}
+  hostName: 
 --- !u!1 &6296315425688479310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,9 +1746,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f64a1bfa3c096e44960a855f159c6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webServerUrl: http://localhost:8080/root
+  environmentVariablesContainer: {fileID: 11400000, guid: 60bcac4d479002c4f83a158cb68d786e, type: 2}
   fileRequest: http://localhost:3000/files/abc.pptx
   token: 
+  hostName: 
   content: {fileID: 7965211061970437026}
   imagePrefab: {fileID: 3980791950310568252, guid: 66558f7ebdaa6e1448a3b2ab9fa1a338, type: 3}
   fileType: pptx
@@ -1798,9 +1802,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f64a1bfa3c096e44960a855f159c6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webServerUrl: http://localhost:8080/root
+  environmentVariablesContainer: {fileID: 11400000, guid: 60bcac4d479002c4f83a158cb68d786e, type: 2}
   fileRequest: http://localhost:3000/files/abc.pptx
   token: 
+  hostName: 
   content: {fileID: 262480477368786232}
   imagePrefab: {fileID: 2765246815952534156, guid: e9e527293b77e054091914e00ae12552, type: 3}
   fileType: pptx

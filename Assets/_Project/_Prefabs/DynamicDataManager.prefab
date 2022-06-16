@@ -47,6 +47,7 @@ MonoBehaviour:
   dataContainer: {fileID: 11400000, guid: 9a09afac497db4043a1359c80cf3f955, type: 2}
   userResponse: {fileID: 11400000, guid: 9c4350803acca014faebe2fe23bd7cdb, type: 2}
   conferenceData: {fileID: 11400000, guid: 23d6e764e5d8ea94d894a8f58ef82e10, type: 2}
+  environmentVariablesContainer: {fileID: 11400000, guid: 60bcac4d479002c4f83a158cb68d786e, type: 2}
   jsonUrl: 
   jsonData: 
   parseOnStart: 0

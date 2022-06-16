@@ -5,10 +5,11 @@ using UnityEngine.Networking;
 
 public class LoginAPI : MonoBehaviour
 {
-	public string urlLogin;
+	public EnvironmentVariablesContainer environmentVariablesContainer;
 	public string username;
 	public string password;
 	public UserResponse userResponse;
+	public string resultJson;
 
 	public void StartLogin()
 	{
@@ -19,7 +20,7 @@ public class LoginAPI : MonoBehaviour
 	{
 		string postBody = $"{{\"username\": \"{usr}\",\"password\": \"{pw}\"}}";
 		Debug.Log(postBody);
-		using (var req = new UnityWebRequest(urlLogin, "POST"))
+		using (var req = new UnityWebRequest(environmentVariablesContainer.environmentVariables.urlLogin, "POST"))
 		{
 			byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(postBody);
 			req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
@@ -46,7 +47,7 @@ public class LoginAPI : MonoBehaviour
 		string pw = password;
 		string postBody = $"{{\"username\": \"{usr}\",\"password\": \"{pw}\"}}";
 		// Debug.Log(postBody);
-		using (var req = new UnityWebRequest(urlLogin, "POST"))
+		using (var req = new UnityWebRequest(environmentVariablesContainer.environmentVariables.urlLogin, "POST"))
 		{
 			byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(postBody);
 			req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
@@ -68,5 +69,10 @@ public class LoginAPI : MonoBehaviour
 				successCB();
 			}
 		}
+	}
+	public IEnumerator CR_GetAllConferenceMetaData()
+	{
+		yield return WebServerAPI.CR_GetConferenceInfo(environmentVariablesContainer.environmentVariables.conferenceUrl);
+		resultJson = WebServerAPI.Result;
 	}
 }

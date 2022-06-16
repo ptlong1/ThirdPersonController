@@ -2861,10 +2861,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61247505de16d224187a96ba6ad83202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urlLogin: http://localhost:8080/auth/login
+  environmentVariablesContainer: {fileID: 11400000, guid: 60bcac4d479002c4f83a158cb68d786e, type: 2}
   username: 
   password: 
   userResponse: {fileID: 11400000, guid: 9c4350803acca014faebe2fe23bd7cdb, type: 2}
+  resultJson: 
 --- !u!114 &2131639241921715665
 MonoBehaviour:
   m_ObjectHideFlags: 0

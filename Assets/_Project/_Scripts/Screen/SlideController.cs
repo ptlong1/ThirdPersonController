@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using TMPro;
+using UnityEngine.UI;
+using Cinemachine;
 
 public class SlideController :NetworkBehaviour 
 {
@@ -9,10 +12,27 @@ public class SlideController :NetworkBehaviour
 	public UserResponse userResponse;
 	public SlideView slideView;
 	public GameObject controllerUI;
+	public Button watchSlideBtn;
 	[SyncVar(hook = nameof(SetIndex))]
 	public int currentIndex;
+	Camera camSlide;
+	CinemachineFreeLook freeLookCamera;
+	Camera mainCamera;
 
 	private void Start() {
+		watchSlideBtn.gameObject.SetActive(true);
+		camSlide = GameObject.FindGameObjectWithTag("CameraSlide").GetComponent<Camera>();
+		camSlide.enabled = true;
+		camSlide.gameObject.SetActive(false);
+		freeLookCamera = FindObjectOfType<CinemachineFreeLook>();
+		mainCamera = Camera.main;
+	}
+
+	public void ChangeToCameraSlide()
+	{
+		bool vl = camSlide.gameObject.activeSelf;
+		mainCamera.gameObject.SetActive(vl);
+		camSlide.gameObject.SetActive(!vl);	
 	}
 
 	public void SetUp(SlideView slide) {

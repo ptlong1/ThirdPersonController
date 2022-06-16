@@ -24,13 +24,13 @@ public class LoginWindow : MonoBehaviour
 
 	void Start(){
 		manager = FindObjectOfType<NetworkManager>();
-		StartCoroutine(CR_GetAllConferenceMetaData());
+		// StartCoroutine(CR_GetAllConferenceMetaData());
 	}
 
-	IEnumerator CR_GetAllConferenceMetaData()
+	public IEnumerator CR_GetAllConferenceMetaData()
 	{
-		yield return WebServerAPI.CR_GetConferenceInfo();
-		string result = WebServerAPI.Result;
+		yield return loginAPI.CR_GetAllConferenceMetaData();
+		string result = loginAPI.resultJson;
 		string fixJson = "{\"conferenceMetaDatas\":" + result + "}";
 		conferenceMetaDataResponse = JsonUtility.FromJson<ConferenceMetaDataResponse>(fixJson);
 		SetupConferenceName();
