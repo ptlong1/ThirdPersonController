@@ -37,7 +37,7 @@ public class EnvironmentVariablesController : MonoBehaviour
 	}
 	public IEnumerator CR_ParseEnvironmentJson()
 	{
-		yield return CR_GetEnvironmentJson(environmentVariablesContainer.environmentUrl);
+		yield return CR_GetEnvironmentJson(environmentVariablesContainer.EnvironmentUrl);
 		// yield return null;
 		environmentVariablesContainer.Parse(resultJson);
 	}

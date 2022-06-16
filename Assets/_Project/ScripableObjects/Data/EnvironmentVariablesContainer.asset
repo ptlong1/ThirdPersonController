@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EnvironmentVariablesContainer
   m_EditorClassIdentifier: 
   environmentVariables:
-    urlLogin: http://localhost:8080/auth/login
-    resourceUrl: http://localhost:8080/resources/
-    conferenceUrl: http://localhost:8080/conference
-    webServerUrl: http://localhost:8080/root
-  environmentUrl: https://gist.githubusercontent.com/ptlong1/f334d507837824b228359f6e822e16c8/raw/
+    urlLogin: https://bf34-42-114-103-83.ap.ngrok.io/auth/login
+    resourceUrl: https://bf34-42-114-103-83.ap.ngrok.io/resources
+    conferenceUrl: https://bf34-42-114-103-83.ap.ngrok.io/conference
+    webServerUrl: https://bf34-42-114-103-83.ap.ngrok.io/root
+  environmentUrl: https://gist.githubusercontent.com/ptlong1/f334d507837824b228359f6e822e16c8/raw/.vfenv

@@ -20,6 +20,13 @@ public class EnvironmentVariablesContainer : ScriptableObject
 	public  EnvironmentVariables environmentVariables;
 	public string environmentUrl;
 
+	public string EnvironmentUrl { 
+		get {
+			string newUrl = environmentUrl + "?" + UnityEngine.Random.Range(100000, 999999).ToString();
+			return newUrl;
+		} 
+		set => environmentUrl = value; }
+
 	[ContextMenu("Parse")]
 	public void Parse(string resultJson)
 	{

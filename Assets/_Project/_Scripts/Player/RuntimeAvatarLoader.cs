@@ -21,6 +21,7 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     public GameEvent OnLoadingAvatar;
     public GameEvent OnLoadedAvatar;
 	AvatarLoader avatarLoader;
+	bool isLoaded;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,8 @@ public class RuntimeAvatarLoader : NetworkBehaviour
         Debug.Log($"Started loading avatar. [{Time.timeSinceLevelLoad:F2}]");
 		// Debug.Log("Assign Avatar");
     }
+
+
 	
 	[Command]
 	public void CmdSetUserAvatar(string url)
@@ -49,7 +52,8 @@ public class RuntimeAvatarLoader : NetworkBehaviour
 	void RpcLoadNewAvatar(string url)
 	{
 		avatarURL = url;
-        LoadNewAvatar();
+		if (!isLoaded)
+			LoadNewAvatar();
 	}
 	
 	public void TestAvatar()
@@ -66,6 +70,7 @@ public class RuntimeAvatarLoader : NetworkBehaviour
 		{
 			OnLoadingAvatar.Raise();
 		}
+		isLoaded = true;
     }
     private void OnAvatarImported(GameObject avatar)
     {
