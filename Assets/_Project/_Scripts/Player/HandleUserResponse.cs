@@ -9,6 +9,7 @@ public class HandleUserResponse : NetworkBehaviour
     // Start is called before the first frame update
 
 	public override void OnStartLocalPlayer(){
+		GetComponent<RuntimeAvatarLoader>().isSyncAvatarUrl = true;
 		GetComponent<RuntimeAvatarLoader>().CmdSetUserAvatar(userResponse.user.avatarUrl);
 		GetComponent<PlayerName>().CmdSetPlayerName(userResponse.user.username);
 		// GetComponent<RuntimeAvatarLoader>().userAvatar = (userResponse.user.url);

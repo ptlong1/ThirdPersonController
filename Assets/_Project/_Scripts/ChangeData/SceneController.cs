@@ -14,7 +14,8 @@ public class SceneController : MonoBehaviour
 	public string[] scenes;
 	TMP_Dropdown dropdown;
 	int currentIndex;
-	public GameEvent OnLoadNewScene;
+	public GameEvent OnLoadingNewScene;
+	public GameEvent OnLoadedNewScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,12 +42,13 @@ public class SceneController : MonoBehaviour
 	}
 	IEnumerator CR_ChangeToScene(int idx)
 	{
+		OnLoadingNewScene.Raise();
 		if (SceneManager.GetSceneByPath(scenes[currentIndex]).IsValid())
 			yield return SceneManager.UnloadSceneAsync(GetSceneName(scenes[currentIndex]));
 		currentIndex = idx;
 		if (SceneManager.GetSceneByPath(scenes[currentIndex]).IsValid() == false)
 			yield return SceneManager.LoadSceneAsync(GetSceneName(scenes[currentIndex]), LoadSceneMode.Additive);
 		GameObject.FindGameObjectWithTag("Chat").SetActive(false);
-		OnLoadNewScene.Raise();
+		OnLoadedNewScene.Raise();
 	}
 }

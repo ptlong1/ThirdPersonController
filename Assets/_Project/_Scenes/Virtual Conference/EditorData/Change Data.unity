@@ -1461,7 +1461,8 @@ MonoBehaviour:
   - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 1.unity
   - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 2.unity
   - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 3.unity
-  OnLoadNewScene: {fileID: 11400000, guid: 6893af87fde89d2418787d37d22f738f, type: 2}
+  OnLoadingNewScene: {fileID: 11400000, guid: 39ec6fbb45c7e3444ae2be2954a860b3, type: 2}
+  OnLoadedNewScene: {fileID: 11400000, guid: 6893af87fde89d2418787d37d22f738f, type: 2}
 --- !u!1 &806580310
 GameObject:
   m_ObjectHideFlags: 0

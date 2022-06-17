@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [Header("Loading Avatar Model Window")]
     public Sprite loadingSprite;
     ModelWindow loadingModelWindow;
+	public LoadingScreen loadingScreen;
 	
 	[ContextMenu("Show Loading Avatar Model Window")]
     public void ShowLoadingAvatarModelWindow()
@@ -25,4 +26,9 @@ public class UIManager : MonoBehaviour
 		if (loadingModelWindow != null)
 			loadingModelWindow.Hide();
     }
+
+	public void ToggleLoadingScreen(bool vl)
+	{
+		loadingScreen.gameObject.SetActive(vl);
+	}
 }

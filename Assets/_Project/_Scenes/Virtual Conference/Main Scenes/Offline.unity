@@ -482,6 +482,8 @@ MonoBehaviour:
   - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 2.unity
   - Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 3.unity
   useAddressablesForScenes: 0
+  OnLoadingNewScene: {fileID: 11400000, guid: 39ec6fbb45c7e3444ae2be2954a860b3, type: 2}
+  OnLoadedNewScene: {fileID: 11400000, guid: 6893af87fde89d2418787d37d22f738f, type: 2}
 --- !u!114 &491867618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1027,10 @@ PrefabInstance:
     - target: {fileID: 3039361735023844875, guid: 0df8ebee130a8424ea8258662b471415, type: 3}
       propertyPath: m_Name
       value: PrepareResources
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039361735023844875, guid: 0df8ebee130a8424ea8258662b471415, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df8ebee130a8424ea8258662b471415, type: 3}
@@ -1827,6 +1833,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381174819, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 6893af87fde89d2418787d37d22f738f, type: 2}
+    - target: {fileID: 1381174820, guid: 05a96c01091ac004abac758994809fcc, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 39ec6fbb45c7e3444ae2be2954a860b3, type: 2}
     - target: {fileID: 1112292494773153582, guid: 05a96c01091ac004abac758994809fcc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2176,30 +2190,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2770386599469107405, guid: 05a96c01091ac004abac758994809fcc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6552252222417275738, guid: 05a96c01091ac004abac758994809fcc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

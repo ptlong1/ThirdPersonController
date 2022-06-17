@@ -22,12 +22,15 @@ public class RuntimeAvatarLoader : NetworkBehaviour
     public GameEvent OnLoadedAvatar;
 	AvatarLoader avatarLoader;
 	bool isLoaded;
+	public bool isSyncAvatarUrl;
     // Start is called before the first frame update
-    void Start()
+    public override void OnStartClient()
     {
 		avatarLoader = new AvatarLoader();
         Debug.Log($"Started loading avatar. [{Time.timeSinceLevelLoad:F2}]");
 		// Debug.Log("Assign Avatar");
+		// if (!isLocalPlayer && !isLoaded)
+		// 	CmdSetUserAvatar(userAvatar);
     }
 
 
@@ -53,7 +56,12 @@ public class RuntimeAvatarLoader : NetworkBehaviour
 	{
 		avatarURL = url;
 		if (!isLoaded)
+		{
 			LoadNewAvatar();
+			RuntimeAvatarLoader localAvatarLoader = NetworkClient.localPlayer.GetComponent<RuntimeAvatarLoader>();
+			if (localAvatarLoader.isLoaded)
+				localAvatarLoader.CmdSetUserAvatar(localAvatarLoader.avatarURL);
+		}
 	}
 	
 	public void TestAvatar()

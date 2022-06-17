@@ -5,6 +5,7 @@ using PlayFab.Networking;
 using Mirror;
 using UnityEngine.SceneManagement;
 using Mirror.Examples.AdditiveLevels;
+using ScriptableObjectArchitecture;
 // using UnityEngine.AddressableAssets;
 // using UnityEngine.ResourceManagement.ResourceProviders;
 // using UnityEngine.ResourceManagement.AsyncOperations;
@@ -39,6 +40,9 @@ namespace Assets._Project._Scripts.AdditiveLevels
         // [Header("Player AssetReference")]
         // public AssetReference playerAssetReference;
         // bool playerRegistered;
+
+		public GameEvent OnLoadingNewScene;
+		public GameEvent OnLoadedNewScene;
 
         #region Scene Management
 
@@ -212,7 +216,9 @@ namespace Assets._Project._Scripts.AdditiveLevels
         public override void OnClientChangeScene(string sceneName, SceneOperation sceneOperation, bool customHandling)
         {
             Debug.Log($"{System.DateTime.Now:HH:mm:ss:fff} OnClientChangeScene {sceneName} {sceneOperation}");
-
+			
+			if (OnLoadingNewScene != null)
+				OnLoadingNewScene.Raise();
             if (sceneOperation == SceneOperation.UnloadAdditive)
                 StartCoroutine(UnloadAdditive(sceneName));
 
@@ -289,6 +295,8 @@ namespace Assets._Project._Scripts.AdditiveLevels
             isInTransition = false;
 
             OnClientSceneChanged();
+			if (OnLoadedNewScene != null)
+				OnLoadedNewScene.Raise();
 
             // yield return fadeInOut.FadeOut();
         }
