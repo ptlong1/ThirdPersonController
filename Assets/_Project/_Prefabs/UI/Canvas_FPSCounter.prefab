@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCounter: {fileID: 7638255520445290346}
+  sec: 0.5
 --- !u!1 &7638255521027652120
 GameObject:
   m_ObjectHideFlags: 0

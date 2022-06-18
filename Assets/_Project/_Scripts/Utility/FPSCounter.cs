@@ -6,10 +6,17 @@ public class FPSCounter : MonoBehaviour
 {
 
 	public TMP_Text fpsCounter;
-    // Update is called once per frame
-    void Update()
-    {
-        float fps = 1/Time.deltaTime;
-		fpsCounter.text = fps.ToString();
-    }
+	public float sec;
+	IEnumerator CR_CountFPS()
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(sec);
+			int fps = (int)Mathf.Round(1/Time.deltaTime);
+			fpsCounter.text = fps.ToString();
+		}
+	}
+	private void Start() {
+		StartCoroutine(CR_CountFPS());
+	}
 }
