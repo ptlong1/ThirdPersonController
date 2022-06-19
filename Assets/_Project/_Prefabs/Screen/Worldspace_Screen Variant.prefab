@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5708912866512363621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384548858682534973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: d832664afc932e445af94ff88020bd51, type: 2}
+  _event: {fileID: 11400000, guid: d832664afc932e445af94ff88020bd51, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4987724476267794893}
+        m_TargetAssemblyTypeName: Assets._Project._Scripts.Screen.ConferenceScreen,
+          Assembly-CSharp
+        m_MethodName: ShowContent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &2283623133680594112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987724476483478463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 0.12, y: -0.12}
+  m_UseGraphicAlpha: 1
 --- !u!82 &8238439598397278008
 AudioSource:
   m_ObjectHideFlags: 0
@@ -96,39 +144,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5708912866512363621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384548858682534973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: d832664afc932e445af94ff88020bd51, type: 2}
-  _event: {fileID: 11400000, guid: d832664afc932e445af94ff88020bd51, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4987724476267794893}
-        m_TargetAssemblyTypeName: Assets._Project._Scripts.Screen.ConferenceScreen,
-          Assembly-CSharp
-        m_MethodName: ShowContent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!1001 &7060511463514091346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,6 +417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c397d8bc74a78d418808bdc582ffbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4987724476483478463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2651508817619389677, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+  m_PrefabInstance: {fileID: 7060511463514091346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4987724475778359278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2651508816983552188, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}

@@ -78,6 +78,10 @@ namespace Assets._Project._Scripts.ChangeData
 
 		public void CurrentScreenTriggerWatching()
 		{
+			if(conferenceObjects == null || CurrentObjectIdx >= conferenceObjects.Length)
+            {
+				return;
+            }
 			ConferenceScreen screen = conferenceObjects[CurrentObjectIdx].GetComponent<ConferenceScreen>();
 			screen.TriggerWatching();
 		}

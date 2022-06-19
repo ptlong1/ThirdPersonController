@@ -72,14 +72,14 @@ public class LoginWindow : MonoBehaviour
 	private void loginFailure()
 	{
 		Debug.Log("Login Failure");
-		Toast.Show("Login Fail", 3f, ToastColor.Red, ToastPosition.BottomCenter);
+		Toast.Show("Login Failed!", 3f, ToastColor.Red, ToastPosition.BottomCenter);
 		//show model windows about fail
 	}
 
 	private void loginSuccess()
 	{
-		Debug.Log("Login Sucess");
-		Toast.Show("Login Success", 3f, ToastColor.Blue, ToastPosition.BottomCenter);
+		Debug.Log("Login Successfully");
+		Toast.Show("Login Successfully!", 3f, ToastColor.Blue, ToastPosition.BottomCenter);
 		gameObject.SetActive(false);
 		OnLoginSuccess.Raise();
 		// manager.StartClient();

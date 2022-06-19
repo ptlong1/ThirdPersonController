@@ -13,7 +13,7 @@ public class FPSCounter : MonoBehaviour
 		{
 			yield return new WaitForSeconds(sec);
 			int fps = (int)Mathf.Round(1/Time.deltaTime);
-			fpsCounter.text = fps.ToString();
+			fpsCounter.text = "FPS: " + fps.ToString();
 		}
 	}
 	private void Start() {

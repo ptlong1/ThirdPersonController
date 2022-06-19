@@ -236,13 +236,16 @@ MonoBehaviour:
   picturePrefab: {fileID: 0}
   documentPrefab: {fileID: 0}
   videoPrefab: {fileID: 0}
+  slidePrefab: {fileID: 0}
   urlContent: 
   token: 
+  hostName: 
   content: {fileID: 0}
   confirmUI: {fileID: 0}
   OnTurnOnContent: {fileID: 0}
   OnTurnOffContent: {fileID: 0}
   defaultOn: 0
+  useWorldSpace: 0
 --- !u!1001 &714058096705849939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,6 +335,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8223399829556069034}
     m_Modifications:
+    - target: {fileID: 2283623133680594112, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
+      propertyPath: m_EffectColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283623133680594112, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
+      propertyPath: m_EffectDistance.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283623133680594112, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 4987724475778359281, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0.8
@@ -341,8 +356,20 @@ PrefabInstance:
       value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4987724476483478462, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.7578947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987724476483478462, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987724476483478463, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987724476781176964, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7384548858682534973, guid: 33aa6de6832b9ac45b31b98f293cec53, type: 3}
       propertyPath: m_Name

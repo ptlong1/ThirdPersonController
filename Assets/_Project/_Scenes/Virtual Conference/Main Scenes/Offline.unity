@@ -796,6 +796,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2062466054}
     m_Modifications:
+    - target: {fileID: 7638255520445290341, guid: b7e7b9cfa1f948343a31f360996e5f82, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638255520445290346, guid: b7e7b9cfa1f948343a31f360996e5f82, type: 3}
+      propertyPath: m_fontSize
+      value: 20.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638255520445290346, guid: b7e7b9cfa1f948343a31f360996e5f82, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a07801a4ed618c4a93a016feea0ff58, type: 2}
+    - target: {fileID: 7638255520445290346, guid: b7e7b9cfa1f948343a31f360996e5f82, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3417602533147800375, guid: 7a07801a4ed618c4a93a016feea0ff58, type: 2}
     - target: {fileID: 7638255521027652120, guid: b7e7b9cfa1f948343a31f360996e5f82, type: 3}
       propertyPath: m_Name
       value: Canvas_FPSCounter
