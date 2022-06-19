@@ -32,6 +32,6 @@ public class LoadingScreen : MonoBehaviour
 	void UpdateRotation()
 	{
 		//logo.eulerAngles += new Vector3(0f,currentRotationSpeed*Time.deltaTime, 0f);
-		logo.eulerAngles += new Vector3(0f,0f,-currentRotationSpeed*Time.deltaTime);
+		logo.eulerAngles += new Vector3(0f, 0f,-currentRotationSpeed*Time.deltaTime);
 	}
 }
