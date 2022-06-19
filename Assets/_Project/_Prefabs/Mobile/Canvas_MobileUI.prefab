@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114017654419583406, guid: f77f88b14a477764bb65a49d28c02d33, type: 3}
       propertyPath: m_Text
-      value: Right Stick
+      value: Look
       objectReference: {fileID: 0}
     - target: {fileID: 114144114248384442, guid: f77f88b14a477764bb65a49d28c02d33, type: 3}
       propertyPath: m_Sprite
@@ -822,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114017654419583406, guid: f77f88b14a477764bb65a49d28c02d33, type: 3}
       propertyPath: m_Text
-      value: Right Stick
+      value: Move
       objectReference: {fileID: 0}
     - target: {fileID: 114144114248384442, guid: f77f88b14a477764bb65a49d28c02d33, type: 3}
       propertyPath: m_Sprite

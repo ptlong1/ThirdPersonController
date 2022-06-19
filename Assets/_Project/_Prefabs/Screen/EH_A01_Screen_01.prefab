@@ -1752,7 +1752,7 @@ MonoBehaviour:
   hostName: 
   content: {fileID: 7965211061970437026}
   imagePrefab: {fileID: 3980791950310568252, guid: 66558f7ebdaa6e1448a3b2ab9fa1a338, type: 3}
-  fileType: pptx
+  fileType: pdf
 --- !u!1 &8498607609400433679
 GameObject:
   m_ObjectHideFlags: 0
