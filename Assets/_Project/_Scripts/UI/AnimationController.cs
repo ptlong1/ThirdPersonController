@@ -9,7 +9,7 @@ public class AnimationController : MonoBehaviour
 {
 	public RectTransform selection;
 	public bool isOn;
-	Animator playerAnimator;
+	NetworkAnimator playerAnimator;
 	public float duration;
 	Coroutine selectionOffCR;
 	public void SelectionOn()
@@ -64,7 +64,7 @@ public class AnimationController : MonoBehaviour
 
 	public void PlayAnimation(string anim)
 	{
-		playerAnimator = NetworkClient.localPlayer.GetComponent<Animator>();
+		playerAnimator = NetworkClient.localPlayer.GetComponent<NetworkAnimator>();
 		playerAnimator.SetTrigger(anim);
 		SelectionOff();
 	}

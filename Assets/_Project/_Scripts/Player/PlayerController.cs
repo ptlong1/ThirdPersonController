@@ -119,12 +119,12 @@ public class PlayerController : NetworkBehaviour
     [ClientCallback]
     void Update()
     {
-		if (DisableMovementAndCameraCheck())
-		{
-			return;
-		}
         if (isLocalPlayer)
         {
+			if (DisableMovementAndCameraCheck())
+			{
+				return;
+			}
             JumpAndGravity();
             GroundedCheck();
             Move(); 
