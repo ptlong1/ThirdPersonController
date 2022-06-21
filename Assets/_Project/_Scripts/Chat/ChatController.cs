@@ -38,6 +38,8 @@ namespace Assets._Project._Scripts.Chat
 				string playerName = sender.identity.GetComponent<PlayerName>().playerName;
 				string roomName = sender.identity.GetComponent<PlayerController>().roomName;
 				RpcReceiveText(playerName, roomName, msg);
+				BubbleController bubbleController =	sender.identity.GetComponent<BubbleController>();
+				bubbleController.RpcTurnOn(msg);
 			}
 		}
 
