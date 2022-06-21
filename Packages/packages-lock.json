@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.plt.tools": {
-      "version": "file:D:/Unity/Unity Packages/Tools",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.unity.cinemachine": {
       "version": "2.6.11",
       "depth": 0,

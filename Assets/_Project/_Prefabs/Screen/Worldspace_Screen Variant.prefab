@@ -163,6 +163,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 262480477368786232, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 540653830327164751, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -223,6 +227,10 @@ PrefabInstance:
       propertyPath: m_TargetAudioSources.Array.data[0]
       value: 
       objectReference: {fileID: 8238439598397278008}
+    - target: {fileID: 2651508816983552188, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2651508817075814723, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
       propertyPath: m_RenderMode
       value: 2

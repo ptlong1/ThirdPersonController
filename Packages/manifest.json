@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.plt.tools": "file:D:/Unity/Unity Packages/Tools",
     "com.unity.cinemachine": "2.6.11",
     "com.unity.collab-proxy": "1.7.1",
     "com.unity.ide.visualstudio": "2.0.11",
