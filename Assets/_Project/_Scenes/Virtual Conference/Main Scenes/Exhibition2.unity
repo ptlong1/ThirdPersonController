@@ -3454,6 +3454,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5205981338013197499, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 5241228380952799851, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -4641,6 +4645,10 @@ PrefabInstance:
     - target: {fileID: 7457003844323895302, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: destinationScene
       value: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Welcome Hall.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457003844323895352, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 7457003844323895352, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: m_LocalRotation.w

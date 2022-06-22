@@ -1047,6 +1047,30 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1260494944585612310, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260494944585612310, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260494944585612310, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260494944585612310, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260494944585612310, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260494944585612310, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 1260494944585612311, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: sceneId
       value: 1017537585
@@ -1675,6 +1699,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6743157503919032879, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6771503844300902721, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -1861,6 +1889,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8599360372171213320, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610236630031977516, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8610236630031977516, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
