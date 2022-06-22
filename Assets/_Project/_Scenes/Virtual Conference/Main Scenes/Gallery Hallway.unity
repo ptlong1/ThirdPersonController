@@ -1003,6 +1003,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 832544242554127156, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 832544242554127156, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 832544242554127156, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.31
+      objectReference: {fileID: 0}
     - target: {fileID: 844443652211344395, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.5
@@ -1457,16 +1469,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4911196039474760852, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_fontSize
-      value: 0.8
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4911196039474760852, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 7a07801a4ed618c4a93a016feea0ff58, type: 2}
+      objectReference: {fileID: 11400000, guid: 6e4fdd038d85ad146979e5d20fd1e816, type: 2}
+    - target: {fileID: 4911196039474760852, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4911196039474760852, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -3417602533147800375, guid: 7a07801a4ed618c4a93a016feea0ff58, type: 2}
+      objectReference: {fileID: -1361311105375832140, guid: 6e4fdd038d85ad146979e5d20fd1e816, type: 2}
     - target: {fileID: 4949749518597456342, guid: 478827124c4e95549b4820b1062f5dac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.100001

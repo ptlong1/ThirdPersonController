@@ -38,8 +38,8 @@ ModelImporter:
       name: Standing Clap
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 0
-      lastFrame: 147
+      firstFrame: 30
+      lastFrame: 109
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

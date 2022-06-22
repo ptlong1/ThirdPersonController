@@ -12,11 +12,12 @@ public class AnimationController : MonoBehaviour
 	NetworkAnimator playerAnimator;
 	public float duration;
 	Coroutine selectionOffCR;
+	public float scalePoint;
 	public void SelectionOn()
 	{
 		isOn = true;
 		selection
-			.DOScale(Vector3.one, duration);
+			.DOScale(Vector3.one * scalePoint, duration);
 		if (selectionOffCR != null)
 		{
 			StopCoroutine(selectionOffCR);
@@ -55,6 +56,14 @@ public class AnimationController : MonoBehaviour
 			// selection.gameObject.SetActive(true);
 			SelectionOn();
 		}
+		if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+			if (selectionOffCR != null)
+			{
+				StopCoroutine(selectionOffCR);
+			}
+			selectionOffCR = StartCoroutine(CR_SelectionOff(0f));
+		}
 	}
 	
 	void Start()
@@ -68,5 +77,7 @@ public class AnimationController : MonoBehaviour
 		playerAnimator.SetTrigger(anim);
 		SelectionOff();
 	}
+
+
 
 }
