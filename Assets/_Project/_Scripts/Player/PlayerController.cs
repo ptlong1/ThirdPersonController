@@ -142,7 +142,7 @@ public class PlayerController : NetworkBehaviour
 			isDisableMovementAndCamera = false;
 		}
 		freeLookCamera.gameObject.SetActive(!isDisableMovementAndCamera);
-		animator.SetBool(animIDSitting, isDisableMovementAndCamera);
+		// animator.SetBool(animIDSitting, isDisableMovementAndCamera);
 		return isDisableMovementAndCamera;
 	}
 
