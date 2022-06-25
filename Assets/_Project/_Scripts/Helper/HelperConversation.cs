@@ -18,10 +18,12 @@ public class HelperConversation : MonoBehaviour
 	// public TextAsset audioContent;
 	TextToSpeechAPI textToSpeechAPI;
 	
-	private void Start() {
+	private void Awake() {
 		audioSource = GetComponent<AudioSource>();
 		textToSpeechAPI = GetComponent<TextToSpeechAPI>();
-		UpdateCanvas();
+		
+	}
+	private void Start() {
 		for(int i = 0; i < questions.Length; ++i)
 		{
 			Button newBtn = Instantiate(questionBtnPrefab, choices.transform);
@@ -29,6 +31,10 @@ public class HelperConversation : MonoBehaviour
 			string answer = answers[i];
 			newBtn.onClick.AddListener(() => SetHelper(answer));
 		}
+	}
+
+	private void OnEnable() {
+		UpdateCanvas();
 	}
 
 	void SetHelper(string str)
