@@ -11,6 +11,7 @@ public class NPCController : MonoBehaviour
 	Animator animator;
 	public GameEvent OnTurnOnContent;
 	public GameEvent OnTurnOffContent;
+	public string openSentence;
 
 	private void Start() {
 		animator = GetComponent<Animator>();
