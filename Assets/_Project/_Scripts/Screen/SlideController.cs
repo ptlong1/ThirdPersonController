@@ -5,7 +5,7 @@ using Mirror;
 using TMPro;
 using UnityEngine.UI;
 using Cinemachine;
-
+using ScriptableObjectArchitecture;
 public class SlideController :NetworkBehaviour 
 {
 	public string controllerName;
@@ -18,6 +18,8 @@ public class SlideController :NetworkBehaviour
 	Camera camSlide;
 	CinemachineFreeLook freeLookCamera;
 	Camera mainCamera;
+	public GameEvent OnTurnOnContent;
+	public GameEvent OnTurnOffContent;
 
 	private void Start() {
 		watchSlideBtn.gameObject.SetActive(true);
@@ -33,6 +35,14 @@ public class SlideController :NetworkBehaviour
 		bool vl = camSlide.gameObject.activeSelf;
 		mainCamera.gameObject.SetActive(vl);
 		camSlide.gameObject.SetActive(!vl);	
+		if (vl)
+		{
+			OnTurnOffContent.Raise();
+		}
+		else
+		{
+			OnTurnOnContent.Raise();
+		}
 	}
 
 	public void SetUp(SlideView slide) {

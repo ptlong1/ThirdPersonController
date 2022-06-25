@@ -25,6 +25,8 @@ namespace Assets._Project._Scripts.Chat
 		{
 			if (!string.IsNullOrWhiteSpace(message))
 			{
+				NetworkClient.localPlayer.GetComponent<NetworkAnimator>().SetTrigger("TalkTrigger");
+				NetworkClient.localPlayer.GetComponentInChildren<PlayerSound>().CmdPlayTalkSound();
 				CmdSendText(message);
 				chatUI.ClearAndFocusInput();
 			}

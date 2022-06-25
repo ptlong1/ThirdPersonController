@@ -967,6 +967,14 @@ PrefabInstance:
       propertyPath: watchSlideBtn
       value: 
       objectReference: {fileID: 7926545413353017429}
+    - target: {fileID: 8675830294467445515, guid: 83f9d0618f2ebd34983b4cd587c05b5e, type: 3}
+      propertyPath: OnTurnOnContent
+      value: 
+      objectReference: {fileID: 11400000, guid: 55cbbf24e947e1a4d8d004ea2cbbcebd, type: 2}
+    - target: {fileID: 8675830294467445515, guid: 83f9d0618f2ebd34983b4cd587c05b5e, type: 3}
+      propertyPath: OnTurnOffContent
+      value: 
+      objectReference: {fileID: 11400000, guid: 318f27925ddb14945b206ce7647b539d, type: 2}
     - target: {fileID: 8896609454242088148, guid: 83f9d0618f2ebd34983b4cd587c05b5e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
