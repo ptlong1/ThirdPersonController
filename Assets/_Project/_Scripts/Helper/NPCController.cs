@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class NPCController : MonoBehaviour
 {
 	public HelperConversation canvasHelper;
 	Animator animator;
+	public GameEvent OnTurnOnContent;
+	public GameEvent OnTurnOffContent;
 
 	private void Start() {
 		animator = GetComponent<Animator>();
@@ -40,11 +43,13 @@ public class NPCController : MonoBehaviour
 	{
 		canvasHelper.gameObject.SetActive(false);
 		animator.SetBool("Talk", false);
+		OnTurnOffContent.Raise();
 	}
 
 	private void TriggerWatching()
 	{
 		canvasHelper.gameObject.SetActive(true);
 		animator.SetBool("Talk", true);
+		OnTurnOnContent.Raise();
 	}
 }
