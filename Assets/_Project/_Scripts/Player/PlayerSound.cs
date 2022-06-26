@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class PlayerSound : NetworkBehaviour 
+public class PlayerSound : MonoBehaviour 
 {
 	public AudioClip walkSound;
 	public AudioClip talkSound;
@@ -39,17 +39,6 @@ public class PlayerSound : NetworkBehaviour
 		audioSource.Play();
 	}
 
-	[Command]
-	public void CmdPlayTalkSound()
-	{
-		RpcPlayTalkSound();
-	}
-
-	[ClientRpc]
-	public void RpcPlayTalkSound()
-	{
-		PlayTalkSound();
-	}
 	public void PlayTalkSound()
 	{
 		ChooseSound(talkSound, false);

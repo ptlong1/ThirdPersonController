@@ -11,6 +11,7 @@ public class EnvironmentVariables
 	public string resourceUrl;
 	public string conferenceUrl;
    	public string webServerUrl;
+   	public string ttsUrl;
 }
 
 

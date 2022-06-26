@@ -22,12 +22,29 @@ public class TextToSpeechRequest
 [Serializable]
 public class TextToSpeechAPI: MonoBehaviour
 {
+	public EnvironmentVariablesContainer environmentVariablesContainer;
 	public  string url;
 	public bool isMale;
 
 	public string result;
 	public TextToSpeechResponse response;
 
+	private void Awake() {
+		// url = environmentVariablesContainer.environmentVariables.ttsUrl;
+	}
+	private static void AddTokenHeader(UnityWebRequest webRequest, string token)
+	{
+		if (!String.IsNullOrWhiteSpace(token))
+		{
+			webRequest.SetRequestHeader("Authorization", "Bearer " + token);
+		}
+		else
+		{
+			Debug.Log("Token empty");
+		}
+	}
+
+	
 	string GetJson(string text, bool isMale)
 	{
 		TextToSpeechRequest request = new TextToSpeechRequest();
@@ -44,12 +61,13 @@ public class TextToSpeechAPI: MonoBehaviour
 	}
 
 
-	public IEnumerator PostAudio(string text)
+	public IEnumerator PostAudio(string text, string token)
 	{
 		string postBody = GetJson(text, isMale);
-		// Debug.Log(postBody);
+		url = environmentVariablesContainer.environmentVariables.ttsUrl;
 		using (var req = new UnityWebRequest(url, "POST"))
 		{
+			AddTokenHeader(req, token);
 			byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(postBody);
 			req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
 			req.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();

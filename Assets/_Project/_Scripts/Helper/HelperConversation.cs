@@ -8,6 +8,7 @@ using System;
 public class HelperConversation : MonoBehaviour
 {
 	public TMP_Text helper;
+	public UserResponse userResponse;
 	public string helperAsk;
 	
 	public GameObject choices;
@@ -50,7 +51,7 @@ public class HelperConversation : MonoBehaviour
 
 	IEnumerator CR_Speak(string content)
 	{
-		yield return textToSpeechAPI.PostAudio(content);
+		yield return textToSpeechAPI.PostAudio(content, userResponse.token);
 		Speak(textToSpeechAPI.response.audioContent);
 	}
 

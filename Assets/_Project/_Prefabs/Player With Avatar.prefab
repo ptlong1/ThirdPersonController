@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 2897542220672871264}
   - component: {fileID: 6428156886158489601}
   - component: {fileID: 6722576309762851805}
+  - component: {fileID: 7434791037608466203}
   m_Layer: 6
   m_Name: Player With Avatar
   m_TagString: Player
@@ -544,6 +545,20 @@ MonoBehaviour:
   textNear: {fileID: 9152803436059000819}
   bubbleFar: {fileID: 4768159664335689256}
   threshhold: 2.5
+--- !u!114 &7434791037608466203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810648194239154873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a99d00dd0262024594c60299a13c7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &3517390345952785361
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +737,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f5f33df69c49543ab1f2584cbf9252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSound: {fileID: 8300000, guid: 2506a20cf3775884ba0b34c5f833f87c, type: 3}
+  talkSound: {fileID: 8300000, guid: 490a23f20eaa1ea49ac1bb0050deae60, type: 3}
+  audioSource: {fileID: 7084919056058509397}
 --- !u!82 &7084919056058509397
 AudioSource:
   m_ObjectHideFlags: 0

@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helper: {fileID: 571259286730137246}
+  userResponse: {fileID: 11400000, guid: 9c4350803acca014faebe2fe23bd7cdb, type: 2}
   helperAsk: What do you want to know?
   choices: {fileID: 571259286623502743}
   questionBtnPrefab: {fileID: 6738259572009605513, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
@@ -469,6 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ae45f7bd803e442b26214aed20aad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  environmentVariablesContainer: {fileID: 11400000, guid: 60bcac4d479002c4f83a158cb68d786e, type: 2}
   url: https://texttospeech.googleapis.com/v1beta1/text:synthesize?key=AIzaSyBzYbhBNFYfXS8Fdd04J4g7eSe0n4lfi0w
   isMale: 1
   result: 
