@@ -53,11 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 594760706443077669, guid: 42d0a94fd8836a74b881effddfe4db23, type: 3}
       propertyPath: m_Name
-      value: Helper_Male
+      value: Helper_Male Variant
       objectReference: {fileID: 0}
     - target: {fileID: 594760706443077671, guid: 42d0a94fd8836a74b881effddfe4db23, type: 3}
       propertyPath: m_WarningMessage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129426029440714880, guid: 42d0a94fd8836a74b881effddfe4db23, type: 3}
+      propertyPath: isMale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42d0a94fd8836a74b881effddfe4db23, type: 3}
@@ -76,6 +80,34 @@ PrefabInstance:
     - target: {fileID: -3915082565821610680, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
       propertyPath: m_Name
       value: Armature
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.000002026558
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.13902023
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.026814684
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.5901412
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1.0042857
+      objectReference: {fileID: 0}
+    - target: {fileID: -3612840882688719046, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.22602676
       objectReference: {fileID: 0}
     - target: {fileID: 2800602913417539097, guid: 91dc7c0e3ede2814facd6b9d2176ca40, type: 3}
       propertyPath: m_RootOrder

@@ -2385,6 +2385,7 @@ Transform:
   - {fileID: 7522253685305581036}
   - {fileID: 6645768321575903895}
   - {fileID: 7714667987050632134}
+  - {fileID: 8077142579353154575}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15167,9 +15168,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7090bba70ffbb12468651e11c4e9c262, type: 3}
---- !u!1 &4118898680220687777 stripped
+--- !u!1 &3143131386665167520 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6257418557668833862, guid: 7090bba70ffbb12468651e11c4e9c262, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4927273168909258055, guid: 7090bba70ffbb12468651e11c4e9c262, type: 3}
   m_PrefabInstance: {fileID: 8070333437357631463}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1514796262961579508 stripped
@@ -15177,9 +15178,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8861455330513691155, guid: 7090bba70ffbb12468651e11c4e9c262, type: 3}
   m_PrefabInstance: {fileID: 8070333437357631463}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3143131386665167520 stripped
+--- !u!1 &4118898680220687777 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4927273168909258055, guid: 7090bba70ffbb12468651e11c4e9c262, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6257418557668833862, guid: 7090bba70ffbb12468651e11c4e9c262, type: 3}
   m_PrefabInstance: {fileID: 8070333437357631463}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5422688137180093204 stripped
@@ -28622,6 +28623,125 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1143745685859530685, guid: 0f7557140be19b74a93b5a8bd769db81, type: 3}
   m_PrefabInstance: {fileID: 8070333438550783643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8676907340813779273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8070333438050395590}
+    m_Modifications:
+    - target: {fileID: 611740922373846339, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_Name
+      value: Helper_Male Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846340, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: welcomeSentence
+      value: Welcome to the Auditorium
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.228751
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.949999
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: answers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: questions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: answers.Array.data[0]
+      value: Click the button on the top left of your windows, it will toggle the
+        presentation mode on and off.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: answers.Array.data[1]
+      value: Right click on the screen and choose actions you want
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: questions.Array.data[0]
+      value: How to enter the presentation mode?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: questions.Array.data[1]
+      value: How can I play an animation?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.000000834465
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.13901976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.0268154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.5901414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1.0042857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248540387783579455, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.22602652
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+--- !u!4 &8077142579353154575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+  m_PrefabInstance: {fileID: 8676907340813779273}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9179640200361006640
 PrefabInstance:

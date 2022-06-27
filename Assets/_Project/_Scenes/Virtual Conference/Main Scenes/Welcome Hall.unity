@@ -812,6 +812,91 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6947839, y: 0.8320558, z: 1.700412}
   m_Center: {x: 0.0000018179421, y: 0.000000029802322, z: 0.0000015497211}
+--- !u!1001 &1303136481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 611740922373846339, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_Name
+      value: Helper_Male Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846340, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: welcomeSentence
+      value: Anybody wants to go to the Exhibition Room?
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 611740922373846342, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: answers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: questions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: answers.Array.data[0]
+      value: It's the room containing stands with articles, posters, videos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: answers.Array.data[1]
+      value: Go upstairs, you will find 2 exhibition rooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: questions.Array.data[0]
+      value: What is the Exhibition Room?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: questions.Array.data[1]
+      value: How can I go there?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
 --- !u!1001 &1436316658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3730,7 +3815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 882790180513320181, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 882790180513320181, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3835,3 +3920,194 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d838b92679991d468c75be710be23f4, type: 3}
+--- !u!1001 &7340861880593710040
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: helperAsk
+      value: Hello this is the entry of Auditorium. What do you want to know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: answers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: questions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: answers.Array.data[0]
+      value: An auditorium is a room built to enable an audience to hear and watch
+        presentations.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: answers.Array.data[1]
+      value: Just go through the door behind me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: questions.Array.data[0]
+      value: What is Auditorium?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: questions.Array.data[1]
+      value: How can I go there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: questions.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623713, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: repeatAfter
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623713, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: welcomeSentence
+      value: Anybody wants to go to the auditorium
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623715, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899024895870623718, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: m_Name
+      value: Helper_MaleBlonde
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: defac94ac39a102448083732e350fb47, type: 3}
+--- !u!1001 &7499839682183656016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6941678437248090120, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: repeatAfter
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090120, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: welcomeSentence
+      value: Anybody wants to go to the Gallery?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090122, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941678437248090127, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: m_Name
+      value: Helper_Blonde
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: helperAsk
+      value: Hello this is the entry of the Gallery. What do you want to know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: answers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: questions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: answers.Array.data[0]
+      value: A room that is used for showing works of art.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: answers.Array.data[1]
+      value: Just go through the door beside me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: questions.Array.data[0]
+      value: What does the Gallery do?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
+      propertyPath: questions.Array.data[1]
+      value: How can I go there?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}

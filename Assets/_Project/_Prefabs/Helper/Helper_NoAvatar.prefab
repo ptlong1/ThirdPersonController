@@ -53,142 +53,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: '
-
-    Transform ''LeftToeBase'' has been deleted
-
-    Transform
-    ''LeftFoot'' has been deleted
-
-    Transform ''LeftLeg'' has been deleted
-
-    Transform
-    ''LeftUpLeg'' has been deleted
-
-    Transform ''RightToeBase'' has been deleted
-
-    Transform
-    ''RightFoot'' has been deleted
-
-    Transform ''RightLeg'' has been deleted
-
-    Transform
-    ''RightUpLeg'' has been deleted
-
-    Transform ''LeftHandIndex3'' has been deleted
-
-    Transform
-    ''LeftHandIndex2'' has been deleted
-
-    Transform ''LeftHandIndex1'' has been
-    deleted
-
-    Transform ''LeftHandMiddle3'' has been deleted
-
-    Transform ''LeftHandMiddle2''
-    has been deleted
-
-    Transform ''LeftHandMiddle1'' has been deleted
-
-    Transform
-    ''LeftHandPinky3'' has been deleted
-
-    Transform ''LeftHandPinky2'' has been
-    deleted
-
-    Transform ''LeftHandPinky1'' has been deleted
-
-    Transform ''LeftHandRing3''
-    has been deleted
-
-    Transform ''LeftHandRing2'' has been deleted
-
-    Transform
-    ''LeftHandRing1'' has been deleted
-
-    Transform ''LeftHandThumb3'' has been
-    deleted
-
-    Transform ''LeftHandThumb2'' has been deleted
-
-    Transform ''LeftHandThumb1''
-    has been deleted
-
-    Transform ''LeftHand'' has been deleted
-
-    Transform
-    ''LeftForeArm'' has been deleted
-
-    Transform ''LeftArm'' has been deleted
-
-    Transform
-    ''LeftShoulder'' has been deleted
-
-    Transform ''Head'' has been deleted
-
-    Transform
-    ''Neck'' has been deleted
-
-    Transform ''RightHandIndex3'' has been deleted
-
-    Transform
-    ''RightHandIndex2'' has been deleted
-
-    Transform ''RightHandIndex1'' has been
-    deleted
-
-    Transform ''RightHandMiddle3'' has been deleted
-
-    Transform ''RightHandMiddle2''
-    has been deleted
-
-    Transform ''RightHandMiddle1'' has been deleted
-
-    Transform
-    ''RightHandPinky3'' has been deleted
-
-    Transform ''RightHandPinky2'' has been
-    deleted
-
-    Transform ''RightHandPinky1'' has been deleted
-
-    Transform ''RightHandRing3''
-    has been deleted
-
-    Transform ''RightHandRing2'' has been deleted
-
-    Transform
-    ''RightHandRing1'' has been deleted
-
-    Transform ''RightHandThumb3'' has been
-    deleted
-
-    Transform ''RightHandThumb2'' has been deleted
-
-    Transform ''RightHandThumb1''
-    has been deleted
-
-    Transform ''RightHand'' has been deleted
-
-    Transform
-    ''RightForeArm'' has been deleted
-
-    Transform ''RightArm'' has been deleted
-
-    Transform
-    ''RightShoulder'' has been deleted
-
-    Transform ''Spine2'' has been deleted
-
-    Transform
-    ''Spine1'' has been deleted
-
-    Transform ''Spine'' has been deleted
-
-    Transform
-    ''Hips'' has been deleted
-
-    Transform ''Armature'' has been deleted'
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -280,7 +145,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 4
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

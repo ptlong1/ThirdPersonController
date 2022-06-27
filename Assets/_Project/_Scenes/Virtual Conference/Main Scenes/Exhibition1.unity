@@ -5462,6 +5462,34 @@ PrefabInstance:
       propertyPath: id
       value: Exhibition1-C-01-01
       objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.08715578
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9961947
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915708116797513610, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 190
+      objectReference: {fileID: 0}
     - target: {fileID: 8962689758723458749, guid: b1d258586e01e7e4b94c8778d0ecf76f, type: 3}
       propertyPath: sceneId
       value: 2810049254
