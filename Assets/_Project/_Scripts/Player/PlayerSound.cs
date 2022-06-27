@@ -7,7 +7,9 @@ using Mirror;
 public class PlayerSound : MonoBehaviour 
 {
 	public AudioClip walkSound;
+	public float walkVolume;
 	public AudioClip talkSound;
+	public float talkVolume;
 	public AudioSource audioSource;
 	CharacterController characterController;
 	bool isWalk;
@@ -23,7 +25,7 @@ public class PlayerSound : MonoBehaviour
 		if (characterController.velocity.magnitude > 0.1f && !isWalk)
 		{
 			isWalk = true;
-			ChooseSound(walkSound, true);
+			ChooseSound(walkSound, true, walkVolume);
 		}
 		if (characterController.velocity.magnitude < 0.1f && isWalk)
 		{
@@ -32,15 +34,17 @@ public class PlayerSound : MonoBehaviour
 		}
     }
 
-	private void ChooseSound(AudioClip clip, bool loop)
+	private void ChooseSound(AudioClip clip, bool loop, float volume)
 	{
 		audioSource.clip = clip;
 		audioSource.loop = loop;
+		audioSource.volume = volume;
 		audioSource.Play();
 	}
 
 	public void PlayTalkSound()
 	{
-		ChooseSound(talkSound, false);
+		Debug.Log("PlayTalkSound");
+		ChooseSound(talkSound, false, talkVolume);
 	}
 }

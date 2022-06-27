@@ -51,35 +51,13 @@ public class HelperConversation : MonoBehaviour
 
 	IEnumerator CR_Speak(string content)
 	{
-		yield return textToSpeechAPI.PostAudio(content, userResponse.token);
-		Speak(textToSpeechAPI.response.audioContent);
+		yield return textToSpeechAPI.CR_ConvertToAudioClip(content, userResponse.token);
+		Speak(textToSpeechAPI.clip);
 	}
 
 	[ContextMenu("Speak")]
-	void Speak(string audioContent)
+	void Speak(AudioClip clip)
 	{
-		byte[] receivedBytes = System.Convert.FromBase64String(audioContent);	
-		// Debug.Log(receivedBytes.Length);
-		// for (int i = 0; i < receivedBytes.Length; ++i)
-			// Debug.Log(receivedBytes[i]);
-		// float[] samples = new float[receivedBytes.Length / 4 + 1]; //size of a float is 4 bytes
-		// Buffer.BlockCopy(receivedBytes, 0, samples, 0, receivedBytes.Length);
-		// Debug.Log(samples.Length);
-		// for (int i = 0; i < samples.Length; ++i)
-		// 	Debug.Log(samples[i]);
-
-		float[] samples = ConvertByteToFloat(receivedBytes);
-		// Debug.Log(samples.Length);
-		// for (int i = 0; i < 1000; ++i)
-		// 	if (Mathf.Abs(samples[i]) > 1)
-		// 	{
-		// 		Debug.Log(samples[i]);
-		// 	}
-		int channels = 1; //Assuming audio is mono because microphone input usually is
-		int sampleRate = 24000; //Assuming your samplerate is 44100 or change to 48000 or whatever is appropriate
-
-		AudioClip clip = AudioClip.Create("ClipName", samples.Length, channels, sampleRate, false);
-		clip.SetData(samples, 0);
 		audioSource.clip = clip;
 		audioSource.Play();
 	}
@@ -96,15 +74,5 @@ public class HelperConversation : MonoBehaviour
     //     }
     //     return floatArr;
     // }
-	private static float[] ConvertByteToFloat(byte[] array) {
-    float[] floatArr = new float[array.Length / 2];
-
-    for (int i = 0; i < floatArr.Length; i++) {
-        floatArr[i] = ((float) BitConverter.ToInt16(array, i * 2))/32768.0f;
-    }
-
-    return floatArr;
-}
-
 
 }

@@ -17,7 +17,8 @@ namespace Assets._Project._Scripts.Chat
 		{
 			if (!string.IsNullOrWhiteSpace(chatUI.inputField.text))
 			{
-				CmdSendText(chatUI.inputField.text);
+				// CmdSendText(chatUI.inputField.text);
+				SendText(chatUI.inputField.text);
 				chatUI.ClearAndFocusInput();
 			}
 		}
@@ -25,6 +26,8 @@ namespace Assets._Project._Scripts.Chat
 		{
 			if (!string.IsNullOrWhiteSpace(message))
 			{
+				// Debug.Log("ABCYASDAS");
+				// Debug.Log(NetworkClient.localPlayer);
 				NetworkClient.localPlayer.GetComponent<NetworkAnimator>().SetTrigger("TalkTrigger");
 				NetworkClient.localPlayer.GetComponent<PlayerSoundNetwork>().CmdPlayTalkSound();
 				CmdSendText(message);

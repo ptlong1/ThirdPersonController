@@ -7,6 +7,11 @@ using ScriptableObjectArchitecture;
 
 public class NPCController : MonoBehaviour
 {
+	public UserResponse userResponse;
+	TextToSpeechAPI textToSpeechAPI;
+	AudioSource audioSource;
+	public string welcomeSentence;
+	public float repeatAfter;
 	public HelperConversation canvasHelper;
 	Animator animator;
 	public GameEvent OnTurnOnContent;
@@ -15,6 +20,27 @@ public class NPCController : MonoBehaviour
 
 	private void Start() {
 		animator = GetComponent<Animator>();
+		textToSpeechAPI = GetComponent<TextToSpeechAPI>();
+		audioSource = GetComponent<AudioSource>();
+		StartCoroutine(CR_Speak(welcomeSentence));
+	}
+	
+
+	IEnumerator CR_Speak(string content)
+	{
+		yield return textToSpeechAPI.CR_ConvertToAudioClip(content, userResponse.token);
+		StartCoroutine(CR_SpeakRepeat(textToSpeechAPI.clip));
+	}
+
+	[ContextMenu("Speak")]
+	IEnumerator CR_SpeakRepeat(AudioClip clip)
+	{
+		audioSource.clip = clip;
+		while (true)
+		{
+			audioSource.Play();
+			yield return new WaitForSeconds(repeatAfter);
+		}
 	}
 
 	private void OnTriggerEnter(Collider other) {
@@ -44,6 +70,7 @@ public class NPCController : MonoBehaviour
 	{
 		canvasHelper.gameObject.SetActive(false);
 		animator.SetBool("Talk", false);
+		audioSource.volume = 1;
 		OnTurnOffContent.Raise();
 	}
 
@@ -51,6 +78,7 @@ public class NPCController : MonoBehaviour
 	{
 		canvasHelper.gameObject.SetActive(true);
 		animator.SetBool("Talk", true);
+		audioSource.volume = 0;
 		OnTurnOnContent.Raise();
 	}
 }

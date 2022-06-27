@@ -28,6 +28,7 @@ public class TextToSpeechAPI: MonoBehaviour
 
 	public string result;
 	public TextToSpeechResponse response;
+	public AudioClip clip;
 
 	private void Awake() {
 		// url = environmentVariablesContainer.environmentVariables.ttsUrl;
@@ -88,4 +89,32 @@ public class TextToSpeechAPI: MonoBehaviour
 			}
 		}
 	}
+
+	[ContextMenu("Speak")]
+	void ConvertToAudioClip(string audioContent)
+	{
+		byte[] receivedBytes = System.Convert.FromBase64String(audioContent);	
+
+		float[] samples = ConvertByteToFloat(receivedBytes);
+		int channels = 1; //Assuming audio is mono because microphone input usually is
+		int sampleRate = 24000; //Assuming your samplerate is 44100 or change to 48000 or whatever is appropriate
+
+		clip = AudioClip.Create("ClipName", samples.Length, channels, sampleRate, false);
+		clip.SetData(samples, 0);
+	}
+	public IEnumerator CR_ConvertToAudioClip(string content, string token)
+	{
+		yield return PostAudio(content, token);
+		ConvertToAudioClip(response.audioContent);
+	}
+	private static float[] ConvertByteToFloat(byte[] array) {
+		float[] floatArr = new float[array.Length / 2];
+
+		for (int i = 0; i < floatArr.Length; i++) {
+			floatArr[i] = ((float) BitConverter.ToInt16(array, i * 2))/32768.0f;
+		}
+
+		return floatArr;
+	}
+
 }
