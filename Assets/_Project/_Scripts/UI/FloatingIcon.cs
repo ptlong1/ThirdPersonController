@@ -11,8 +11,8 @@ public class FloatingIcon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target.DOLocalMoveY(deltaY, duration).SetLoops(-1, LoopType.Yoyo);
-		target.DOScale(Vector3.one*deltaScale, duration).SetLoops(-1, LoopType.Yoyo);
+        transform.DOLocalMoveY(deltaY, duration).SetLoops(-1, LoopType.Yoyo);
+		// target.DOScale(Vector3.one*deltaScale, duration).SetLoops(-1, LoopType.Yoyo);
     }
 
 }
