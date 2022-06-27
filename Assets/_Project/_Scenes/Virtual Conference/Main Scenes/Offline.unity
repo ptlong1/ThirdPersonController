@@ -465,7 +465,7 @@ MonoBehaviour:
   offlineScene: 
   onlineScene: 
   transport: {fileID: 491867616}
-  networkAddress: localhost
+  networkAddress: ea.ssl.cloud.playflow.app
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 2810648194239154873, guid: 920c0616f3d6d5949a5de92a46925f1e, type: 3}
