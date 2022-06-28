@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,15 @@ using Assets._Project._Scripts.DynamicData;
 
 namespace Assets._Project._Scripts.ChangeData
 {
+	public class ConferenceNameComparer : IComparer {
+		public int Compare(System.Object x, System.Object y)
+        {
+			string xx = ((ConferenceObjectData)x).id;
+			string yy = ((ConferenceObjectData)y).id;
+
+			return String.Compare(yy, xx);
+		}
+	}
 	public class ChangeDataController : MonoBehaviour
 	{
 		public CinemachineVirtualCamera virtualCam;
@@ -43,6 +53,8 @@ namespace Assets._Project._Scripts.ChangeData
 			conferenceObjects = FindObjectsOfType<ConferenceObjectData>();
 			CurrentObjectIdx = 0;
 			conferenceIdList.Clear();
+			ConferenceNameComparer comparer = new ConferenceNameComparer();
+			Array.Sort(conferenceObjects, comparer);
 			for (int i = 0; i < conferenceObjects.Length; ++i)
 			{
 				ConferenceIdButton btn = conferenceIdList.AddButton(conferenceObjects[i].id, i);

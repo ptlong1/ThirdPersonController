@@ -33,7 +33,10 @@ public class GetMultiTexture : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
 	{
-		// Debug.Log("ABC");
+		foreach(Transform child in content.transform)
+        {
+			GameObject.Destroy(child.gameObject);
+        }
 		ChooseRatio(fileType);
 		GetRequest();
 	}

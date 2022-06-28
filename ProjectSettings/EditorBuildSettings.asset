@@ -5,15 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Offline.unity
     guid: ab12d37d278dc2c4894e3d14919a4251
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/_Scenes/Virtual Conference/EditorData/Change Data.unity
     guid: aae191fbf3caae44b80c30713397269a
-  - enabled: 1
-    path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition1.unity
-    guid: c4e0c576c5acac34b9aa9721a77d6f42
   - enabled: 1
     path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Gallery Hallway.unity
     guid: b3f62b44023d2e246ac8228e48a9af94
@@ -24,9 +21,6 @@ EditorBuildSettings:
     path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 1.unity
     guid: 9611b48a04d7c4944817c7aa9f05994f
   - enabled: 1
-    path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition2.unity
-    guid: 1a91026ceee51554db663851ed8bc9da
-  - enabled: 1
     path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium 2.unity
     guid: 19535ab0ec10e284db88f7d26862c5e0
   - enabled: 1
@@ -35,12 +29,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Auditorium Hallway.unity
     guid: 171a2eb7b9d0ea3439e1f063c4506c5b
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition1.unity
+    guid: 2cf34e93951f0534e8f8859943db2f98
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition2.unity
+    guid: c23f2348acba4374ab66de7165a07c1f
   - enabled: 0
     path: Assets/Samples/Input System/1.0.2/On-Screen Controls/OnScreenControlsSample.unity
     guid: 011b162d4daa13c4ab03e94ad47b8258
   - enabled: 0
     path: Assets/_Project/_Scenes/Mobile UI WebGL Test.unity
     guid: fd81c8563186f4d45ab456fd6b711682
+  - enabled: 0
+    path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition 1.unity
+    guid: c4e0c576c5acac34b9aa9721a77d6f42
+  - enabled: 0
+    path: Assets/_Project/_Scenes/Virtual Conference/Main Scenes/Exhibition 2.unity
+    guid: 1a91026ceee51554db663851ed8bc9da
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 5db6419928f1d7b48a7649efc5ea91ee, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
