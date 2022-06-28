@@ -168,6 +168,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: EH_A01_Screen_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2651508817075814751, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061021068437, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061021068437, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061762878474, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061764515315, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061764515315, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061883669918, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061883669918, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061948458822, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061948458822, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061950009006, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061950009006, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061950009006, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965211061950009006, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd7a1a3944a89147bbee77c9acb953d, type: 3}
 --- !u!4 &7667317578298728798 stripped

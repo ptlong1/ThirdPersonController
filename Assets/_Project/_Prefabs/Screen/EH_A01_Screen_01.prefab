@@ -1737,7 +1737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 820264515740950196, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 406.6368
+      value: 425.2411
       objectReference: {fileID: 0}
     - target: {fileID: 820264515740950196, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1773,7 +1773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 820264515740950196, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20.7458
+      value: 11.4436
       objectReference: {fileID: 0}
     - target: {fileID: 820264515740950196, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1790,6 +1790,10 @@ PrefabInstance:
     - target: {fileID: 820264515740950197, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
       propertyPath: m_Name
       value: Scroll View
+      objectReference: {fileID: 0}
+    - target: {fileID: 820264515740950197, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 820264516376702210, guid: ee150f34ba53c2a4a8cd8efab800e65a, type: 3}
       propertyPath: m_Value
