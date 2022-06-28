@@ -10,6 +10,7 @@ public class HelperConversation : MonoBehaviour
 	public TMP_Text helper;
 	public UserResponse userResponse;
 	public string helperAsk;
+	public string currentStr;
 	
 	public GameObject choices;
 	public Button questionBtnPrefab;
@@ -35,18 +36,19 @@ public class HelperConversation : MonoBehaviour
 	}
 
 	private void OnEnable() {
+		currentStr = helperAsk;
 		UpdateCanvas();
 	}
 
 	void SetHelper(string str)
 	{
-		helperAsk = str;
+		currentStr = str;
 		UpdateCanvas();
 	}
 	void UpdateCanvas()
 	{
-		helper.text = helperAsk;
-		StartCoroutine(CR_Speak(helperAsk));
+		helper.text = currentStr;
+		StartCoroutine(CR_Speak(currentStr));
 	}
 
 	IEnumerator CR_Speak(string content)
