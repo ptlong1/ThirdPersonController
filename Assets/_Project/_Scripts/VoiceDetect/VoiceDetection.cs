@@ -29,15 +29,15 @@ public class VoiceDetection : NetworkBehaviour
 
 	}
 
-	private void OnDisable() {
-		if (NetworkClient.localPlayer == null) return;
-		Debug.Log("OnDisable");
-		string playerName = NetworkClient.localPlayer.GetComponent<PlayerName>().playerName;
-		Debug.Log(playerName);
-		Debug.Log("Contain name");
-		CmdRemovePlayerNameToList(playerName);
-		Debug.Log("End Disable");
-	}
+	// private void OnDisable() {
+	// 	if (NetworkClient.localPlayer == null) return;
+	// 	Debug.Log("OnDisable");
+	// 	string playerName = NetworkClient.localPlayer.GetComponent<PlayerName>().playerName;
+	// 	Debug.Log(playerName);
+	// 	Debug.Log("Contain name");
+	// 	CmdRemovePlayerNameToList(playerName);
+	// 	Debug.Log("End Disable");
+	// }
 
 	void OnPlayerSpeakingUpdated(SyncList<string>.Operation op, int index, string oldItem, string newItem)
     {
