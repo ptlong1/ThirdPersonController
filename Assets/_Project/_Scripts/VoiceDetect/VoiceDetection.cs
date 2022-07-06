@@ -13,12 +13,46 @@ public class VoiceDetection : NetworkBehaviour
 	public readonly SyncList<string> playerSpeaking = new SyncList<string>();
 	bool oldState;
 	public bool editorValue;
+	public VoiceCanvas voiceCanvas;
 
 
 	[ServerCallback]
 	void Awake()
 	{
 	}
+    public override void OnStartClient()
+	{
+		playerSpeaking.Callback += OnPlayerSpeakingUpdated;
+		// Process initial SyncList payload
+        for (int index = 0; index < playerSpeaking.Count; index++)
+            OnPlayerSpeakingUpdated(SyncList<string>.Operation.OP_ADD, index, string.Empty, playerSpeaking[index]);
+
+	}
+
+	void OnPlayerSpeakingUpdated(SyncList<string>.Operation op, int index, string oldItem, string newItem)
+    {
+        switch (op)
+        {
+            case SyncList<string>.Operation.OP_ADD:
+				voiceCanvas.Add(newItem);
+                break;
+            case SyncList<string>.Operation.OP_INSERT:
+                // index is where it was inserted into the list
+                // newItem is the new item
+                break;
+            case SyncList<string>.Operation.OP_REMOVEAT:
+				voiceCanvas.Remove(oldItem);
+                break;
+            case SyncList<string>.Operation.OP_SET:
+                // index is of the item that was changed
+                // oldItem is the previous value for the item at the index
+                // newItem is the new value for the item at the index
+                break;
+            case SyncList<string>.Operation.OP_CLEAR:
+                // list got cleared
+                break;
+        }
+    }
 
 	[Command]
 	void CmdSyncList()
