@@ -1,0 +1,1584 @@
+fileFormatVersion: 2
+guid: 4f1856449895d264db2811356b47473f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4173784706109710453
+    second: soundwave_0
+  - first:
+      213: 3111435726805153268
+    second: soundwave_1
+  - first:
+      213: -1859814678914778752
+    second: soundwave_2
+  - first:
+      213: -5319089772451945049
+    second: soundwave_3
+  - first:
+      213: -4270226571489899428
+    second: soundwave_4
+  - first:
+      213: 7156115292082455732
+    second: soundwave_5
+  - first:
+      213: -6640105297025452772
+    second: soundwave_6
+  - first:
+      213: 4366573589752069990
+    second: soundwave_7
+  - first:
+      213: -8584089302017765887
+    second: soundwave_8
+  - first:
+      213: 993850048846272254
+    second: soundwave_9
+  - first:
+      213: -120283596373493852
+    second: soundwave_10
+  - first:
+      213: 1119075801806780044
+    second: soundwave_11
+  - first:
+      213: 3786006050500046154
+    second: soundwave_12
+  - first:
+      213: -6094707457707613647
+    second: soundwave_13
+  - first:
+      213: 3442555833842852923
+    second: soundwave_14
+  - first:
+      213: 8962469286916498310
+    second: soundwave_15
+  - first:
+      213: -7296333582540900591
+    second: soundwave_16
+  - first:
+      213: -7926649745252131602
+    second: soundwave_17
+  - first:
+      213: -3891162577993838391
+    second: soundwave_18
+  - first:
+      213: 1253572118701534938
+    second: soundwave_19
+  - first:
+      213: 236172767828119808
+    second: soundwave_20
+  - first:
+      213: 4689639973023748504
+    second: soundwave_21
+  - first:
+      213: -8658344604951893755
+    second: soundwave_22
+  - first:
+      213: 8038075043338940309
+    second: soundwave_23
+  - first:
+      213: -7465005672320379907
+    second: soundwave_24
+  - first:
+      213: -194421058135706764
+    second: soundwave_25
+  - first:
+      213: 1344678027158264704
+    second: soundwave_26
+  - first:
+      213: -3549121198925542261
+    second: soundwave_27
+  - first:
+      213: 8158387246018858131
+    second: soundwave_28
+  - first:
+      213: -6500073012601820503
+    second: soundwave_29
+  - first:
+      213: 219352435306454496
+    second: soundwave_30
+  - first:
+      213: 6684706169537139581
+    second: soundwave_31
+  - first:
+      213: -8478886335206240446
+    second: soundwave_32
+  - first:
+      213: -1307132179651308110
+    second: soundwave_33
+  - first:
+      213: -1243290466886851061
+    second: soundwave_34
+  - first:
+      213: -5045669415306178436
+    second: soundwave_35
+  - first:
+      213: -7468707365580082752
+    second: soundwave_36
+  - first:
+      213: -8731675228425036169
+    second: soundwave_37
+  - first:
+      213: -304758996325133763
+    second: soundwave_38
+  - first:
+      213: -2414335322164573435
+    second: soundwave_39
+  - first:
+      213: -7382733664444537802
+    second: soundwave_40
+  - first:
+      213: 5183238650506643945
+    second: soundwave_41
+  - first:
+      213: 6256505484005755103
+    second: soundwave_42
+  - first:
+      213: -3131441621394123021
+    second: soundwave_43
+  - first:
+      213: -3367674490857591614
+    second: soundwave_44
+  - first:
+      213: 6546083311669868511
+    second: soundwave_45
+  - first:
+      213: 4455673422214587945
+    second: soundwave_46
+  - first:
+      213: 8133616699564287841
+    second: soundwave_47
+  - first:
+      213: 973242696141470998
+    second: soundwave_48
+  - first:
+      213: 2922361768162536184
+    second: soundwave_49
+  - first:
+      213: -8933261723711415121
+    second: soundwave_50
+  - first:
+      213: 8426116751254796445
+    second: soundwave_51
+  - first:
+      213: -7973827313957780365
+    second: soundwave_52
+  - first:
+      213: 3077401140243922138
+    second: soundwave_53
+  - first:
+      213: 8664864848145687606
+    second: soundwave_54
+  - first:
+      213: -3646106396630504525
+    second: soundwave_55
+  - first:
+      213: 3933801506914114657
+    second: soundwave_56
+  - first:
+      213: -7440496392427149360
+    second: soundwave_57
+  - first:
+      213: 5750934361488965876
+    second: soundwave_58
+  - first:
+      213: -5791324892138826318
+    second: soundwave_59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soundwave_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2442
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f5f576cecb316c0800000000000000
+      internalID: -4173784706109710453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2442
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f53ea5fe4a0e2b20800000000000000
+      internalID: 3111435726805153268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 2442
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0893a3b376c9036e0800000000000000
+      internalID: -1859814678914778752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_3
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 2442
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5a690a80cce26b0800000000000000
+      internalID: -5319089772451945049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2442
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c09efce8b1db4c0800000000000000
+      internalID: -4270226571489899428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2220
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4c05481f0af4360800000000000000
+      internalID: 7156115292082455732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2220
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15bb93c96b99d3a0800000000000000
+      internalID: -6640105297025452772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_7
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 2220
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f36c67b8f299c30800000000000000
+      internalID: 4366573589752069990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_8
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 2220
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e0001a2403fd880800000000000000
+      internalID: -8584089302017765887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_9
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2220
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef69c719a5ddacd00800000000000000
+      internalID: 993850048846272254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1998
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7f9d5d4baa45ef0800000000000000
+      internalID: -120283596373493852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_11
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1998
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86bd6b3381c78f00800000000000000
+      internalID: 1119075801806780044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_12
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1998
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4de88d91789a8430800000000000000
+      internalID: 3786006050500046154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_13
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1998
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132e96dbbdf3b6ba0800000000000000
+      internalID: -6094707457707613647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_14
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1998
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34e6ab9a4a66cf20800000000000000
+      internalID: 3442555833842852923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1776
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683a10dc456116c70800000000000000
+      internalID: 8962469286916498310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_16
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1776
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11775e9a3473eba90800000000000000
+      internalID: -7296333582540900591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_17
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1776
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec5e4bcd02eef190800000000000000
+      internalID: -7926649745252131602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_18
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1776
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c052676040dff9c0800000000000000
+      internalID: -3891162577993838391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_19
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1776
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adee9834335956110800000000000000
+      internalID: 1253572118701534938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1554
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001140c81ed074300800000000000000
+      internalID: 236172767828119808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1554
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8919d8c65b2f41140800000000000000
+      internalID: 4689639973023748504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_22
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1554
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5092ce6a47167d780800000000000000
+      internalID: -8658344604951893755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_23
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1554
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f66241aaafc8f60800000000000000
+      internalID: 8038075043338940309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_24
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1554
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3511f64e8f66890800000000000000
+      internalID: -7465005672320379907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1332
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47337f4e3174d4df0800000000000000
+      internalID: -194421058135706764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_26
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1332
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b9a029a8149a210800000000000000
+      internalID: 1344678027158264704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_27
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1332
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c0c39d21dfebec0800000000000000
+      internalID: -3549121198925542261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_28
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1332
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c080ba9f9683170800000000000000
+      internalID: 8158387246018858131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_29
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1332
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aae3cda80a1bc5a0800000000000000
+      internalID: -6500073012601820503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1110
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0edde03b0eb4b0300800000000000000
+      internalID: 219352435306454496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_31
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1110
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d739f1718d8d4cc50800000000000000
+      internalID: 6684706169537139581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_32
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1110
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f4e1b1dc1f45a80800000000000000
+      internalID: -8478886335206240446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_33
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1110
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5d66545322cdde0800000000000000
+      internalID: -1307132179651308110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_34
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1110
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06649858e1febee0800000000000000
+      internalID: -1243290466886851061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c705f9e566e2af9b0800000000000000
+      internalID: -5045669415306178436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_36
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 888
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1714fc832d95890800000000000000
+      internalID: -7468707365580082752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_37
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 888
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ed5a364abd2d680800000000000000
+      internalID: -8731675228425036169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_38
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 888
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d329fe9be4745cbf0800000000000000
+      internalID: -304758996325133763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_39
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 888
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bc3b1f0de8e7ed0800000000000000
+      internalID: -2414335322164573435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 666
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634277bf8d24b8990800000000000000
+      internalID: -7382733664444537802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_41
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 666
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9068537109ee740800000000000000
+      internalID: 5183238650506643945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_42
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 666
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8427dd69293d650800000000000000
+      internalID: 6256505484005755103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_43
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 666
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f61ee9bf62ea84d0800000000000000
+      internalID: -3131441621394123021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_44
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 666
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cce94da4ed9341d0800000000000000
+      internalID: -3367674490857591614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7f13ed61c58da50800000000000000
+      internalID: 6546083311669868511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_46
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 444
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926ef3ece5bb5dd30800000000000000
+      internalID: 4455673422214587945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_47
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 444
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167e6b46b4960e070800000000000000
+      internalID: 8133616699564287841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_48
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 444
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d71cf5317a18d00800000000000000
+      internalID: 973242696141470998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_49
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 444
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faa2887b805e8820800000000000000
+      internalID: 2922361768162536184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac5690facda60480800000000000000
+      internalID: -8933261723711415121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_51
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 222
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98b282ba849fe470800000000000000
+      internalID: 8426116751254796445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_52
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 222
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3744d3b1e46475190800000000000000
+      internalID: -7973827313957780365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_53
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 222
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcfe93480025ba20800000000000000
+      internalID: 3077401140243922138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_54
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 222
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6342e74cba8cf3870800000000000000
+      internalID: 8664864848145687606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb2f87dc8d666dc0800000000000000
+      internalID: -3646106396630504525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_56
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c138cd0aba79630800000000000000
+      internalID: 3933801506914114657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_57
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7edc8d3fb0eb890800000000000000
+      internalID: -7440496392427149360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_58
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0432ff45c6fcf40800000000000000
+      internalID: 5750934361488965876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soundwave_59
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b51031c1b411afa0800000000000000
+      internalID: -5791324892138826318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9d0ba94c74545614b870c36456745f3d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

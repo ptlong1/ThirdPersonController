@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0110f245bfcfc7d459681f7bd9ebc590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 46457
+  port: 14964
   maxMessageSize: 16384
   handshakeMaxSize: 3000
   noDelay: 1
@@ -441,7 +441,7 @@ MonoBehaviour:
   clientMaxMessagesPerTick: 1000
   batchSend: 1
   waitBeforeSend: 0
-  clientUseWss: 0
+  clientUseWss: 1
   sslEnabled: 0
   sslCertJson: ./cert.json
   sslProtocols: 3072
@@ -465,7 +465,7 @@ MonoBehaviour:
   offlineScene: 
   onlineScene: 
   transport: {fileID: 491867616}
-  networkAddress: localhost
+  networkAddress: ea.ssl.cloud.playflow.app
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 2810648194239154873, guid: 920c0616f3d6d5949a5de92a46925f1e, type: 3}
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491867614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
   m_Name: 
