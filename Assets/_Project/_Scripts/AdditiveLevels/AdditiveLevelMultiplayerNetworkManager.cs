@@ -410,6 +410,20 @@ namespace Assets._Project._Scripts.AdditiveLevels
         // }
         
 
+		public override void OnClientDisconnect()
+		{
+			Debug.Log("Client Disconnect");
+			string playerName = NetworkClient.localPlayer.GetComponent<PlayerName>().playerName;
+			VoiceDetection voiceDetection = FindObjectOfType<VoiceDetection>();
+			if (voiceDetection != null) 
+			{
+				voiceDetection.CmdRemovePlayerNameToList(playerName);
+				Debug.Log("ASDFASDFASDF");
+			}
+			base.OnClientDisconnect();
+
+		}
+
         #endregion
     }
 }

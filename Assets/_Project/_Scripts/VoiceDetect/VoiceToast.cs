@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-
+using DG.Tweening;
+using UnityEngine.UI;
 public class VoiceToast : MonoBehaviour
 {
 	public TMP_Text text;
@@ -15,6 +16,9 @@ public class VoiceToast : MonoBehaviour
 
 	internal void Remove()
 	{
-		Destroy(gameObject);
+		RectTransform rect = GetComponent<RectTransform>();
+		Image image = GetComponent<Image>();
+		rect.DOScaleY(0f, 0.5f);
+		image.DOFade(0f, 0.5f).OnComplete(() => Destroy(gameObject));
 	}
 }

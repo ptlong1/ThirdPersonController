@@ -29,6 +29,16 @@ public class VoiceDetection : NetworkBehaviour
 
 	}
 
+	private void OnDisable() {
+		if (NetworkClient.localPlayer == null) return;
+		Debug.Log("OnDisable");
+		string playerName = NetworkClient.localPlayer.GetComponent<PlayerName>().playerName;
+		Debug.Log(playerName);
+		Debug.Log("Contain name");
+		CmdRemovePlayerNameToList(playerName);
+		Debug.Log("End Disable");
+	}
+
 	void OnPlayerSpeakingUpdated(SyncList<string>.Operation op, int index, string oldItem, string newItem)
     {
         switch (op)
@@ -108,7 +118,7 @@ public class VoiceDetection : NetworkBehaviour
 	}
 
 	[Command(requiresAuthority = false)]
-	void CmdRemovePlayerNameToList(string playerName)
+	public void CmdRemovePlayerNameToList(string playerName)
 	{
 		playerSpeaking.Remove(playerName);
 		// RpcRemovePlayerName(playerName);
