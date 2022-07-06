@@ -10,17 +10,26 @@ public class VoiceDetection : NetworkBehaviour
 	private static extern bool isSpeaking();
 #endif
 
-	public List<PlayerName> playerSpeaking;
+	public readonly SyncList<string> playerSpeaking = new SyncList<string>();
+	bool oldState;
+	public bool editorValue;
 
-	void Start()
+
+	[ServerCallback]
+	void Awake()
 	{
-		playerSpeaking = new List<PlayerName>();
+	}
+
+	[Command]
+	void CmdSyncList()
+	{
+
 	}
 
 	public bool IsLocalPlayerSpeaking()
 	{
 		#if UNITY_EDITOR
-    		return true; // value to return in Play Mode (in the editor)
+    		return editorValue; // value to return in Play Mode (in the editor)
 		#elif UNITY_WEBGL
     		return isSpeaking(); // value based on the current browser
 		#else
@@ -30,43 +39,51 @@ public class VoiceDetection : NetworkBehaviour
 
 	[ClientCallback]
 	private void Update() {
-		if (IsLocalPlayerSpeaking())
+		if (oldState == false && IsLocalPlayerSpeaking())
 		{
 			Debug.Log("Add");
-			CmdAddPlayerNameToList(NetworkClient.localPlayer.GetComponent<PlayerName>());
+			CmdAddPlayerNameToList(NetworkClient.localPlayer.GetComponent<PlayerName>().playerName);
+			oldState = true;
 		}
-		else 
+		if (oldState == true && !IsLocalPlayerSpeaking()) 
 		{
 			//remove list
 			Debug.Log("Remove");
-			CmdRemovePlayerNameToList(NetworkClient.localPlayer.GetComponent<PlayerName>());
+			CmdRemovePlayerNameToList(NetworkClient.localPlayer.GetComponent<PlayerName>().playerName);
+			oldState = false;
 		}
 	}
 
-	
 	[Command(requiresAuthority = false)]
-	void CmdAddPlayerNameToList(PlayerName playerName)
+	void CmdAddPlayerNameToList(string playerName)
 	{
-		RpcAddPlayerName(playerName);
+		playerSpeaking.Add(playerName);
 	}
+	
+	// [Command(requiresAuthority = false)]
+	// void CmdAddPlayerNameToList(PlayerName playerName)
+	// {
+	// 	RpcAddPlayerName(playerName);
+	// }
 
 	[ClientRpc]
 	void RpcAddPlayerName(PlayerName playerName)
 	{
 		Debug.Log("RPC ADD");
-		playerSpeaking.Add(playerName);
+		// playerSpeaking.Add(playerName);
 	}
 
 	[Command(requiresAuthority = false)]
-	void CmdRemovePlayerNameToList(PlayerName playerName)
+	void CmdRemovePlayerNameToList(string playerName)
 	{
-		RpcRemovePlayerName(playerName);
+		playerSpeaking.Remove(playerName);
+		// RpcRemovePlayerName(playerName);
 	}
 
 	[ClientRpc]
 	void RpcRemovePlayerName(PlayerName playerName)
 	{
-		playerSpeaking.Remove(playerName);
+		// playerSpeaking.Remove(playerName);
 	}
 
 	void UpdateUI()
