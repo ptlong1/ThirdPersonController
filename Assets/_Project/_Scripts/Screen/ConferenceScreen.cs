@@ -107,6 +107,7 @@ namespace Assets._Project._Scripts.Screen
 		[ContextMenu("Restart Content")]
 		public void RestartContent()
 		{
+			TurnOnContent(true);
 			ReadyContent();
 			if (content.activeInHierarchy)
 			{
