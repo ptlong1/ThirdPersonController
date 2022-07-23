@@ -4115,6 +4115,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 360162710705068565, guid: eb5f9f9da9122244680209a528710bb1, type: 3}
+      propertyPath: envContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 60bcac4d479002c4f83a158cb68d786e, type: 2}
+    - target: {fileID: 360162710705068565, guid: eb5f9f9da9122244680209a528710bb1, type: 3}
+      propertyPath: updateUrlApi
+      value: https://localhost:8080/resources/
+      objectReference: {fileID: 0}
     - target: {fileID: 360162710705068566, guid: eb5f9f9da9122244680209a528710bb1, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0.5

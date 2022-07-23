@@ -61,6 +61,7 @@ public class UpdateDataWindow : MonoBehaviour
 	public TMP_InputField currentUrl;
 	public TMP_InputField currentType;
 	public TMP_InputField currentHost;
+	public EnvironmentVariablesContainer envContainer;
 	
 	// public Button
 
@@ -152,7 +153,7 @@ public class UpdateDataWindow : MonoBehaviour
 		// string postBody = $"{{\"id\": \"{Id}\",\"url\": \"{SimpleUrl}\", \"type\" : \"{Type}\"}}";
 		string postBody = $"{{\"url\": \"{Url}\", \"type\" : \"{Type}\",\"conferenceId\": \"{conferenceData.ConferenceId}\",\"hostName\": \"{HostName}\"}}";
 		Debug.Log(postBody);
-		string newUpdateUrl = WebServerAPI.Combine(updateUrlApi, Id + "/update");
+		string newUpdateUrl = WebServerAPI.Combine(envContainer.environmentVariables.resourceUrl, Id + "/update");
 		Debug.Log(newUpdateUrl);
 		using (var req = new UnityWebRequest(newUpdateUrl, "POST"))
 		{
