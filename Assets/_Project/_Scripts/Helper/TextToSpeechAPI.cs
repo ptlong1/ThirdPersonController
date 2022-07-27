@@ -56,8 +56,8 @@ public class TextToSpeechAPI: MonoBehaviour
 		request.audioConfig.pitch = 0;
 		request.audioConfig.speakingRate = 1;
 		request.input.text = text;
-		request.voice.languageCode = "en-US";
-		request.voice.name = isMale?"en-US-Wavenet-B":"en-US-Wavenet-F";
+		request.voice.languageCode = "vi-VN";
+		request.voice.name = isMale ? "vi-VN-Wavenet-B" : "vi-VN-Wavenet-A";
 		return JsonUtility.ToJson(request);
 	}
 

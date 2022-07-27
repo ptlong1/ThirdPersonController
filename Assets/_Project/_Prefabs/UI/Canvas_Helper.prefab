@@ -163,10 +163,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Assistant
+  m_text: "Tr\u1EE3 l\xFD \u1EA3o"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e4fdd038d85ad146979e5d20fd1e816, type: 2}
-  m_sharedMaterial: {fileID: -1361311105375832140, guid: 6e4fdd038d85ad146979e5d20fd1e816, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6cdbb17590e14e2488d60e2190df8311, type: 2}
+  m_sharedMaterial: {fileID: 7612342639049228387, guid: 6cdbb17590e14e2488d60e2190df8311, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -196,11 +196,11 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 32
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 21.03
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -350,6 +350,7 @@ MonoBehaviour:
   helper: {fileID: 571259286730137246}
   userResponse: {fileID: 11400000, guid: 9c4350803acca014faebe2fe23bd7cdb, type: 2}
   helperAsk: What do you want to know?
+  currentStr: 
   choices: {fileID: 571259286623502743}
   questionBtnPrefab: {fileID: 6738259572009605513, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
   questions:
@@ -958,8 +959,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: What do you want to ask?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7a07801a4ed618c4a93a016feea0ff58, type: 2}
-  m_sharedMaterial: {fileID: -3417602533147800375, guid: 7a07801a4ed618c4a93a016feea0ff58, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6cdbb17590e14e2488d60e2190df8311, type: 2}
+  m_sharedMaterial: {fileID: 7612342639049228387, guid: 6cdbb17590e14e2488d60e2190df8311, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1474,10 +1475,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571259286623502742}
     m_Modifications:
-    - target: {fileID: 6738259572009605512, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 6738259571604360194, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
+      propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 21300000, guid: 701e7ed4dde1bf949b30e33741547ac9, type: 3}
+      objectReference: {fileID: 11400000, guid: 6cdbb17590e14e2488d60e2190df8311, type: 2}
+    - target: {fileID: 6738259571604360194, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7612342639049228387, guid: 6cdbb17590e14e2488d60e2190df8311, type: 2}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1508,11 +1513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 480
+      value: 458
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 94.6
+      value: 88.23333
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1544,11 +1549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240
+      value: 234
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -47.3
+      value: -49.116665
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605514, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1564,7 +1569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605515, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_Name
-      value: QuetstionButton
+      value: QuestionButton
       objectReference: {fileID: 0}
     - target: {fileID: 6738259572009605515, guid: 6b4a85d4bbd6d7b4288a0af784a080aa, type: 3}
       propertyPath: m_IsActive

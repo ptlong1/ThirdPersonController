@@ -22,7 +22,7 @@ public class NPCController : MonoBehaviour
 		animator = GetComponent<Animator>();
 		textToSpeechAPI = GetComponent<TextToSpeechAPI>();
 		audioSource = GetComponent<AudioSource>();
-		StartCoroutine(CR_Speak(welcomeSentence));
+		//StartCoroutine(CR_Speak(welcomeSentence));
 	}
 	
 
