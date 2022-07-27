@@ -7681,6 +7681,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6352767607875030332}
     m_Modifications:
     - target: {fileID: 841550491286613079, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
+      propertyPath: helperAsk
+      value: "B\u1EA1n mu\u1ED1n bi\u1EBFt \u0111i\u1EC1u g\xEC?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 841550491286613079, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: answers.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7690,19 +7694,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 841550491286613079, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: answers.Array.data[0]
-      value: You can walk around and view all the content.
+      value: "B\u1EA1n c\xF3 th\u1EC3 \u0111i b\u1ED9 xung quanh v\xE0 xem t\u1EA5t
+        c\u1EA3 n\u1ED9i dung."
       objectReference: {fileID: 0}
     - target: {fileID: 841550491286613079, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: answers.Array.data[1]
-      value: You can walk into them and view pictures, documents or videos
+      value: "B\u1EA1n c\xF3 th\u1EC3 b\u01B0\u1EDBc v\xE0o \u0111\xF3 v\xE0 xem
+        h\xECnh \u1EA3nh, t\xE0i li\u1EC7u ho\u1EB7c video"
       objectReference: {fileID: 0}
     - target: {fileID: 841550491286613079, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: questions.Array.data[0]
-      value: What can I do in here?
+      value: "T\xF4i c\xF3 th\u1EC3 l\xE0m g\xEC \u1EDF \u0111\xE2y?"
       objectReference: {fileID: 0}
     - target: {fileID: 841550491286613079, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: questions.Array.data[1]
-      value: What are those mini blue screens?
+      value: "Nh\u1EEFng m\xE0n h\xECnh xanh nh\u1ECF \u0111\xF3 l\xE0 g\xEC?"
       objectReference: {fileID: 0}
     - target: {fileID: 882790180513320176, guid: cde41fb7515635e43bfcc53c99b4d160, type: 3}
       propertyPath: m_Name

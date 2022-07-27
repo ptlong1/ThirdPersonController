@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43791398, g: 0.485856, b: 0.56613404, a: 1}
+  m_IndirectSpecularColor: {r: 0.4379133, g: 0.48585528, b: 0.56613284, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -944,6 +944,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: helperAsk
+      value: "B\u1EA1n mu\u1ED1n bi\u1EBFt g\xEC?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: answers.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -953,19 +957,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: answers.Array.data[0]
-      value: It's the room containing stands with articles, posters, videos
+      value: "\u0110\xF3 l\xE0 c\u0103n ph\xF2ng ch\u1EE9a c\xE1c b\xE0i b\xE1o,
+        \xE1p ph\xEDch, video"
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: answers.Array.data[1]
-      value: Go upstairs, you will find 2 exhibition rooms
+      value: "\u0110i l\xEAn t\u1EA7ng tr\xEAn, b\u1EA1n s\u1EBD th\u1EA5y 2 ph\xF2ng
+        h\u1ED9i ngh\u1ECB"
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: questions.Array.data[0]
-      value: What is the Exhibition Room?
+      value: "Ph\xF2ng H\u1ED9i Ngh\u1ECB l\xE0 g\xEC?"
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: questions.Array.data[1]
-      value: How can I go there?
+      value: "T\xF4i \u0111i \u0111\u1EBFn \u0111\xF3 b\u1EB1ng c\xE1ch n\xE0o?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
@@ -4317,7 +4323,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: helperAsk
-      value: Hello this is the entry of Auditorium. What do you want to know?
+      value: "Xin ch\xE0o, \u0111\xE2y l\xE0 l\u1ED1i v\xE0o c\u1EE7a Th\xEDnh ph\xF2ng.
+        B\u1EA1n mu\u1ED1n bi\u1EBFt g\xEC?"
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: answers.Array.size
@@ -4329,20 +4336,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: answers.Array.data[0]
-      value: An auditorium is a room built to enable an audience to hear and watch
-        presentations.
+      value: "Th\xEDnh ph\xF2ng l\xE0 m\u1ED9t c\u0103n ph\xF2ng \u0111\u01B0\u1EE3c
+        x\xE2y d\u1EF1ng \u0111\u1EC3 kh\xE1n gi\u1EA3 c\xF3 th\u1EC3 nghe v\xE0
+        xem c\xE1c b\xE0i thuy\u1EBFt tr\xECnh."
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: answers.Array.data[1]
-      value: Just go through the door behind me.
+      value: "Ch\u1EC9 c\u1EA7n \u0111i qua c\xE1nh c\u1EEDa sau l\u01B0ng t\xF4i."
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: questions.Array.data[0]
-      value: What is Auditorium?
+      value: "Th\xEDnh ph\xF2ng l\xE0 g\xEC?"
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: questions.Array.data[1]
-      value: How can I go there?
+      value: "T\xF4i \u0111i \u0111\u1EBFn \u0111\xF3 b\u1EB1ng c\xE1ch n\xE0o?"
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: questions.Array.data[2]
@@ -4567,7 +4575,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
       propertyPath: helperAsk
-      value: Hello this is the entry of the Gallery. What do you want to know?
+      value: "Xin ch\xE0o, \u0111\xE2y l\xE0 l\u1ED1i v\xE0o c\u1EE7a Ph\xF2ng tri\u1EC3n
+        l\xE3m. B\u1EA1n mu\u1ED1n bi\u1EBFt \u0111i\u1EC1u g\xEC?"
       objectReference: {fileID: 0}
     - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
       propertyPath: answers.Array.size
@@ -4579,19 +4588,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
       propertyPath: answers.Array.data[0]
-      value: A room that is used for showing works of art.
+      value: "M\u1ED9t c\u0103n ph\xF2ng \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng \u0111\u1EC3
+        tr\u01B0ng b\xE0y c\xE1c t\xE1c ph\u1EA9m ngh\u1EC7 thu\u1EADt."
       objectReference: {fileID: 0}
     - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
       propertyPath: answers.Array.data[1]
-      value: Just go through the door beside me.
+      value: "Ch\u1EC9 c\u1EA7n \u0111i qua c\xE1nh c\u1EEDa b\xEAn c\u1EA1nh t\xF4i."
       objectReference: {fileID: 0}
     - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
       propertyPath: questions.Array.data[0]
-      value: What does the Gallery do?
+      value: "Ph\xF2ng tri\u1EC3n l\xE3m l\xE0 g\xEC?"
       objectReference: {fileID: 0}
     - target: {fileID: 7473809935834013864, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}
       propertyPath: questions.Array.data[1]
-      value: How can I go there?
+      value: "T\xF4i \u0111i \u0111\u1EBFn \u0111\xF3 b\u1EB1ng c\xE1ch n\xE0o?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50e4f338334f3fb4f91d8fca4eb5f515, type: 3}

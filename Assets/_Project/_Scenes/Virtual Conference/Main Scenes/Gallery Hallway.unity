@@ -224,6 +224,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
+      propertyPath: helperAsk
+      value: "B\u1EA1n mu\u1ED1n bi\u1EBFt g\xEC?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: answers.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -233,11 +237,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: answers.Array.data[0]
-      value: Just go around and enjoy all those beautiful pictures
+      value: "Ch\u1EC9 c\u1EA7n \u0111i xung quanh v\xE0 th\u01B0\u1EDFng th\u1EE9c
+        c\xE1c b\u1EE9c tranh \u0111\u1EB9p"
       objectReference: {fileID: 0}
     - target: {fileID: 7670610937356189505, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: questions.Array.data[0]
-      value: What can I do in here?
+      value: "T\xF4i c\xF3 th\u1EC3 l\xE0m g\xEC \u1EDF \u0111\xE2y?"
       objectReference: {fileID: 0}
     - target: {fileID: 7899024895870623713, guid: defac94ac39a102448083732e350fb47, type: 3}
       propertyPath: welcomeSentence

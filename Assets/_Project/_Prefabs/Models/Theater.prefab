@@ -28684,6 +28684,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
+      propertyPath: helperAsk
+      value: "B\u1EA1n mu\u1ED1n bi\u1EBFt g\xEC?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: answers.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -28693,8 +28697,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: answers.Array.data[0]
-      value: Click the button on the top left of your windows, it will toggle the
-        presentation mode on and off.
+      value: "Nh\u1EA5p v\xE0o n\xFAt \u1EDF tr\xEAn c\xF9ng b\xEAn tr\xE1i c\u1EE7a
+        c\u1EEDa s\u1ED5 c\u1EE7a b\u1EA1n, n\xF3 s\u1EBD b\u1EADt v\xE0 t\u1EAFt
+        ch\u1EBF \u0111\u1ED9 tr\xECnh b\xE0y."
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: answers.Array.data[1]
@@ -28702,7 +28707,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: questions.Array.data[0]
-      value: How to enter the presentation mode?
+      value: "L\xE0m th\u1EBF n\xE0o \u0111\u1EC3 v\xE0o ch\u1EBF \u0111\u1ED9 tr\xECnh
+        b\xE0y?"
       objectReference: {fileID: 0}
     - target: {fileID: 1121627667602019812, guid: da94f899a0b58e24bab4be6568e2e345, type: 3}
       propertyPath: questions.Array.data[1]
