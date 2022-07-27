@@ -134,12 +134,13 @@ public class GetMultiTexture : MonoBehaviour
 
 	IEnumerator FillContent(FilesInfo file)
 	{
-		FixFilePath(file);
+		// FixFilePath(file);
 		foreach (FilesInfo child in file.children)
 		{
 			// Debug.Log(child.name);
 			// string path = Path.Combine(webServerUrl, child.path);
-			string path = Combine(environmentVariablesContainer.environmentVariables.webServerUrl, child.path);
+			// string path = Combine(environmentVariablesContainer.environmentVariables.webServerUrl, child.path);
+			string path = child.path;
 			// Debug.Log("Download from " + path);
 			yield return GetTexture(path);
 			AddContent(currentTexture);
