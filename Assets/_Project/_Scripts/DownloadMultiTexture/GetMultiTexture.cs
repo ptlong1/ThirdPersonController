@@ -162,7 +162,7 @@ public class GetMultiTexture : MonoBehaviour
 
 	IEnumerator GetTexture(string url)
 	{
-		using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url))
+		using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url,true))
         {
 			AddTokenHeader(uwr);
             yield return uwr.SendWebRequest();
