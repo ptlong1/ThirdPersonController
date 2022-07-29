@@ -27,7 +27,7 @@ MonoBehaviour:
   negativeColor: {r: 1, g: 0.43137255, b: 0.39215687, a: 1}
   backgroundColor: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 0.9411765}
   lightFont: {fileID: 11400000, guid: 501c3584798b7544daed173223ef3afd, type: 2}
-  regularFont: {fileID: 11400000, guid: baf5990ef136e594abc52299c06d9b48, type: 2}
+  regularFont: {fileID: 11400000, guid: 838eb62a4f82bac409c0432f36eb66f1, type: 2}
   mediumFont: {fileID: 11400000, guid: b04f3173f946b754db673ac13842f4c1, type: 2}
   semiBoldFont: {fileID: 11400000, guid: 581c047ed60765249b12f37ff2895497, type: 2}
   boldFont: {fileID: 11400000, guid: 194c956b3d864664890e731c63fd4a02, type: 2}

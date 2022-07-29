@@ -102,6 +102,7 @@ public class VoiceDetection : NetworkBehaviour
 	[Command(requiresAuthority = false)]
 	void CmdAddPlayerNameToList(string playerName)
 	{
+		if (string.IsNullOrWhiteSpace(playerName)) return;
 		playerSpeaking.Add(playerName);
 	}
 	

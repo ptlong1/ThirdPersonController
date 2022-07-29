@@ -18,6 +18,7 @@ public class ConferenceIdList : MonoBehaviour
 	public ConferenceIdButton AddButton(string id, int idx)
 	{
 		ConferenceIdButton newBtn = Instantiate(buttonPrefab, content.transform);
+		newBtn.gameObject.SetActive(true);
 		newBtn.Id = id;
 		newBtn.Idx = idx;
 		return newBtn;

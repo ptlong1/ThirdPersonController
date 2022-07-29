@@ -13,6 +13,7 @@ public class VoiceCanvas : MonoBehaviour
 
 	public void Add(string playerName)
 	{
+		if (string.IsNullOrWhiteSpace(playerName)) return;
 		VoiceToast newToast = Instantiate(voiceToast, context);
 		newToast.SetText(playerName);
 		currentToast.Add(playerName, newToast);

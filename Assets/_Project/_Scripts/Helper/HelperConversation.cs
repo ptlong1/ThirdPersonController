@@ -29,6 +29,7 @@ public class HelperConversation : MonoBehaviour
 		for(int i = 0; i < questions.Length; ++i)
 		{
 			Button newBtn = Instantiate(questionBtnPrefab, choices.transform);
+			newBtn.gameObject.SetActive(true);
 			newBtn.GetComponentInChildren<TMP_Text>().text = questions[i];
 			string answer = answers[i];
 			newBtn.onClick.AddListener(() => SetHelper(answer));

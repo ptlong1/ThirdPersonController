@@ -1537,6 +1537,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2651508817075814750}
     m_Modifications:
+    - target: {fileID: 1222008090707415695, guid: 369ffd83c25b3704fa68ab690b321ec3, type: 3}
+      propertyPath: m_text
+      value: CLOSE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222492333502105783, guid: 369ffd83c25b3704fa68ab690b321ec3, type: 3}
+      propertyPath: m_text
+      value: CLOSE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222626945799416345, guid: 369ffd83c25b3704fa68ab690b321ec3, type: 3}
+      propertyPath: m_text
+      value: CLOSE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222643481028286439, guid: 369ffd83c25b3704fa68ab690b321ec3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2651508817075814751}
+    - target: {fileID: 1222643481028286439, guid: 369ffd83c25b3704fa68ab690b321ec3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7044654755597020112, guid: 369ffd83c25b3704fa68ab690b321ec3, type: 3}
       propertyPath: m_Name
       value: Button_Done
